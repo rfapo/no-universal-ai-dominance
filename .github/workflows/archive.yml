@@ -1,0 +1,56 @@
+name: archive sources
+
+# Requests Internet Archive snapshots of every cited source URL.
+#
+# This is a manually triggered job rather than part of `reproduce`, because it
+# writes to a third-party service and should run only when someone asks for it.
+# It exists because web.archive.org is unreachable from some networks (an ISP
+# in Brazil blocks it, along with archive.today, while archive.org itself stays
+# reachable), and a GitHub-hosted runner is not behind that filter.
+#
+# Run it from the Actions tab: "archive sources" -> "Run workflow".
+
+on:
+  workflow_dispatch:
+    inputs:
+      skip_recent_days:
+        description: "Skip URLs already archived within this many days (0 = force all)"
+        required: false
+        default: "30"
+
+permissions:
+  contents: read
+
+jobs:
+  archive:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Coverage before
+        run: python code/archive_status.py || true
+
+      - name: Request snapshots
+        env:
+          SKIP_RECENT_DAYS: ${{ inputs.skip_recent_days }}
+        # The script exits non-zero if any single URL fails to archive. Some
+        # sources cannot be archived at all (SEC, X/Twitter, Cloudflare-
+        # protected pages), so a failure here is information, not a broken
+        # build -- the log and the coverage report below say what happened.
+        run: bash code/archive_urls.sh || true
+
+      - name: Coverage after
+        run: python code/archive_status.py || true
+
+      - name: Upload the archive log
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: archive-log
+          path: results/archive_log.txt
+          if-no-files-found: warn
