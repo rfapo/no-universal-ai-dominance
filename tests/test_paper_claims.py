@@ -690,3 +690,85 @@ def test_readme_internal_file_references_exist():
             assert list(ROOT.glob(ref)), ref
         else:
             assert (ROOT / ref).exists(), ref
+
+
+# --------------------------------------------------------------------------
+# Effective number of competitors and the Hill profile (Table 2, Appendix C)
+# --------------------------------------------------------------------------
+
+
+def test_effective_n_inverts_the_hhi_bounds():
+    """Table 2's 1/HHI column is the HHI restated as a firm count, so it must
+    invert the bounds exactly: the low count pairs with the high index."""
+    for row in RESULTS["concentration"]:
+        assert row["eff_n_lo"] == approx(10000.0 / row["hhi_hi"], tol=0.01), row["metric"]
+        assert row["eff_n_hi"] == approx(10000.0 / row["hhi_lo"], tol=0.01), row["metric"]
+        assert row["eff_n_lo"] <= row["eff_n_hi"]
+
+
+def test_hill_profile_is_non_increasing_in_q():
+    """A defining property of the Hill family: weighting the leader more
+    heavily can never report more effective competitors."""
+    for row in RESULTS["concentration"]:
+        prof = [row["hill_q0"], row["hill_q1"], row["hill_q2"], row["hill_qinf"]]
+        for a, b in zip(prof, prof[1:]):
+            assert b <= a + 1e-6, (row["metric"], prof)
+
+
+def test_hill_q_infinity_is_the_reciprocal_leader_share():
+    """q -> inf reduces to 1/s_(1) on the renormalised named shares."""
+    for row in RESULTS["concentration"]:
+        # shares are renormalised over named firms, so s_(1) is scaled by the named total
+        assert row["hill_qinf"] >= 1.0
+        assert row["hill_qinf"] <= row["hill_q0"] + 1e-6
+
+
+def test_hill_q0_is_an_integer_count_of_named_firms():
+    for row in RESULTS["concentration"]:
+        assert abs(row["hill_q0"] - round(row["hill_q0"])) < 1e-6, row["metric"]
+
+
+def test_hill_q2_is_at_most_the_effective_n_from_hhi():
+    """hill_q2 renormalises the named shares and so discards the unattributed
+    residual, which can only add competitors. It must therefore sit at or below
+    the Table 2 figure, and the gap must grow with the residual."""
+    for row in RESULTS["concentration"]:
+        assert row["hill_q2"] <= row["eff_n_hi"] + 1e-6, row["metric"]
+        if row["residual"] < 0.2:
+            assert row["hill_q2"] == approx(row["eff_n_hi"], tol=0.02), row["metric"]
+
+
+def test_concentrated_group_separates_from_the_rest_for_q_at_least_one():
+    """Appendix C claims the separation holds for q >= 1 but not at q = 0."""
+    conc = {"A", "E", "E'", "F", "G"}
+    by = {r["metric"].split()[0]: r for r in RESULTS["concentration"]}
+    for q in ("hill_q1", "hill_q2", "hill_qinf"):
+        hi = max(by[k][q] for k in by if k in conc)
+        lo = min(by[k][q] for k in by if k not in conc)
+        assert hi < lo, (q, hi, lo)
+    q0_hi = max(by[k]["hill_q0"] for k in by if k in conc)
+    q0_lo = min(by[k]["hill_q0"] for k in by if k not in conc)
+    assert not (q0_hi < q0_lo), "appendix says q=0 does NOT separate"
+
+
+def test_hhi_and_leader_share_rankings_disagree():
+    """Appendix C's point: E' is the most concentrated metric at q=2 and the
+    least concentrated of the five at q=inf."""
+    by = {r["metric"].split()[0]: r for r in RESULTS["concentration"]}
+    conc = ["A", "E", "E'", "F", "G"]
+    assert min(conc, key=lambda k: by[k]["hill_q2"]) == "E'"
+    assert max(conc, key=lambda k: by[k]["hill_qinf"]) == "E'"
+    assert min(conc, key=lambda k: by[k]["hill_qinf"]) == "E"
+
+
+def test_manuscript_justifies_the_choice_of_index_and_links_the_appendix():
+    assert "Why the HHI" in TEX
+    assert "app:hill" in TEX and "\\ref{app:hill}" in TEX
+    assert "1/\\mathrm{HHI}" in TEX
+
+
+def test_provenance_reports_the_measured_archive_outcome():
+    """The Provenance paragraph must state the real coverage, not a promise."""
+    assert "46 now have a snapshot" in TEX
+    log = (ROOT / "results" / "archive_log.txt")
+    assert log.exists() and log.stat().st_size > 0

@@ -11,7 +11,13 @@
    "hhi_hi": 3968,
    "residual": 0.1,
    "dominant50": true,
-   "dominant40": true
+   "dominant40": true,
+   "eff_n_lo": 2.52,
+   "eff_n_hi": 2.52,
+   "hill_q0": 7.0,
+   "hill_q1": 3.27,
+   "hill_q2": 2.52,
+   "hill_qinf": 1.77
   },
   {
    "metric": "B  Monthly active users (Counterpoint, Apr 2026)",
@@ -24,7 +30,13 @@
    "hhi_hi": 1661,
    "residual": 11.67,
    "dominant50": false,
-   "dominant40": false
+   "dominant40": false,
+   "eff_n_lo": 6.02,
+   "eff_n_hi": 6.15,
+   "hill_q0": 7.0,
+   "hill_q1": 5.52,
+   "hill_q2": 4.8,
+   "hill_qinf": 3.53
   },
   {
    "metric": "C  LLM revenue (Counterpoint, Q1 2026)",
@@ -37,7 +49,13 @@
    "hhi_hi": 2075,
    "residual": 4.9,
    "dominant50": false,
-   "dominant40": false
+   "dominant40": false,
+   "eff_n_lo": 4.82,
+   "eff_n_hi": 4.82,
+   "hill_q0": 12.0,
+   "hill_q1": 5.81,
+   "hill_q2": 4.36,
+   "hill_qinf": 3.03
   },
   {
    "metric": "D  Developer gateway requests (OpenRouter, wk of 9 Nov 2026)",
@@ -50,7 +68,13 @@
    "hhi_hi": 1755,
    "residual": 8.1,
    "dominant50": false,
-   "dominant40": false
+   "dominant40": false,
+   "eff_n_lo": 5.7,
+   "eff_n_hi": 5.74,
+   "hill_q0": 9.0,
+   "hill_q1": 6.14,
+   "hill_q2": 4.85,
+   "hill_qinf": 2.89
   },
   {
    "metric": "E  Enterprise LLM API spend, US (Menlo, 2026)",
@@ -63,7 +87,13 @@
    "hhi_hi": 4092,
    "residual": 5.0,
    "dominant50": true,
-   "dominant40": true
+   "dominant40": true,
+   "eff_n_lo": 2.44,
+   "eff_n_hi": 2.46,
+   "hill_q0": 3.0,
+   "hill_q1": 2.47,
+   "hill_q2": 2.22,
+   "hill_qinf": 1.73
   },
   {
    "metric": "D' Developer tokens excl. BYOK (AIMultiple/OpenRouter, Oct 2026)",
@@ -76,7 +106,13 @@
    "hhi_hi": 1744,
    "residual": 6.43,
    "dominant50": false,
-   "dominant40": false
+   "dominant40": false,
+   "eff_n_lo": 5.73,
+   "eff_n_hi": 5.75,
+   "hill_q0": 10.0,
+   "hill_q1": 6.41,
+   "hill_q2": 5.03,
+   "hill_qinf": 3.08
   },
   {
    "metric": "E' Business token spend, US (Ramp, Oct 2026)",
@@ -89,7 +125,13 @@
    "hhi_hi": 4565,
    "residual": 0.5,
    "dominant50": false,
-   "dominant40": true
+   "dominant40": true,
+   "eff_n_lo": 2.19,
+   "eff_n_hi": 2.19,
+   "hill_q0": 4.0,
+   "hill_q1": 2.37,
+   "hill_q2": 2.17,
+   "hill_qinf": 2.02
   },
   {
    "metric": "F  App+web audience (Sensor Tower, May 2026)",
@@ -102,7 +144,13 @@
    "hhi_hi": 3161,
    "residual": 15.6,
    "dominant50": false,
-   "dominant40": true
+   "dominant40": true,
+   "eff_n_lo": 3.16,
+   "eff_n_hi": 3.3,
+   "hill_q0": 3.0,
+   "hill_q1": 2.59,
+   "hill_q2": 2.35,
+   "hill_qinf": 1.82
   },
   {
    "metric": "G  China AI-native app MAU, top 5 (QuestMobile, Sep 2026)",
@@ -115,7 +163,13 @@
    "hhi_hi": 3663,
    "residual": 0.0,
    "dominant50": true,
-   "dominant40": true
+   "dominant40": true,
+   "eff_n_lo": 2.73,
+   "eff_n_hi": 2.73,
+   "hill_q0": 5.0,
+   "hill_q1": 3.44,
+   "hill_q2": 2.73,
+   "hill_qinf": 1.84
   }
  ],
  "matrix": {

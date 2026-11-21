@@ -20,6 +20,20 @@ def hhi_bounds(named, total=100.0):
 def cr(named, k):
     return round(sum(sorted(named.values(), reverse=True)[:k]), 1)
 
+def hill(named, q):
+    """Hill number of order q: the number of equally sized firms that would give
+    the same concentration. The family spans the usual indices, so reporting a
+    profile over q shows how far a verdict depends on how heavily the leader is
+    weighted: q=0 counts firms, q=1 is exp(Shannon entropy), q=2 is 1/HHI and
+    q=inf is 1/s_(1). Computed on the named shares renormalised to 100, which is
+    the concentration-maximising convention: the unattributed residual can only
+    add competitors, never remove them."""
+    p = np.array([v for v in named.values() if v > 0], float)
+    p = p/p.sum()
+    if np.isinf(q):          return float(1.0/p.max())
+    if abs(q - 1.0) < 1e-12: return float(np.exp(-(p*np.log(p)).sum()))
+    return float(((p**q).sum())**(1.0/(1.0 - q)))
+
 # ---------------- datasets (shares in %) ----------------
 D = {}
 D["A  Consumer web visits (Similarweb, 7 assistants, Oct 2026)"] = dict(OpenAI=56.6, Google=24.7, Anthropic=11.7, DeepSeek=3.5, xAI=1.9, Perplexity=0.8, Microsoft=0.7)
@@ -41,7 +55,11 @@ for name, d in D.items():
     leader = max(d, key=d.get); srt = sorted(d.values(), reverse=True)
     out["concentration"].append(dict(metric=name, leader=leader, s1=round(d[leader], 1), s2=round(srt[1], 1),
         lead_ratio=round(srt[0]/srt[1], 2), cr4=cr(d, 4), hhi_lo=lo, hhi_hi=hi, residual=resid,
-        dominant50=d[leader] >= 50, dominant40=d[leader] >= 40))
+        dominant50=d[leader] >= 50, dominant40=d[leader] >= 40,
+        # 1/HHI restated as a count of equally sized firms; the bounds invert the HHI bounds
+        eff_n_lo=round(10000.0/hi, 2), eff_n_hi=round(10000.0/lo, 2),
+        hill_q0=round(hill(d, 0), 2), hill_q1=round(hill(d, 1), 2),
+        hill_q2=round(hill(d, 2), 2), hill_qinf=round(hill(d, float("inf")), 2)))
 
 # ---------------- cross-dimension vendor matrix (primary: 5 global dimensions) ----------------
 labs = ["OpenAI", "Google", "Anthropic", "DeepSeek", "Meta", "Alibaba"]

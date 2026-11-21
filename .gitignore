@@ -19,8 +19,8 @@ paper/*.fdb_latexmk
 paper/*.synctex.gz
 paper/main.pdf
 
-# produced by code/archive_urls.sh
-results/archive_log.txt
+# results/archive_log.txt IS committed: it is the provenance record of which
+# source URLs were snapshotted, when, and which the Wayback crawler refused.
 
 # OS
 .DS_Store
