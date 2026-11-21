@@ -44,8 +44,7 @@ Austin Horng-En Wang and Kyle Siler-Evans.
 
 \bibitem[Vipra and Korinek(2023)]{vipra2023market}
 Jai Vipra and Anton Korinek.
-\newblock Market concentration implications of foundation models: The invisible
-  hand of {ChatGPT}.
+\newblock Market concentration implications of foundation models.
 \newblock \emph{arXiv preprint arXiv:2311.01550}, 2023.
 
 \bibitem[Korinek and Vipra(2025)]{korinek2025concentrating}
@@ -162,6 +161,7 @@ Harold Demsetz.
 \newblock Industry structure, market rivalry, and public policy.
 \newblock \emph{Journal of Law and Economics}, 16\penalty0 (1):\penalty0 1--9,
   1973.
+\newblock \doi{10.1086/466752}.
 
 \bibitem[Baumol(1982)]{baumol1982contestable}
 William~J. Baumol.
@@ -190,6 +190,7 @@ W.~Brian Arthur.
 \newblock Competing technologies, increasing returns, and lock-in by historical
   events.
 \newblock \emph{Economic Journal}, 99\penalty0 (394):\penalty0 116--131, 1989.
+\newblock \doi{10.2307/2234208}.
 
 \bibitem[Azoulay et~al.(2025)Azoulay, Krieger, and Nagaraj]{azoulay2025old}
 Pierre Azoulay, Joshua~L. Krieger, and Abhishek Nagaraj.
@@ -210,6 +211,7 @@ Andrei Hagiu and Julian Wright.
 Andrei Hagiu and Julian Wright.
 \newblock Artificial intelligence and competition policy.
 \newblock \emph{International Journal of Industrial Organization}, 2025.
+\newblock \doi{10.1016/j.ijindorg.2025.103134}.
 
 \bibitem[Tucker(2024)]{tucker2024competition}
 Catherine Tucker.
@@ -251,18 +253,21 @@ Jean-Charles Rochet and Jean Tirole.
 \newblock Platform competition in two-sided markets.
 \newblock \emph{Journal of the European Economic Association}, 1\penalty0
   (4):\penalty0 990--1029, 2003.
+\newblock \doi{10.1162/154247603322493212}.
 
 \bibitem[Armstrong(2006)]{armstrong2006competition}
 Mark Armstrong.
 \newblock Competition in two-sided markets.
 \newblock \emph{RAND Journal of Economics}, 37\penalty0 (3):\penalty0 668--691,
   2006.
+\newblock \doi{10.1111/j.1756-2171.2006.tb00037.x}.
 
 \bibitem[Lerner and Tirole(2002)]{lerner2002simple}
 Josh Lerner and Jean Tirole.
 \newblock Some simple economics of open source.
 \newblock \emph{Journal of Industrial Economics}, 50\penalty0 (2):\penalty0
   197--234, 2002.
+\newblock \doi{10.1111/1467-6451.00174}.
 
 \bibitem[Widder et~al.(2024)Widder, Whittaker, and West]{widder2024open}
 David~Gray Widder, Meredith Whittaker, and Sarah~Myers West.
@@ -299,6 +304,7 @@ Moming Duan, Mingzhe Du, Rui Zhao, Mengying Wang, Yinghui Wu, Nigel Shadbolt,
 Zvi Griliches.
 \newblock Hybrid corn: An exploration in the economics of technological change.
 \newblock \emph{Econometrica}, 25\penalty0 (4):\penalty0 501--522, 1957.
+\newblock \doi{10.2307/1905380}.
 
 \bibitem[Rogers(2003)]{rogers2003diffusion}
 Everett~M. Rogers.
@@ -310,18 +316,21 @@ Timothy~F. Bresnahan and Manuel Trajtenberg.
 \newblock General purpose technologies: `engines of growth'?
 \newblock \emph{Journal of Econometrics}, 65\penalty0 (1):\penalty0 83--108,
   1995.
+\newblock \doi{10.1016/0304-4076(94)01598-T}.
 
 \bibitem[Eloundou et~al.(2024)Eloundou, Manning, Mishkin, and
   Rock]{eloundou2024gpts}
 Tyna Eloundou, Sam Manning, Pamela Mishkin, and Daniel Rock.
 \newblock {GPTs} are {GPTs}: Labor market impact potential of {LLMs}.
 \newblock \emph{Science}, 384\penalty0 (6702):\penalty0 1306--1308, 2024.
+\newblock \doi{10.1126/science.adj0998}.
 
 \bibitem[Comin and Hobijn(2010)]{comin2010exploration}
 Diego Comin and Bart Hobijn.
 \newblock An exploration of technology diffusion.
 \newblock \emph{American Economic Review}, 100\penalty0 (5):\penalty0
   2031--2059, 2010.
+\newblock \doi{10.1257/aer.100.5.2031}.
 
 \bibitem[Comin and Mestieri(2018)]{comin2018technology}
 Diego Comin and Mart{\'i} Mestieri.
@@ -350,6 +359,7 @@ Kristina McElheran, J.~Frank Li, Erik Brynjolfsson, Zachary Kroff, Emin
 \newblock {AI} adoption in {America}: Who, what, and where.
 \newblock \emph{Journal of Economics \& Management Strategy}, 33\penalty0
   (2):\penalty0 375--415, 2024.
+\newblock \doi{10.1111/jems.12576}.
 
 \bibitem[Su{\'a}rez and Garc{\'i}a-Mari{\~n}oso(2025)]{suarez2025verge}
 David Su{\'a}rez and Bego{\~n}a Garc{\'i}a-Mari{\~n}oso.
@@ -387,6 +397,7 @@ Dani{\"e}l Lakens.
   and meta-analyses.
 \newblock \emph{Social Psychological and Personality Science}, 8\penalty0
   (4):\penalty0 355--362, 2017.
+\newblock \doi{10.1177/1948550617697177}.
 
 \bibitem[Roy(1953)]{roy1953heuristic}
 S.~N. Roy.
@@ -394,6 +405,7 @@ S.~N. Roy.
   multivariate analysis.
 \newblock \emph{Annals of Mathematical Statistics}, 24\penalty0 (2):\penalty0
   220--238, 1953.
+\newblock \doi{10.1214/aoms/1177729029}.
 
 \bibitem[{Court of Justice of the European Communities}(1991)]{akzo1991}
 {Court of Justice of the European Communities}.
@@ -423,6 +435,7 @@ Maurice~G. Kendall and Bernard {Babington Smith}.
 \newblock The problem of $m$ rankings.
 \newblock \emph{Annals of Mathematical Statistics}, 10\penalty0 (3):\penalty0
   275--287, 1939.
+\newblock \doi{10.1214/aoms/1177732186}.
 
 \bibitem[Saltelli et~al.(2008)Saltelli, Ratto, Andres, Campolongo, Cariboni,
   Gatelli, Saisana, and Tarantola]{saltelli2008global}
@@ -430,11 +443,13 @@ Andrea Saltelli, Marco Ratto, Terry Andres, Francesca Campolongo, Jessica
   Cariboni, Debora Gatelli, Michaela Saisana, and Stefano Tarantola.
 \newblock \emph{Global Sensitivity Analysis: The Primer}.
 \newblock Wiley, Chichester, 2008.
+\newblock \doi{10.1002/9780470725184}.
 
 \bibitem[Berger(1982)]{berger1982multiparameter}
 Roger~L. Berger.
 \newblock Multiparameter hypothesis testing and acceptance sampling.
 \newblock \emph{Technometrics}, 24\penalty0 (4):\penalty0 295--300, 1982.
+\newblock \doi{10.1080/00401706.1982.10487790}.
 
 \bibitem[O'Brien and Salop(2000)]{obrien2000competitive}
 Daniel~P. O'Brien and Steven~C. Salop.
@@ -448,6 +463,7 @@ Stephen Hymer and Peter Pashigian.
 \newblock Turnover of firms as a measure of market behavior.
 \newblock \emph{Review of Economics and Statistics}, 44\penalty0 (1):\penalty0
   82--87, 1962.
+\newblock \doi{10.2307/1926627}.
 
 \bibitem[{Momentic}(2026)]{momentic2026chatbots}
 {Momentic}.
@@ -741,6 +757,7 @@ Andrew~M. Bean, Ryan~Othniel Kearns, Angelika Romanou, Franziska~Sofia Hafner,
   benchmarks.
 \newblock In \emph{Advances in Neural Information Processing Systems 38
   (Datasets and Benchmarks Track)}, 2025.
+\newblock \doi{10.52202/085713-0590}.
 
 \bibitem[{Anthropic}(2026)]{anthropic2026index}
 {Anthropic}.
