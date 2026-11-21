@@ -772,3 +772,39 @@ def test_provenance_reports_the_measured_archive_outcome():
     assert "46 now have a snapshot" in TEX
     log = (ROOT / "results" / "archive_log.txt")
     assert log.exists() and log.stat().st_size > 0
+
+
+# --------------------------------------------------------------------------
+# Exclusivity-adjusted concentration (Section 4.9)
+# --------------------------------------------------------------------------
+
+
+def test_adjusted_hhi_divides_by_the_squared_multihoming_index():
+    mh = RESULTS["multihoming"]["tools_per_user_lb"]
+    adj = RESULTS["multihoming"]["adjusted_hhi"]
+    conc = {r["metric"].split()[0]: r for r in RESULTS["concentration"]}
+    for key, row in adj.items():
+        assert row["hhi"] == conc[key]["hhi_lo"], key
+        assert row["adjusted"] == approx(conc[key]["hhi_lo"] / mh**2, tol=1.0), key
+        assert row["adjusted"] < row["hhi"], key
+
+
+def test_adjusted_hhi_applies_only_to_the_consumer_metrics():
+    """Enterprise buyers single-home, so no correction is warranted for E or E'."""
+    adj = RESULTS["multihoming"]["adjusted_hhi"]
+    assert set(adj) == {"A", "F"}
+
+
+def test_both_consumer_metrics_cross_the_concentration_band():
+    """Section 4.9: A falls 3,968 -> 1,787 and F 3,026 -> 1,363, both crossing 1,800."""
+    adj = RESULTS["multihoming"]["adjusted_hhi"]
+    assert adj["A"]["adjusted"] == 1787 and adj["F"]["adjusted"] == 1363
+    for key, row in adj.items():
+        assert row["band_before"] == "highly" and row["band_after"] == "moderately", key
+        assert row["hhi"] > 1800 > row["adjusted"], key
+
+
+def test_manuscript_states_the_adjustment_and_its_lower_bound_caveat():
+    assert "Concentration net of multi-homing" in TEX
+    assert "3{,}968 to 1{,}787" in TEX and "3{,}026 to 1{,}363" in TEX
+    assert "lower bound on concentration" in TEX

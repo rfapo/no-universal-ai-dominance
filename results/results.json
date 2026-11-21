@@ -1007,7 +1007,21 @@
  "multihoming": {
   "sum_brands": 76,
   "any_use": 51,
-  "tools_per_user_lb": 1.49
+  "tools_per_user_lb": 1.49,
+  "adjusted_hhi": {
+   "A": {
+    "hhi": 3968,
+    "adjusted": 1787,
+    "band_before": "highly",
+    "band_after": "moderately"
+   },
+   "F": {
+    "hhi": 3026,
+    "adjusted": 1363,
+    "band_before": "highly",
+    "band_after": "moderately"
+   }
+  }
  },
  "adoption_measures": [
   [

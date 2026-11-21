@@ -234,7 +234,21 @@ out["price_ratio"] = dict(openrouter=price_ratio(72.0, 27.0), vercel=price_ratio
 
 # ---- multi-homing lower bound (Reuters Institute 2026, weekly use, six countries) ----
 brands = dict(ChatGPT=34, Gemini=24, Copilot=11, Claude=7)
-out["multihoming"] = dict(sum_brands=sum(brands.values()), any_use=51, tools_per_user_lb=round(sum(brands.values())/51, 2))
+mh = sum(brands.values())/51
+out["multihoming"] = dict(sum_brands=sum(brands.values()), any_use=51, tools_per_user_lb=round(mh, 2))
+
+# Exclusivity-adjusted concentration. A share counts a multi-homing user once per
+# brand, so to first order the exclusive-user share is s/mh and the index scales by
+# 1/mh^2. Applied only to the consumer metrics, where multi-homing is measured;
+# enterprise buyers mostly single-home, so no adjustment is warranted there. The
+# correction divides every vendor by the same factor, while a leader plausibly holds
+# more exclusive users than a challenger, so the adjusted figure is a LOWER BOUND on
+# concentration.
+out["multihoming"]["adjusted_hhi"] = {
+    row["metric"].split()[0]: dict(hhi=row["hhi_lo"], adjusted=round(row["hhi_lo"]/mh**2),
+                                   band_before="highly" if row["hhi_lo"] > 1800 else "moderately",
+                                   band_after="highly" if row["hhi_lo"]/mh**2 > 1800 else "moderately")
+    for row in out["concentration"] if row["metric"].split()[0] in ("A", "F")}
 
 # ---- adoption depends on the measure ----
 out["adoption_measures"] = [
