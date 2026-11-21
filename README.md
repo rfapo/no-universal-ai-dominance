@@ -186,6 +186,9 @@ make test         # pytest tests/                                       (<1 s)
 make paper        # LaTeX → paper/no-universal-ai-dominance.pdf
 make verify       # assert results/ and figures are unchanged by a fresh run
 make verify-strict # same, but the figures must match byte for byte
+
+make archive-status # which cited URLs lack a Wayback snapshot, or have a stale one
+make archive        # request a snapshot of every cited URL (needs web.archive.org)
 ```
 
 ### What reproduces, and how exactly
@@ -256,7 +259,9 @@ Not a re-run — a re-derivation by a different route, with a different seed and
 
 ## Data provenance and its limits
 
-Every source was read in **November 2026**. Several are live dashboards that are overwritten weekly or monthly, so **the figures cannot be recovered from the URL alone**. `data/sources.csv` lists 63 source URLs — the 61 data sources counted in the paper plus the ownership disclosures used in the bloc scenarios — and `code/archive_urls.sh` requests an Internet Archive snapshot of each; the snapshots could not be created from the environment in which the analysis was run, and the script should be executed before the URLs change again.
+Every source was read in **November 2026**. Several are live dashboards that are overwritten weekly or monthly, so **the figures cannot be recovered from the URL alone**. `data/sources.csv` lists 63 source URLs — the 61 data sources counted in the paper plus the ownership disclosures used in the bloc scenarios. `make archive` requests an Internet Archive snapshot of each, and `make archive-status` reports which URLs still need one.
+
+A snapshot is not merely *present* or *absent*: a snapshot taken before the month a source was read does not show the figures the paper reports, because these pages are overwritten. `make archive-status` therefore separates **missing** from **stale** and compares each snapshot against the `accessed` column of `data/sources.csv`. Note that `make archive` needs `web.archive.org`, which some networks block at the TCP level even when `archive.org` itself is reachable; the script preflights that host and exits immediately with an explanation rather than stalling for hours.
 
 Known limits, stated in the paper and repeated here:
 

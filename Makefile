@@ -22,7 +22,7 @@ PDF     := paper/no-universal-ai-dominance.pdf
 # passed to code/compare_figures.py; verify-strict overrides it with --strict
 FIGCMP  ?=
 
-.PHONY: all analysis validate figures test paper verify verify-strict arxiv archive clean help
+.PHONY: all analysis validate figures test paper verify verify-strict arxiv archive archive-status clean help
 .DEFAULT_GOAL := help
 
 all: analysis validate figures test ## run the whole pipeline and the test suite
@@ -84,8 +84,11 @@ arxiv: ## bundle the arXiv submission (manuscript + figures + ancillary files)
 	@cd build/arxiv && zip -qr ../no-universal-ai-dominance-arxiv.zip .
 	@echo "wrote build/no-universal-ai-dominance-arxiv.zip"
 
-archive: ## request an Internet Archive snapshot of every source URL (needs network)
+archive: ## request an Internet Archive snapshot of every source URL (needs web.archive.org)
 	bash code/archive_urls.sh
+
+archive-status: ## report which source URLs lack a snapshot or have a stale one
+	$(PYTHON) code/archive_status.py
 
 clean: ## remove build artefacts (never the committed results or figures)
 	rm -rf build $(SCRATCH) .pytest_cache paper/main.aux paper/main.log \
