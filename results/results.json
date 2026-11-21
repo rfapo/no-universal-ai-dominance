@@ -1,0 +1,3365 @@
+{
+ "concentration": [
+  {
+   "metric": "A  Consumer web visits (Similarweb, 7 assistants, Oct 2026)",
+   "leader": "OpenAI",
+   "s1": 56.6,
+   "s2": 24.7,
+   "lead_ratio": 2.29,
+   "cr4": 96.5,
+   "hhi_lo": 3968,
+   "hhi_hi": 3968,
+   "residual": 0.1,
+   "dominant50": true,
+   "dominant40": true
+  },
+  {
+   "metric": "B  Monthly active users (Counterpoint, Apr 2026)",
+   "leader": "Meta",
+   "s1": 25.1,
+   "s2": 20.9,
+   "lead_ratio": 1.2,
+   "cr4": 74.0,
+   "hhi_lo": 1627,
+   "hhi_hi": 1661,
+   "residual": 11.67,
+   "dominant50": false,
+   "dominant40": false
+  },
+  {
+   "metric": "C  LLM revenue (Counterpoint, Q1 2026)",
+   "leader": "Anthropic",
+   "s1": 31.4,
+   "s2": 29.0,
+   "lead_ratio": 1.08,
+   "cr4": 79.7,
+   "hhi_lo": 2075,
+   "hhi_hi": 2075,
+   "residual": 4.9,
+   "dominant50": false,
+   "dominant40": false
+  },
+  {
+   "metric": "D  Developer gateway requests (OpenRouter, wk of 9 Nov 2026)",
+   "leader": "DeepSeek",
+   "s1": 31.8,
+   "s2": 19.0,
+   "lead_ratio": 1.67,
+   "cr4": 72.9,
+   "hhi_lo": 1742,
+   "hhi_hi": 1755,
+   "residual": 8.1,
+   "dominant50": false,
+   "dominant40": false
+  },
+  {
+   "metric": "E  Enterprise LLM API spend, US (Menlo, 2026)",
+   "leader": "Anthropic",
+   "s1": 55.0,
+   "s2": 31.0,
+   "lead_ratio": 1.77,
+   "cr4": 95.0,
+   "hhi_lo": 4067,
+   "hhi_hi": 4092,
+   "residual": 5.0,
+   "dominant50": true,
+   "dominant40": true
+  },
+  {
+   "metric": "D' Developer tokens excl. BYOK (AIMultiple/OpenRouter, Oct 2026)",
+   "leader": "Google",
+   "s1": 30.4,
+   "s2": 22.5,
+   "lead_ratio": 1.35,
+   "cr4": 72.8,
+   "hhi_lo": 1739,
+   "hhi_hi": 1744,
+   "residual": 6.43,
+   "dominant50": false,
+   "dominant40": false
+  },
+  {
+   "metric": "E' Business token spend, US (Ramp, Oct 2026)",
+   "leader": "Anthropic",
+   "s1": 49.3,
+   "s2": 46.1,
+   "lead_ratio": 1.07,
+   "cr4": 99.5,
+   "hhi_lo": 4564,
+   "hhi_hi": 4565,
+   "residual": 0.5,
+   "dominant50": false,
+   "dominant40": true
+  },
+  {
+   "metric": "F  App+web audience (Sensor Tower, May 2026)",
+   "leader": "OpenAI",
+   "s1": 46.4,
+   "s2": 27.7,
+   "lead_ratio": 1.68,
+   "cr4": 84.4,
+   "hhi_lo": 3026,
+   "hhi_hi": 3161,
+   "residual": 15.6,
+   "dominant50": false,
+   "dominant40": true
+  },
+  {
+   "metric": "G  China AI-native app MAU, top 5 (QuestMobile, Sep 2026)",
+   "leader": "ByteDance",
+   "s1": 54.3,
+   "s2": 20.5,
+   "lead_ratio": 2.65,
+   "cr4": 95.5,
+   "hhi_lo": 3663,
+   "hhi_hi": 3663,
+   "residual": 0.0,
+   "dominant50": true,
+   "dominant40": true
+  }
+ ],
+ "matrix": {
+  "A web visits": {
+   "OpenAI": 56.2,
+   "Google": 24.6,
+   "Anthropic": 11.7,
+   "DeepSeek": 3.3,
+   "Meta": 0.5,
+   "Alibaba": 0.3
+  },
+  "B MAU": {
+   "OpenAI": 20.9,
+   "Google": 20.9,
+   "Anthropic": 2.8,
+   "DeepSeek": 3.0,
+   "Meta": 25.1,
+   "Alibaba": 6.7
+  },
+  "C revenue": {
+   "OpenAI": 29.0,
+   "Google": 12.1,
+   "Anthropic": 31.4,
+   "DeepSeek": 0.2,
+   "Meta": 1.4,
+   "Alibaba": 2.9
+  },
+  "D gateway req.": {
+   "OpenAI": 19.0,
+   "Google": 15.1,
+   "Anthropic": 6.3,
+   "DeepSeek": 31.8,
+   "Meta": 0.8,
+   "Alibaba": 6.2
+  },
+  "E enterprise": {
+   "OpenAI": 31.0,
+   "Google": 9.0,
+   "Anthropic": 55.0,
+   "DeepSeek": 1.3,
+   "Meta": 1.3,
+   "Alibaba": 1.3
+  }
+ },
+ "leaders_primary": {
+  "A web visits": "OpenAI",
+  "B MAU": "Meta",
+  "C revenue": "Anthropic",
+  "D gateway req.": "DeepSeek",
+  "E enterprise": "Anthropic"
+ },
+ "robustness": [
+  {
+   "lab": "OpenAI",
+   "max_share": 56.2,
+   "max_dim": "A web visits",
+   "min_share": 19.0,
+   "min_dim": "D gateway req.",
+   "kappa": 2.6,
+   "dims_ge50": 1,
+   "dims_ge40": 1,
+   "dims_ge30": 2,
+   "dims_led": 1
+  },
+  {
+   "lab": "Google",
+   "max_share": 24.6,
+   "max_dim": "A web visits",
+   "min_share": 9.0,
+   "min_dim": "E enterprise",
+   "kappa": 5.6,
+   "dims_ge50": 0,
+   "dims_ge40": 0,
+   "dims_ge30": 0,
+   "dims_led": 0
+  },
+  {
+   "lab": "Anthropic",
+   "max_share": 55.0,
+   "max_dim": "E enterprise",
+   "min_share": 2.8,
+   "min_dim": "B MAU",
+   "kappa": 17.9,
+   "dims_ge50": 1,
+   "dims_ge40": 1,
+   "dims_ge30": 2,
+   "dims_led": 2
+  },
+  {
+   "lab": "DeepSeek",
+   "max_share": 31.8,
+   "max_dim": "D gateway req.",
+   "min_share": 0.2,
+   "min_dim": "C revenue",
+   "kappa": 250.0,
+   "dims_ge50": 0,
+   "dims_ge40": 0,
+   "dims_ge30": 1,
+   "dims_led": 1
+  },
+  {
+   "lab": "Meta",
+   "max_share": 25.1,
+   "max_dim": "B MAU",
+   "min_share": 0.5,
+   "min_dim": "A web visits",
+   "kappa": 100.0,
+   "dims_ge50": 0,
+   "dims_ge40": 0,
+   "dims_ge30": 0,
+   "dims_led": 1
+  },
+  {
+   "lab": "Alibaba",
+   "max_share": 6.7,
+   "max_dim": "B MAU",
+   "min_share": 0.3,
+   "min_dim": "A web visits",
+   "kappa": 161.3,
+   "dims_ge50": 0,
+   "dims_ge40": 0,
+   "dims_ge30": 0,
+   "dims_led": 0
+  }
+ ],
+ "kendall_primary": {
+  "n_labs": 6,
+  "k_dims": 5,
+  "W": 0.379,
+  "p_perm": 0.0794,
+  "mean_rank": {
+   "OpenAI": 1.9,
+   "Google": 2.7,
+   "Anthropic": 3.0,
+   "DeepSeek": 4.2,
+   "Meta": 4.4,
+   "Alibaba": 4.8
+  }
+ },
+ "kendall_big4": {
+  "n_labs": 4,
+  "k_dims": 5,
+  "W": 0.233,
+  "p_perm": 0.347,
+  "mean_rank": {
+   "OpenAI": 1.7,
+   "Google": 2.5,
+   "Anthropic": 2.6,
+   "DeepSeek": 3.2
+  },
+  "worst_rank": {
+   "OpenAI": 2.0,
+   "Google": 3.0,
+   "Anthropic": 4.0,
+   "DeepSeek": 4.0
+  }
+ },
+ "kendall_ext": {
+  "n_labs": 4,
+  "k_metrics": 8,
+  "W": 0.343,
+  "p_perm": 0.0345,
+  "mean_rank": {
+   "OpenAI": 1.69,
+   "Google": 2.31,
+   "Anthropic": 2.5,
+   "DeepSeek": 3.5
+  },
+  "leaders": {
+   "A web visits": "OpenAI",
+   "B MAU": "OpenAI",
+   "C revenue": "Anthropic",
+   "D gateway req.": "DeepSeek",
+   "E enterprise": "Anthropic",
+   "D' tokens excl BYOK": "Google",
+   "E' Ramp token spend": "Anthropic",
+   "F audience": "OpenAI"
+  }
+ },
+ "paradigm": {
+  "metrics": [
+   [
+    "Gateway tokens, OpenRouter (Sep 2026)",
+    72.0
+   ],
+   [
+    "Gateway tokens, Vercel (Sep 2026)",
+    71.5
+   ],
+   [
+    "Gateway spend, OpenRouter (Sep 2026)",
+    27.0
+   ],
+   [
+    "Gateway spend, Vercel (Sep 2026)",
+    23.0
+   ],
+   [
+    "Enterprise usage, US (Menlo 2026)",
+    19.0
+   ],
+   [
+    "Enterprise metered consumption (Futurum, Oct 2026)",
+    5.0
+   ],
+   [
+    "Enterprise spend, US (Menlo 2026)",
+    4.0
+   ],
+   [
+    "Consumer web visits, open-weight lab (Oct 2026)",
+    3.5
+   ]
+  ],
+  "open_ge50": 2,
+  "closed_ge50": 6,
+  "min_open": 3.5,
+  "max_open": 72.0
+ },
+ "origin": [
+  [
+   "Consumer web visits (AIMultiple, Oct 2026)",
+   95.73,
+   4.21
+  ],
+  [
+   "Enterprise API spend, US (Menlo)",
+   95.0,
+   null
+  ],
+  [
+   "Revenue (Counterpoint Q1 2026)",
+   83.5,
+   11.6
+  ],
+  [
+   "MAU (Counterpoint Apr 2026)",
+   66.8,
+   21.5
+  ],
+  [
+   "Dev tokens excl. BYOK (AIMultiple, Oct 2026)",
+   65.3,
+   29.15
+  ],
+  [
+   "Dev tokens excl. BYOK (AIMultiple, Jul 2026)",
+   21.05,
+   76.99
+  ],
+  [
+   "HF downloads (Feb 2025-Feb 2026)",
+   36.5,
+   41.0
+  ],
+  [
+   "Gateway tokens (OpenRouter, Sep 2026)",
+   null,
+   69.0
+  ]
+ ],
+ "geo": [
+  {
+   "country": "United States",
+   "leader": "ChatGPT",
+   "s1": 62.9,
+   "s2": 16.5,
+   "hhi": 4458,
+   "sum": 100.0
+  },
+  {
+   "country": "India",
+   "leader": "ChatGPT",
+   "s1": 64.1,
+   "s2": 20.2,
+   "hhi": 4659,
+   "sum": 99.9
+  },
+  {
+   "country": "Japan",
+   "leader": "ChatGPT",
+   "s1": 55.6,
+   "s2": 35.5,
+   "hhi": 4394,
+   "sum": 100.0
+  },
+  {
+   "country": "Brazil",
+   "leader": "ChatGPT",
+   "s1": 65.1,
+   "s2": 26.3,
+   "hhi": 4957,
+   "sum": 100.1
+  },
+  {
+   "country": "Indonesia",
+   "leader": "ChatGPT",
+   "s1": 49.4,
+   "s2": 34.8,
+   "hhi": 3781,
+   "sum": 100.1
+  },
+  {
+   "country": "United Kingdom",
+   "leader": "ChatGPT",
+   "s1": 68.2,
+   "s2": 14.3,
+   "hhi": 5030,
+   "sum": 100.0
+  },
+  {
+   "country": "South Korea",
+   "leader": "ChatGPT",
+   "s1": 56.5,
+   "s2": 30.6,
+   "hhi": 4229,
+   "sum": 100.0
+  },
+  {
+   "country": "Germany",
+   "leader": "ChatGPT",
+   "s1": 62.6,
+   "s2": 21.5,
+   "hhi": 4487,
+   "sum": 100.0
+  },
+  {
+   "country": "France",
+   "leader": "ChatGPT",
+   "s1": 62.5,
+   "s2": 21.4,
+   "hhi": 4512,
+   "sum": 99.9
+  },
+  {
+   "country": "Canada",
+   "leader": "ChatGPT",
+   "s1": 64.3,
+   "s2": 19.3,
+   "hhi": 4648,
+   "sum": 100.0
+  },
+  {
+   "country": "Vietnam",
+   "leader": "ChatGPT",
+   "s1": 46.8,
+   "s2": 43.5,
+   "hhi": 4112,
+   "sum": 99.9
+  },
+  {
+   "country": "Mexico",
+   "leader": "ChatGPT",
+   "s1": 47.1,
+   "s2": 39.2,
+   "hhi": 3822,
+   "sum": 100.0
+  },
+  {
+   "country": "China",
+   "leader": "DeepSeek",
+   "s1": 73.2,
+   "s2": 17.7,
+   "hhi": 5707,
+   "sum": 100.1
+  },
+  {
+   "country": "Philippines",
+   "leader": "ChatGPT",
+   "s1": 62.2,
+   "s2": 25.7,
+   "hhi": 4604,
+   "sum": 100.0
+  },
+  {
+   "country": "Spain",
+   "leader": "ChatGPT",
+   "s1": 55.0,
+   "s2": 29.7,
+   "hhi": 4014,
+   "sum": 100.0
+  },
+  {
+   "country": "Italy",
+   "leader": "Gemini",
+   "s1": 44.8,
+   "s2": 43.5,
+   "hhi": 3964,
+   "sum": 100.0
+  },
+  {
+   "country": "Australia",
+   "leader": "ChatGPT",
+   "s1": 66.6,
+   "s2": 15.5,
+   "hhi": 4840,
+   "sum": 100.0
+  },
+  {
+   "country": "Turkey",
+   "leader": "ChatGPT",
+   "s1": 48.4,
+   "s2": 43.0,
+   "hhi": 4228,
+   "sum": 99.9
+  },
+  {
+   "country": "Russia",
+   "leader": "ChatGPT",
+   "s1": 43.6,
+   "s2": 32.1,
+   "hhi": 3158,
+   "sum": 100.0
+  }
+ ],
+ "geo_summary": {
+  "n": 19,
+  "leaders": {
+   "ChatGPT": 17,
+   "Gemini": 1,
+   "DeepSeek": 1
+  },
+  "chatgpt_ge50": 12,
+  "any_ge50": 13,
+  "hhi_min": 3158,
+  "hhi_max": 5707,
+  "hhi_median": 4458.0,
+  "close_lead": [
+   "Vietnam",
+   "Italy",
+   "Turkey"
+  ]
+ },
+ "scale": {
+  "openrouter_T_per_day": 18.3,
+  "google_T_per_day": 106.7,
+  "doubao_T_per_day": 180.0,
+  "openrouter_vs_sum_pct": 6.4,
+  "openrouter_vs_doubao_pct": 10.2,
+  "google_api_T_per_day": 46.1
+ },
+ "dedup": {
+  "mau_sum_M": 4789,
+  "microsoft_users_B": 1.0,
+  "ratio_cnnic_ms_china": 2.86,
+  "ratio_survey_ms_us": 1.48,
+  "india_share_chatgpt_pct": 11.1
+ },
+ "capability": {
+  "benchlm_top10": {
+   "OpenAI": 5,
+   "Google": 3,
+   "Anthropic": 2
+  },
+  "hle_top10": {
+   "Anthropic": 7,
+   "OpenAI": 1,
+   "Moonshot": 1,
+   "DeepSeek": 1
+  },
+  "benchlm_open_in_top25": 2,
+  "hf_collection_qwen_org": 9,
+  "hf_collection_n": 40
+ },
+ "favourable": [
+  {
+   "lab": "OpenAI",
+   "A": 79.4,
+   "B": 46.4,
+   "C": 29.0,
+   "D": 22.5,
+   "E": 56.0,
+   "weakest": "D",
+   "second_weakest": "C",
+   "kappa50": 2.23,
+   "fail50": 3,
+   "kappa2nd50": 1.72,
+   "kappa40": 1.78,
+   "fail40": 2,
+   "kappa2nd40": 1.38,
+   "kappa30": 1.34,
+   "fail30": 2,
+   "kappa2nd30": 1.03
+  },
+  {
+   "lab": "Google",
+   "A": 24.7,
+   "B": 27.7,
+   "C": 12.1,
+   "D": 30.4,
+   "E": 9.0,
+   "weakest": "E",
+   "second_weakest": "C",
+   "kappa50": 5.56,
+   "fail50": 5,
+   "kappa2nd50": 4.13,
+   "kappa40": 4.44,
+   "fail40": 5,
+   "kappa2nd40": 3.31,
+   "kappa30": 3.33,
+   "fail30": 4,
+   "kappa2nd30": 2.48
+  },
+  {
+   "lab": "Anthropic",
+   "A": 11.7,
+   "B": 10.3,
+   "C": 31.4,
+   "D": 9.8,
+   "E": 58.7,
+   "weakest": "D",
+   "second_weakest": "B",
+   "kappa50": 5.1,
+   "fail50": 4,
+   "kappa2nd50": 4.85,
+   "kappa40": 4.08,
+   "fail40": 4,
+   "kappa2nd40": 3.88,
+   "kappa30": 3.06,
+   "fail30": 3,
+   "kappa2nd30": 2.91
+  },
+  {
+   "lab": "DeepSeek",
+   "A": 3.5,
+   "B": 3.0,
+   "C": 0.2,
+   "D": 31.8,
+   "E": 4.0,
+   "weakest": "C",
+   "second_weakest": "B",
+   "kappa50": 250.0,
+   "fail50": 5,
+   "kappa2nd50": 16.51,
+   "kappa40": 200.0,
+   "fail40": 5,
+   "kappa2nd40": 13.21,
+   "kappa30": 150.0,
+   "fail30": 4,
+   "kappa2nd30": 9.91
+  },
+  {
+   "lab": "Meta",
+   "A": 0.5,
+   "B": 25.1,
+   "C": 1.4,
+   "D": 1.8,
+   "E": 4.0,
+   "weakest": "A",
+   "second_weakest": "C",
+   "kappa50": 100.0,
+   "fail50": 5,
+   "kappa2nd50": 35.71,
+   "kappa40": 80.0,
+   "fail40": 5,
+   "kappa2nd40": 28.57,
+   "kappa30": 60.0,
+   "fail30": 5,
+   "kappa2nd30": 21.43
+  }
+ ],
+ "mc": {
+  "sigmas": [
+   0.0,
+   0.05,
+   0.1,
+   0.15,
+   0.2,
+   0.25,
+   0.3,
+   0.35,
+   0.4,
+   0.45,
+   0.5,
+   0.55,
+   0.6,
+   0.65,
+   0.7,
+   0.75,
+   0.8,
+   0.85,
+   0.9,
+   0.95,
+   1.0
+  ],
+  "n": 100000,
+  "favourable_indep": {
+   "50": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    4e-05,
+    0.00017,
+    0.0005,
+    0.00097,
+    0.00171,
+    0.00252,
+    0.00336,
+    0.00441,
+    0.00527,
+    0.00662,
+    0.0077,
+    0.00818,
+    0.00914,
+    0.01037,
+    0.01135
+   ],
+   "40": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.00011,
+    0.00058,
+    0.00228,
+    0.00488,
+    0.00782,
+    0.01108,
+    0.01429,
+    0.01605,
+    0.01874,
+    0.02051,
+    0.02192,
+    0.02433,
+    0.02548,
+    0.02619,
+    0.02705,
+    0.02799,
+    0.02891
+   ],
+   "30": [
+    0.0,
+    0.0,
+    0.00052,
+    0.01052,
+    0.03103,
+    0.05239,
+    0.06863,
+    0.08227,
+    0.08906,
+    0.09104,
+    0.09463,
+    0.09338,
+    0.09281,
+    0.09177,
+    0.0893,
+    0.08859,
+    0.08659,
+    0.0846,
+    0.08421,
+    0.08061,
+    0.08011
+   ]
+  },
+  "favourable_corr": {
+   "50": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.00018,
+    0.00113,
+    0.00374,
+    0.00889,
+    0.01518,
+    0.02301,
+    0.02933,
+    0.038,
+    0.04671,
+    0.05508,
+    0.06242,
+    0.06812,
+    0.07688,
+    0.0847,
+    0.09313,
+    0.10099
+   ],
+   "40": [
+    0.0,
+    0.0,
+    0.0,
+    4e-05,
+    0.00103,
+    0.005,
+    0.01403,
+    0.0267,
+    0.0402,
+    0.05341,
+    0.06614,
+    0.07714,
+    0.09082,
+    0.10228,
+    0.11115,
+    0.12108,
+    0.12634,
+    0.13605,
+    0.1445,
+    0.15369,
+    0.16091
+   ],
+   "30": [
+    0.0,
+    0.0,
+    0.00178,
+    0.02199,
+    0.05881,
+    0.09733,
+    0.12687,
+    0.15086,
+    0.16963,
+    0.18562,
+    0.19756,
+    0.20681,
+    0.21776,
+    0.22727,
+    0.23407,
+    0.24181,
+    0.24604,
+    0.25259,
+    0.2596,
+    0.26584,
+    0.27126
+   ]
+  },
+  "primary_indep": {
+   "50": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1e-05,
+    7e-05,
+    0.00012,
+    0.00017,
+    0.00031,
+    0.00045,
+    0.0006,
+    0.0008,
+    0.00102,
+    0.00146,
+    0.00147
+   ],
+   "40": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    1e-05,
+    0.0,
+    0.00012,
+    0.00018,
+    0.00027,
+    0.00075,
+    0.00104,
+    0.00163,
+    0.00183,
+    0.00273,
+    0.00345,
+    0.00355,
+    0.00449,
+    0.00517,
+    0.00545
+   ],
+   "30": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    9e-05,
+    0.00054,
+    0.00165,
+    0.00366,
+    0.00507,
+    0.00742,
+    0.00919,
+    0.01062,
+    0.01292,
+    0.01401,
+    0.01612,
+    0.01659,
+    0.01815,
+    0.01898,
+    0.02047,
+    0.02193,
+    0.0221
+   ]
+  },
+  "at_sigma_035": {
+   "fav_indep": {
+    "50": 0.0002,
+    "40": 0.0049,
+    "30": 0.0823
+   },
+   "fav_corr": {
+    "50": 0.0037,
+    "40": 0.0267,
+    "30": 0.1509
+   },
+   "prim_indep": {
+    "50": 0.0,
+    "40": 0.0,
+    "30": 0.0037
+   }
+  },
+  "sigma_at_5pct": {
+   "fav_indep": {
+    "50": null,
+    "40": null,
+    "30": 0.25
+   },
+   "fav_corr": {
+    "50": 0.7,
+    "40": 0.45,
+    "30": 0.2
+   }
+  },
+  "factor95_at_035": 1.99
+ },
+ "price_ratio": {
+  "openrouter": 7.0,
+  "vercel": 8.4
+ },
+ "multihoming": {
+  "sum_brands": 76,
+  "any_use": 51,
+  "tools_per_user_lb": 1.49
+ },
+ "adoption_measures": [
+  [
+   "Organisations reporting any AI use, global survey (AI Index, 2025)",
+   88.0
+  ],
+  [
+   "US businesses paying for AI, card platform (Ramp, Oct 2026)",
+   56.8
+  ],
+  [
+   "Individuals, weekly use, six countries (Reuters Institute, 2026)",
+   51.0
+  ],
+  [
+   "Individuals, China (CNNIC, mid-2026)",
+   50.0
+  ],
+  [
+   "Workers, work-related use, US (Fed/RPS, Nov 2025)",
+   41.0
+  ],
+  [
+   "Individuals 16-74, last 3 months, EU (Eurostat, 2025)",
+   32.7
+  ],
+  [
+   "Internet users, Brazil (TIC Domicilios, 2025)",
+   32.0
+  ],
+  [
+   "EU enterprises using AI (Eurostat, 2025)",
+   20.0
+  ],
+  [
+   "World working-age population (Microsoft, Q2 2026)",
+   18.8
+  ],
+  [
+   "US firms using AI in production (Census BTOS, late 2023)",
+   3.8
+  ]
+ ],
+ "series": {
+  "vercel_tokens": [
+   [
+    "Dec 25",
+    7
+   ],
+   [
+    "Apr 26",
+    11
+   ],
+   [
+    "Jun 26",
+    29
+   ],
+   [
+    "Jul 26",
+    36
+   ],
+   [
+    "Aug 26",
+    56
+   ],
+   [
+    "Sep 26",
+    71.5
+   ]
+  ],
+  "vercel_spend": [
+   [
+    "Jun 26",
+    4
+   ],
+   [
+    "Jul 26",
+    8.6
+   ],
+   [
+    "Aug 26",
+    14
+   ],
+   [
+    "Sep 26",
+    23
+   ]
+  ],
+  "menlo": {
+   "Anthropic": [
+    [
+     2023,
+     12
+    ],
+    [
+     2025,
+     40
+    ],
+    [
+     2026,
+     55
+    ]
+   ],
+   "OpenAI": [
+    [
+     2023,
+     50
+    ],
+    [
+     2025,
+     27
+    ],
+    [
+     2026,
+     31
+    ]
+   ],
+   "Google": [
+    [
+     2025,
+     21
+    ],
+    [
+     2026,
+     9
+    ]
+   ]
+  }
+ },
+ "microsoft": [
+  [
+   "United Arab Emirates",
+   73.3,
+   "e"
+  ],
+  [
+   "Singapore",
+   64.3,
+   "e"
+  ],
+  [
+   "Ireland",
+   49.9,
+   "e"
+  ],
+  [
+   "France",
+   49.6,
+   "e"
+  ],
+  [
+   "United States",
+   33.0,
+   "e"
+  ],
+  [
+   "Global North",
+   28.8,
+   "a"
+  ],
+  [
+   "Japan",
+   24.7,
+   "e"
+  ],
+  [
+   "Brazil",
+   20.2,
+   "e"
+  ],
+  [
+   "World",
+   18.8,
+   "a"
+  ],
+  [
+   "India",
+   18.5,
+   "e"
+  ],
+  [
+   "China",
+   17.5,
+   "e"
+  ],
+  [
+   "Global South",
+   16.2,
+   "a"
+  ]
+ ],
+ "favourable_matrix": {
+  "OpenAI": {
+   "A": 79.4,
+   "B": 46.4,
+   "C": 29.0,
+   "D": 22.5,
+   "E": 56.0
+  },
+  "Google": {
+   "A": 24.7,
+   "B": 27.7,
+   "C": 12.1,
+   "D": 30.4,
+   "E": 9.0
+  },
+  "Anthropic": {
+   "A": 11.7,
+   "B": 10.3,
+   "C": 31.4,
+   "D": 9.8,
+   "E": 58.7
+  },
+  "DeepSeek": {
+   "A": 3.5,
+   "B": 3.0,
+   "C": 0.2,
+   "D": 31.8,
+   "E": 4.0
+  },
+  "Meta": {
+   "A": 0.5,
+   "B": 25.1,
+   "C": 1.4,
+   "D": 1.8,
+   "E": 4.0
+  }
+ },
+ "access": {
+  "microsoft": {
+   "China": 89,
+   "Belarus": 56,
+   "Cuba": 49,
+   "Russia": 43
+  },
+  "similarweb": {
+   "United States": 1.0,
+   "India": 1.1,
+   "Japan": 0.1,
+   "Brazil": 1.6,
+   "Indonesia": 2.2,
+   "United Kingdom": 1.0,
+   "South Korea": 0.4,
+   "Germany": 1.9,
+   "France": 0.9,
+   "Canada": 1.1,
+   "Vietnam": 2.6,
+   "Mexico": 2.6,
+   "China": 73.2,
+   "Philippines": 1.3,
+   "Spain": 1.7,
+   "Italy": 1.2,
+   "Australia": 0.8,
+   "Turkey": 1.0,
+   "Russia": 32.1
+  },
+  "restricted": [
+   "China",
+   "Russia"
+  ],
+  "south": [
+   "India",
+   "Brazil",
+   "Indonesia",
+   "Vietnam",
+   "Mexico",
+   "Philippines",
+   "Turkey"
+  ],
+  "north": [
+   "United States",
+   "Japan",
+   "United Kingdom",
+   "South Korea",
+   "Germany",
+   "France",
+   "Canada",
+   "Spain",
+   "Italy",
+   "Australia"
+  ],
+  "median_open": 1.1,
+  "max_open": 2.6,
+  "n_open": 17,
+  "median_south": 1.6,
+  "median_north": 1.0,
+  "leader_share_south": {
+   "India": 64.1,
+   "Brazil": 65.1,
+   "Indonesia": 49.4,
+   "Vietnam": 46.8,
+   "Mexico": 47.1,
+   "Philippines": 62.2,
+   "Turkey": 48.4
+  },
+  "min_chatgpt_south": 46.8,
+  "us_origin_south": {
+   "India": 98.9,
+   "Brazil": 98.4,
+   "Indonesia": 97.8,
+   "Vietnam": 97.4,
+   "Mexico": 97.4,
+   "Philippines": 98.7,
+   "Turkey": 99.0
+  }
+ },
+ "trackers": {
+  "ChatGPT": {
+   "similarweb": 56.6,
+   "statcounter": 79.4,
+   "ratio": 1.4
+  },
+  "Gemini": {
+   "similarweb": 24.7,
+   "statcounter": 10.9,
+   "ratio": 2.3
+  },
+  "Claude": {
+   "similarweb": 11.7,
+   "statcounter": 2.57,
+   "ratio": 4.6
+  },
+  "DeepSeek": {
+   "similarweb": 3.5,
+   "statcounter": 0.02,
+   "ratio": 175.0
+  },
+  "Perplexity": {
+   "similarweb": 0.8,
+   "statcounter": 4.31,
+   "ratio": 5.4
+  },
+  "Copilot": {
+   "similarweb": 0.7,
+   "statcounter": 2.79,
+   "ratio": 4.0
+  }
+ },
+ "china_apps": {
+  "bytedance": 54.3,
+  "open_weight_labs": 36.4
+ },
+ "vintage": {
+  "y2025": {
+   "tokens": 30,
+   "enterprise_usage": 13,
+   "consumer_web": 7
+  },
+  "y2026": {
+   "tokens": 72,
+   "enterprise_usage": 19,
+   "consumer_web": 4.2
+  }
+ },
+ "open_segment": {
+  "gateway_family": {
+   "leader": "DeepSeek",
+   "s1": 53.5,
+   "cr4": 83.1,
+   "hhi_lo": 3225,
+   "hhi_hi": 3226,
+   "residual": 3.64,
+   "china_origin": 89.6,
+   "us_origin": 6.5,
+   "eu_origin": 0.3
+  },
+  "downloads_family": {
+   "2026-09-17": {
+    "leader": "Qwen",
+    "s1": 55.8,
+    "cr4": 80.0,
+    "hhi_lo": 3366,
+    "hhi_hi": 3388,
+    "residual": 10.7,
+    "origin": {
+     "China": 66.1,
+     "US": 31.5,
+     "EU": 1.2,
+     "Korea": 0.5,
+     "unattributed": 0.7
+    }
+   },
+   "2026-11-04": {
+    "leader": "Qwen",
+    "s1": 50.9,
+    "cr4": 78.3,
+    "hhi_lo": 2929,
+    "hhi_hi": 2960,
+    "residual": 12.6,
+    "origin": {
+     "China": 64.1,
+     "US": 30.0,
+     "EU": 1.6,
+     "Korea": 0.5,
+     "unattributed": 3.9
+    }
+   }
+  },
+  "atom": {
+   "total_M": 2036.0,
+   "region_share": {
+    "China": 56.5,
+    "US": 35.5,
+    "EU": 8.0
+   },
+   "family_share": {
+    "Qwen": 46.3,
+    "Llama": 23.4,
+    "DeepSeek": 6.3,
+    "Mistral": 6.1
+   },
+   "qwen_over_llama": 1.98
+  },
+  "derivatives": {
+   "Qwen": 151448,
+   "Google": 82506,
+   "Meta": 58249,
+   "Llama": 32223
+  },
+  "gguf": {
+   "monthly_M": {
+    "Qwen": 39.6,
+    "Gemma": 20.8,
+    "Llama": 7.5
+   },
+   "qwen_share_of_three": 58.3
+  },
+  "seller": {
+   "third_party_T": 94.4,
+   "lab_served_T": 50.2,
+   "total_T": 144.6,
+   "family_sum_T": 145.9,
+   "family_implied_total_T": 151.6,
+   "lab_served_pct": 34.7,
+   "hhi_family": 3225,
+   "hhi_seller": 559,
+   "top_sellers": [
+    [
+     "Hunyuan (lab)",
+     12.9
+    ],
+    [
+     "Wafer",
+     8.2
+    ],
+    [
+     "DeepSeek (lab)",
+     7.9
+    ],
+    [
+     "DeepInfra",
+     7.7
+    ],
+    [
+     "Together",
+     7.2
+    ],
+    [
+     "Relace",
+     5.6
+    ]
+   ],
+   "largest_seller": 12.9,
+   "deepseek_lab_share_of_all": 7.9,
+   "hq_all_tokens": {
+    "US": 57.6,
+    "China": 31.8,
+    "n/l": 7.7,
+    "Singapore": 1.4,
+    "Other": 0.6,
+    "EU": 0.3
+   },
+   "third_party_hq": {
+    "US": 80.6,
+    "n/l": 11.8,
+    "China": 3.4,
+    "Singapore": 2.2,
+    "Netherlands": 0.3,
+    "France": 0.3,
+    "Indonesia": 0.3,
+    "Sweden": 0.3
+   },
+   "third_party_us": 80.6,
+   "third_party_china": 3.4,
+   "third_party_china_incl_affiliates": 7.1,
+   "lab_served_by_family": {
+    "Hunyuan": 99,
+    "Nemotron": 89,
+    "MiniMax": 82,
+    "MiMo": 70,
+    "Qwen": 51,
+    "Kimi": 48,
+    "Mistral": 34,
+    "DeepSeek": 14,
+    "GLM": 8,
+    "Gemma": 0,
+    "gpt-oss": 0,
+    "Llama": 0
+   },
+   "china_family_T": 135.7,
+   "china_family_lab_served_pct": 31.5,
+   "china_family_sold_by_us_hosts_min_pct": 54.0
+  },
+  "concordance": {
+   "families": [
+    "Qwen",
+    "DeepSeek",
+    "Llama",
+    "GLM",
+    "Nemotron",
+    "Gemma"
+   ],
+   "layers": [
+    "Hub downloads",
+    "Gateway tokens",
+    "Enterprise production"
+   ],
+   "W": 0.141,
+   "p_perm": 0.8714,
+   "spearman": {
+    "Hub downloads ~ Gateway tokens": {
+     "rho": 0.2,
+     "p": 0.704
+    },
+    "Hub downloads ~ Enterprise production": {
+     "rho": -0.46,
+     "p": 0.354
+    },
+    "Gateway tokens ~ Enterprise production": {
+     "rho": -0.61,
+     "p": 0.2
+    }
+   },
+   "ranks": {
+    "Hub downloads": {
+     "Qwen": 1.0,
+     "DeepSeek": 2.0,
+     "Llama": 3.0,
+     "GLM": 4.0,
+     "Nemotron": 5.0,
+     "Gemma": 6.0
+    },
+    "Gateway tokens": {
+     "Qwen": 4.0,
+     "DeepSeek": 1.0,
+     "Llama": 6.0,
+     "GLM": 2.0,
+     "Nemotron": 3.0,
+     "Gemma": 5.0
+    },
+    "Enterprise production": {
+     "Qwen": 5.0,
+     "DeepSeek": 3.5,
+     "Llama": 2.0,
+     "GLM": 6.0,
+     "Nemotron": 3.5,
+     "Gemma": 1.0
+    }
+   },
+   "leaders": {
+    "Hub downloads": "Qwen",
+    "Gateway tokens": "DeepSeek",
+    "Enterprise production": "Gemma"
+   }
+  },
+  "kappa": {
+   "Qwen": {
+    "min_share": 1.5,
+    "max_share": 50.9,
+    "kappa": 33.3
+   },
+   "DeepSeek": {
+    "min_share": 6.7,
+    "max_share": 53.5,
+    "kappa": 7.5
+   },
+   "Llama": {
+    "min_share": 0.06,
+    "max_share": 5.3,
+    "kappa": 833.3
+   },
+   "GLM": {
+    "min_share": 3.4,
+    "max_share": 11.8,
+    "kappa": 14.7
+   },
+   "Nemotron": {
+    "min_share": 3.2,
+    "max_share": 5.4,
+    "kappa": 15.6
+   },
+   "Gemma": {
+    "min_share": 0.6,
+    "max_share": 2.5,
+    "kappa": 83.3
+   }
+  },
+  "matrix": {
+   "downloads": {
+    "Qwen": 50.9,
+    "GPT/OPT": 15.4,
+    "DeepSeek": 6.7,
+    "Llama": 5.3,
+    "GLM": 3.4,
+    "Nemotron": 3.2,
+    "Gemma": 2.5
+   },
+   "gateway": {
+    "DeepSeek": 53.5,
+    "Hunyuan": 12.4,
+    "GLM": 11.8,
+    "Nemotron": 5.4,
+    "Kimi": 4.3,
+    "MiniMax": 3.8,
+    "MiMo": 2.3,
+    "Qwen": 1.5,
+    "Gemma": 0.6,
+    "gpt-oss": 0.4,
+    "Mistral": 0.3,
+    "Llama": 0.06
+   },
+   "enterprise": {
+    "Gemma": 55,
+    "Phi": 39,
+    "Llama": 35,
+    "DeepSeek": 25,
+    "Nemotron": 25,
+    "Mistral": 24,
+    "Qwen": 10,
+    "Kimi": 6,
+    "GLM": 1
+   },
+   "derivatives_k": {
+    "Qwen": 151.4,
+    "Google": 82.5,
+    "Meta": 58.2,
+    "Llama": 32.2
+   },
+   "gguf": {
+    "Qwen": 39.6,
+    "Gemma": 20.8,
+    "Llama": 7.5
+   }
+  },
+  "lag_months": [
+   [
+    "Epoch Capabilities Index, Jan 2023 - Oct 2025",
+    3,
+    3,
+    "epoch"
+   ],
+   [
+    "Epoch Capabilities Index, since Jan 2026",
+    4,
+    4,
+    "epoch"
+   ],
+   [
+    "Public benchmarks (17 selected, by type)",
+    4,
+    6,
+    "epoch"
+   ],
+   [
+    "Cyber capabilities index",
+    6,
+    7,
+    "epoch"
+   ],
+   [
+    "Furniture-assembly benchmark (visual, spatial)",
+    7,
+    7,
+    "epoch"
+   ],
+   [
+    "Private benchmarks (17 selected, by type)",
+    8,
+    10,
+    "epoch"
+   ],
+   [
+    "Training compute (2024 estimate, 90% CI 6-22)",
+    15,
+    15,
+    "epoch2024"
+   ],
+   [
+    "Benchmark performance (2024 estimate, 90% CI)",
+    5,
+    22,
+    "epoch2024"
+   ]
+  ],
+  "aa_index": [
+   {
+    "date": "Apr 2025",
+    "closed": 35,
+    "open": 22,
+    "closed_model": "Claude 3.7 Sonnet",
+    "open_model": "DeepSeek V3",
+    "gap": 13
+   },
+   {
+    "date": "Apr 2026",
+    "closed": 60,
+    "open": 54,
+    "closed_model": "GPT-5.5",
+    "open_model": "Kimi K2.6, MiMo V2.5 Pro",
+    "gap": 6
+   },
+   {
+    "date": "Oct 2026 (v5.0)",
+    "closed": 58,
+    "open": 32,
+    "closed_model": "Claude Opus 5.5",
+    "open_model": "DeepSeek V4.1 Flash, GLM-5.3",
+    "unreleased": 46,
+    "unreleased_model": "Kimi K3.1 Pro",
+    "gap": 26
+   }
+  ],
+  "aa_price_frontier": {
+   "open_on_frontier": 9,
+   "frontier_n": 13
+  },
+  "share_above_70B": [
+   [
+    "MiniMax",
+    100,
+    "China"
+   ],
+   [
+    "Moonshot",
+    88,
+    "China"
+   ],
+   [
+    "DeepSeek",
+    55,
+    "China"
+   ],
+   [
+    "Z.ai",
+    39,
+    "China"
+   ],
+   [
+    "NVIDIA",
+    14,
+    "US"
+   ],
+   [
+    "Meta",
+    9,
+    "US"
+   ],
+   [
+    "Google",
+    0,
+    "US"
+   ],
+   [
+    "Microsoft",
+    0,
+    "US"
+   ],
+   [
+    "IBM",
+    0,
+    "US"
+   ]
+  ],
+  "above_70B_all": 3.0,
+  "licences_above_20B": {
+   "China": {
+    "n": 178,
+    "permissive": 81,
+    "apache": 59,
+    "mit": 22,
+    "other": 19
+   },
+   "US": {
+    "permissive": 29,
+    "custom": 41,
+    "none_declared": 30
+   }
+  },
+  "hub": {
+   "models_M": 2.96,
+   "pct_models_under_200_dl": 85.6,
+   "pct_repos_for_99_2_dl": 1.5,
+   "top25_from_2022": 13,
+   "top25_from_2026": 0,
+   "top25_overlap_likes": 1,
+   "qwen_2026_M": 2045,
+   "moonshot_2026_M": 37,
+   "qwen_over_moonshot": 55
+  }
+ },
+ "rev6": {
+  "markets": {
+   "Consumer assistants outside China": {
+    "readings": [
+     [
+      "Similarweb web visits, Oct 2026",
+      "OpenAI",
+      56.6
+     ],
+     [
+      "StatCounter page views, Oct 2026",
+      "OpenAI",
+      51.58
+     ],
+     [
+      "StatCounter page views, Aug 2026",
+      "OpenAI",
+      79.4
+     ],
+     [
+      "Sensor Tower app and web audience, May 2026",
+      "OpenAI",
+      46.4
+     ]
+    ],
+    "n": 4,
+    "distinct_leaders": [
+     "OpenAI"
+    ],
+    "n_ge50": 3,
+    "n_ge40": 4,
+    "min": 46.4,
+    "max": 79.4,
+    "same_leader_ge50": 3
+   },
+   "Enterprise model spend": {
+    "readings": [
+     [
+      "Menlo survey, US, 2026",
+      "Anthropic",
+      55.0
+     ],
+     [
+      "Ramp transactions, US, Oct 2026",
+      "Anthropic",
+      49.3
+     ],
+     [
+      "Ramp transactions, US, week to 15 Nov 2026",
+      "Anthropic",
+      58.7
+     ],
+     [
+      "Moss card spend, Europe, Jan 2024-May 2026",
+      "Anthropic",
+      52.8
+     ],
+     [
+      "a16z survey, Global 2000 CIOs, Jan 2026",
+      "OpenAI",
+      56.0
+     ]
+    ],
+    "n": 5,
+    "distinct_leaders": [
+     "Anthropic",
+     "OpenAI"
+    ],
+    "n_ge50": 4,
+    "n_ge40": 5,
+    "min": 49.3,
+    "max": 58.7,
+    "same_leader_ge50": 3
+   },
+   "Developer inference through gateways": {
+    "readings": [
+     [
+      "OpenRouter requests by model author, Nov 2026",
+      "DeepSeek",
+      31.8
+     ],
+     [
+      "OpenRouter paid tokens by author, Oct 2026",
+      "Google",
+      30.39
+     ],
+     [
+      "Requests by seller (reconstructed), Nov 2026",
+      "OpenAI",
+      19.0
+     ]
+    ],
+    "n": 3,
+    "distinct_leaders": [
+     "DeepSeek",
+     "Google",
+     "OpenAI"
+    ],
+    "n_ge50": 0,
+    "n_ge40": 0,
+    "min": 19.0,
+    "max": 31.8,
+    "same_leader_ge50": 0
+   },
+   "Consumer AI apps in China": {
+    "readings": [
+     [
+      "QuestMobile top five, Sep 2026",
+      "ByteDance",
+      54.3
+     ],
+     [
+      "AICPB five largest Chinese assistants by firm, Jun 2026",
+      "Alibaba",
+      42.0
+     ],
+     [
+      "AICPB excluding Quark, Jun 2026",
+      "ByteDance",
+      39.6
+     ]
+    ],
+    "n": 3,
+    "distinct_leaders": [
+     "Alibaba",
+     "ByteDance"
+    ],
+    "n_ge50": 1,
+    "n_ge40": 2,
+    "min": 39.6,
+    "max": 54.3,
+    "same_leader_ge50": 1
+   }
+  },
+  "aicpb": {
+   "doubao_of_five": 33.2,
+   "alibaba_of_five": 42.0,
+   "doubao_ex_quark": 39.6
+  },
+  "statcounter_regions": {
+   "Worldwide (Oct)": {
+    "leader": "ChatGPT",
+    "s1": 51.58,
+    "hhi": 3730,
+    "shares": {
+     "ChatGPT": 51.58,
+     "Gemini": 28.86,
+     "Perplexity": 15.04,
+     "Claude": 2.3,
+     "Copilot": 2.18,
+     "DeepSeek": 0.05
+    }
+   },
+   "Africa (Oct)": {
+    "leader": "ChatGPT",
+    "s1": 45.93,
+    "hhi": 3730,
+    "shares": {
+     "ChatGPT": 45.93,
+     "Gemini": 38.97,
+     "Perplexity": 9.23,
+     "Copilot": 3.08,
+     "Claude": 2.71,
+     "DeepSeek": 0.07
+    }
+   },
+   "Asia (Oct)": {
+    "leader": "ChatGPT",
+    "s1": 55.8,
+    "hhi": 4015,
+    "shares": {
+     "ChatGPT": 55.8,
+     "Gemini": 24.64,
+     "Perplexity": 17.04,
+     "Claude": 1.7,
+     "Copilot": 0.77,
+     "DeepSeek": 0.04
+    }
+   },
+   "Europe (Oct)": {
+    "leader": "ChatGPT",
+    "s1": 43.38,
+    "hhi": 3512,
+    "shares": {
+     "ChatGPT": 43.38,
+     "Gemini": 38.64,
+     "Perplexity": 10.38,
+     "Copilot": 4.11,
+     "Claude": 3.48,
+     "DeepSeek": 0.01
+    }
+   },
+   "North America (Sep)": {
+    "leader": "ChatGPT",
+    "s1": 74.24,
+    "hhi": 5778,
+    "shares": {
+     "ChatGPT": 74.24,
+     "Gemini": 14.64,
+     "Copilot": 6.27,
+     "Perplexity": 3.1,
+     "Claude": 1.69,
+     "DeepSeek": 0.07
+    }
+   },
+   "South America (Oct)": {
+    "leader": "Gemini",
+    "s1": 49.26,
+    "hhi": 3887,
+    "shares": {
+     "Gemini": 49.26,
+     "ChatGPT": 37.05,
+     "Perplexity": 8.63,
+     "Claude": 2.85,
+     "Copilot": 2.2,
+     "DeepSeek": 0.01
+    }
+   },
+   "Oceania (Jul)": {
+    "leader": "ChatGPT",
+    "s1": 70.2,
+    "hhi": 5168,
+    "shares": {
+     "ChatGPT": 70.2,
+     "Copilot": 9.57,
+     "Gemini": 9.57,
+     "Perplexity": 5.42,
+     "Claude": 5.24,
+     "DeepSeek": 0.01
+    }
+   }
+  },
+  "statcounter_summary": {
+   "regions": 6,
+   "chatgpt_leads": 5,
+   "leader_ge50": 3,
+   "world_aug": 79.4,
+   "world_oct": 51.58
+  },
+  "panel": {
+   "months": [
+    "2025-10",
+    "2025-11",
+    "2025-12",
+    "2026-01",
+    "2026-02",
+    "2026-03",
+    "2026-04",
+    "2026-05",
+    "2026-06",
+    "2026-07",
+    "2026-08",
+    "2026-09",
+    "2026-10"
+   ],
+   "web": {
+    "leaders": [
+     "OpenAI",
+     "OpenAI",
+     "OpenAI",
+     "OpenAI",
+     "OpenAI",
+     "OpenAI",
+     "OpenAI",
+     "OpenAI",
+     "OpenAI",
+     "OpenAI",
+     "OpenAI",
+     "OpenAI",
+     "OpenAI"
+    ],
+    "leader_share": [
+     75.05,
+     70.91,
+     66.54,
+     64.77,
+     62.78,
+     55.98,
+     54.02,
+     53.07,
+     53.06,
+     54.23,
+     55.89,
+     56.77,
+     56.23
+    ],
+    "distinct_leaders": 1,
+    "months_led": {
+     "OpenAI": 13
+    },
+    "leader_changes": 0,
+    "months_ge50": 13,
+    "months_ge40": 13,
+    "longest_spell_ge50": 13,
+    "same_firm_ge50_all": true,
+    "instability_mean": 2.94,
+    "instability_max": 6.96,
+    "hhi": [
+     5870,
+     5331,
+     4891,
+     4766,
+     4582,
+     3844,
+     3755,
+     3698,
+     3731,
+     3777,
+     3906,
+     3981,
+     3921
+    ]
+   },
+   "dev": {
+    "leaders": [
+     "Qwen",
+     "Qwen",
+     "Google",
+     "Google",
+     "Google",
+     "Google",
+     "Google",
+     "Google",
+     "Xiaomi",
+     "Xiaomi",
+     "Xiaomi",
+     "Xiaomi",
+     "Google"
+    ],
+    "leader_share": [
+     42.55,
+     39.36,
+     25.2,
+     33.1,
+     25.15,
+     20.94,
+     22.09,
+     26.65,
+     41.0,
+     70.34,
+     63.08,
+     42.59,
+     30.39
+    ],
+    "distinct_leaders": 3,
+    "months_led": {
+     "Qwen": 2,
+     "Google": 7,
+     "Xiaomi": 4
+    },
+    "leader_changes": 3,
+    "months_ge50": 2,
+    "months_ge40": 5,
+    "longest_spell_ge50": 2,
+    "same_firm_ge50_all": false,
+    "instability_mean": 19.37,
+    "instability_max": 39.84,
+    "hhi": [
+     2505,
+     2342,
+     1718,
+     1775,
+     1563,
+     1411,
+     1480,
+     1717,
+     2285,
+     5105,
+     4268,
+     2557,
+     1739
+    ]
+   },
+   "web_series": {
+    "OpenAI": [
+     75.05,
+     70.91,
+     66.54,
+     64.77,
+     62.78,
+     55.98,
+     54.02,
+     53.07,
+     53.06,
+     54.23,
+     55.89,
+     56.77,
+     56.23
+    ],
+    "Google": [
+     14.4,
+     16.46,
+     20.79,
+     23.34,
+     24.68,
+     25.33,
+     27.1,
+     27.66,
+     28.25,
+     26.73,
+     25.96,
+     25.43,
+     24.65
+    ],
+    "Anthropic": [
+     2.4,
+     2.62,
+     2.85,
+     3.01,
+     4.21,
+     6.55,
+     8.75,
+     9.59,
+     9.79,
+     10.1,
+     9.41,
+     9.71,
+     11.65
+    ],
+    "DeepSeek": [
+     4.15,
+     4.43,
+     4.26,
+     3.59,
+     3.27,
+     3.56,
+     3.95,
+     4.19,
+     3.92,
+     3.76,
+     3.71,
+     3.52,
+     3.31
+    ],
+    "xAI": [
+     0.01,
+     0.14,
+     0.04,
+     0.07,
+     0.07,
+     3.21,
+     2.73,
+     2.33,
+     2.09,
+     2.09,
+     2.08,
+     1.97,
+     1.89
+    ],
+    "Perplexity": [
+     2.66,
+     2.28,
+     2.15,
+     1.91,
+     1.79,
+     1.63,
+     1.52,
+     1.32,
+     1.14,
+     1.03,
+     0.94,
+     0.88,
+     0.82
+    ],
+    "Meta": [
+     0.28,
+     0.24,
+     0.26,
+     0.26,
+     0.23,
+     0.23,
+     0.3,
+     0.33,
+     0.3,
+     0.41,
+     0.56,
+     0.5,
+     0.5
+    ],
+    "Qwen": [
+     0.4,
+     0.49,
+     0.41,
+     0.38,
+     0.41,
+     0.53,
+     0.4,
+     0.39,
+     0.34,
+     0.36,
+     0.35,
+     0.33,
+     0.31
+    ]
+   },
+   "dev_series": {
+    "Google": [
+     14.24,
+     16.7,
+     25.2,
+     33.1,
+     25.15,
+     20.94,
+     22.09,
+     26.65,
+     15.09,
+     8.97,
+     13.29,
+     19.88,
+     30.39
+    ],
+    "OpenAI": [
+     9.3,
+     12.21,
+     12.99,
+     12.47,
+     13.98,
+     13.73,
+     16.75,
+     18.54,
+     11.52,
+     7.36,
+     9.12,
+     16.74,
+     22.46
+    ],
+    "Anthropic": [
+     16.34,
+     15.3,
+     19.32,
+     19.69,
+     18.08,
+     17.9,
+     19.87,
+     21.16,
+     12.94,
+     2.69,
+     2.68,
+     1.96,
+     9.8
+    ],
+    "Qwen": [
+     42.55,
+     39.36,
+     21.44,
+     4.31,
+     3.64,
+     4.3,
+     5.22,
+     7.05,
+     5.33,
+     3.43,
+     3.03,
+     6.13,
+     10.11
+    ],
+    "Xiaomi": [
+     0,
+     0,
+     0.0,
+     0.18,
+     0.65,
+     14.4,
+     6.79,
+     2.8,
+     41.0,
+     70.34,
+     63.08,
+     42.59,
+     8.12
+    ],
+    "DeepSeek": [
+     0.11,
+     0.08,
+     3.89,
+     8.72,
+     9.4,
+     8.41,
+     8.75,
+     9.25,
+     5.89,
+     0.83,
+     2.8,
+     4.62,
+     5.8
+    ],
+    "Moonshot": [
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0.71,
+     0.44,
+     1.3,
+     1.25,
+     2.26
+    ],
+    "Zhipu": [
+     11.72,
+     11.41,
+     8.04,
+     5.99,
+     0,
+     0,
+     0,
+     0,
+     0.93,
+     0.93,
+     1.02,
+     1.11,
+     2.06
+    ],
+    "Meta": [
+     1.01,
+     0.72,
+     0.96,
+     1.23,
+     1.33,
+     1.16,
+     0.99,
+     1.36,
+     1.06,
+     0.71,
+     0.79,
+     1.28,
+     1.8
+    ],
+    "MiniMax": [
+     0,
+     0,
+     0.51,
+     1.98,
+     17.44,
+     12.87,
+     12.88,
+     8.36,
+     3.26,
+     1.0,
+     1.03,
+     0.81,
+     0.77
+    ]
+   },
+   "origin": {
+    "web_US": [
+     94.8,
+     92.69,
+     92.67,
+     93.38,
+     93.78,
+     92.98,
+     94.44,
+     94.31,
+     94.73,
+     94.78,
+     94.84,
+     95.26,
+     95.73
+    ],
+    "dev_US": [
+     45.6,
+     48.93,
+     65.22,
+     76.89,
+     67.12,
+     58.86,
+     64.93,
+     70.56,
+     41.69,
+     21.05,
+     26.6,
+     40.49,
+     65.3
+    ],
+    "dev_CN": [
+     54.39,
+     50.86,
+     33.89,
+     21.23,
+     31.17,
+     40.01,
+     33.65,
+     27.47,
+     57.14,
+     76.99,
+     72.26,
+     56.52,
+     29.15
+    ]
+   },
+   "openai_web_change": -18.82,
+   "openai_web_min": 53.06,
+   "openai_web_slope_first8": -2.92,
+   "openai_web_slope_last5": 0.89,
+   "dev_origin_majority_flips": 3,
+   "dev_china_ge50": 6,
+   "dev_us_ge50": 7
+  },
+  "blocs": {
+   "S0 no bloc": {
+    "primary": {
+     "best": "OpenAI",
+     "kappa50": 2.63,
+     "kappa40": 2.11,
+     "kappa30": 1.58,
+     "row": {
+      "shares": {
+       "A": 56.2,
+       "B": 20.9,
+       "C": 29.0,
+       "D": 19.0,
+       "E": 31.0
+      },
+      "weakest": "D",
+      "min": 19.0,
+      "kappa50": 2.63,
+      "kappa40": 2.11,
+      "kappa30": 1.58,
+      "fail50": 4,
+      "fail40": 4,
+      "fail30": 3
+     }
+    },
+    "favourable": {
+     "best": "OpenAI",
+     "kappa50": 2.23,
+     "kappa40": 1.78,
+     "kappa30": 1.34,
+     "row": {
+      "shares": {
+       "A": 79.4,
+       "B": 46.4,
+       "C": 29.0,
+       "D": 22.5,
+       "E": 56.0
+      },
+      "weakest": "D",
+      "min": 22.5,
+      "kappa50": 2.23,
+      "kappa40": 1.78,
+      "kappa30": 1.34,
+      "fail50": 3,
+      "fail40": 2,
+      "fail30": 2
+     }
+    },
+    "mc_primary": {
+     "50": 0.0,
+     "40": 0.0,
+     "30": 0.0035
+    },
+    "mc_fav_indep": {
+     "50": 0.0002,
+     "40": 0.0047,
+     "30": 0.0813
+    },
+    "mc_fav_corr": {
+     "50": 0.0041,
+     "40": 0.0262,
+     "30": 0.1497
+    }
+   },
+   "S1 OpenAI+Microsoft": {
+    "primary": {
+     "best": "OpenAI+Microsoft",
+     "kappa50": 2.43,
+     "kappa40": 1.94,
+     "kappa30": 1.46,
+     "row": {
+      "shares": {
+       "A": 56.9,
+       "B": 29.8,
+       "C": 36.2,
+       "D": 20.6,
+       "E": 31.0
+      },
+      "weakest": "D",
+      "min": 20.6,
+      "kappa50": 2.43,
+      "kappa40": 1.94,
+      "kappa30": 1.46,
+      "fail50": 4,
+      "fail40": 4,
+      "fail30": 2
+     }
+    },
+    "favourable": {
+     "best": "OpenAI+Microsoft",
+     "kappa50": 2.08,
+     "kappa40": 1.66,
+     "kappa30": 1.25,
+     "row": {
+      "shares": {
+       "A": 82.2,
+       "B": 46.4,
+       "C": 36.2,
+       "D": 24.1,
+       "E": 56.0
+      },
+      "weakest": "D",
+      "min": 24.1,
+      "kappa50": 2.08,
+      "kappa40": 1.66,
+      "kappa30": 1.25,
+      "fail50": 3,
+      "fail40": 2,
+      "fail30": 1
+     }
+    },
+    "mc_primary": {
+     "50": 0.0,
+     "40": 0.0005,
+     "30": 0.0254
+    },
+    "mc_fav_indep": {
+     "50": 0.0007,
+     "40": 0.0154,
+     "30": 0.1592
+    },
+    "mc_fav_corr": {
+     "50": 0.0101,
+     "40": 0.0531,
+     "30": 0.2329
+    }
+   },
+   "S2 Google+Anthropic": {
+    "primary": {
+     "best": "Google+Anthropic",
+     "kappa50": 2.34,
+     "kappa40": 1.87,
+     "kappa30": 1.4,
+     "row": {
+      "shares": {
+       "A": 36.3,
+       "B": 23.7,
+       "C": 43.5,
+       "D": 21.4,
+       "E": 64.0
+      },
+      "weakest": "D",
+      "min": 21.4,
+      "kappa50": 2.34,
+      "kappa40": 1.87,
+      "kappa30": 1.4,
+      "fail50": 4,
+      "fail40": 3,
+      "fail30": 2
+     }
+    },
+    "favourable": {
+     "best": "Google+Anthropic",
+     "kappa50": 1.37,
+     "kappa40": 1.1,
+     "kappa30": 0.82,
+     "row": {
+      "shares": {
+       "A": 36.4,
+       "B": 38.0,
+       "C": 43.5,
+       "D": 40.2,
+       "E": 64.0
+      },
+      "weakest": "A",
+      "min": 36.4,
+      "kappa50": 1.37,
+      "kappa40": 1.1,
+      "kappa30": 0.82,
+      "fail50": 4,
+      "fail40": 2,
+      "fail30": 0
+     }
+    },
+    "mc_primary": {
+     "50": 0.0,
+     "40": 0.0006,
+     "30": 0.0282
+    },
+    "mc_fav_indep": {
+     "50": 0.0026,
+     "40": 0.0517,
+     "30": 0.4113
+    },
+    "mc_fav_corr": {
+     "50": 0.0507,
+     "40": 0.1991,
+     "30": 0.5864
+    }
+   },
+   "S3 both blocs": {
+    "primary": {
+     "best": "Google+Anthropic",
+     "kappa50": 2.34,
+     "kappa40": 1.87,
+     "kappa30": 1.4,
+     "row": {
+      "shares": {
+       "A": 36.3,
+       "B": 23.7,
+       "C": 43.5,
+       "D": 21.4,
+       "E": 64.0
+      },
+      "weakest": "D",
+      "min": 21.4,
+      "kappa50": 2.34,
+      "kappa40": 1.87,
+      "kappa30": 1.4,
+      "fail50": 4,
+      "fail40": 3,
+      "fail30": 2
+     }
+    },
+    "favourable": {
+     "best": "Google+Anthropic",
+     "kappa50": 1.37,
+     "kappa40": 1.1,
+     "kappa30": 0.82,
+     "row": {
+      "shares": {
+       "A": 36.4,
+       "B": 38.0,
+       "C": 43.5,
+       "D": 40.2,
+       "E": 64.0
+      },
+      "weakest": "A",
+      "min": 36.4,
+      "kappa50": 1.37,
+      "kappa40": 1.1,
+      "kappa30": 0.82,
+      "fail50": 4,
+      "fail40": 2,
+      "fail30": 0
+     }
+    },
+    "mc_primary": {
+     "50": 0.0,
+     "40": 0.001,
+     "30": 0.0503
+    },
+    "mc_fav_indep": {
+     "50": 0.0032,
+     "40": 0.0618,
+     "30": 0.462
+    },
+    "mc_fav_corr": {
+     "50": 0.0565,
+     "40": 0.2207,
+     "30": 0.6261
+    }
+   }
+  },
+  "mhhi": {
+   "A": {
+    "hhi_lo": 3968,
+    "silent_delta": 49,
+    "merger_delta": 657,
+    "hhi_silent": 4017,
+    "hhi_merger": 4625
+   },
+   "B": {
+    "hhi_lo": 1627,
+    "silent_delta": 0,
+    "merger_delta": 0,
+    "hhi_silent": 1627,
+    "hhi_merger": 1627
+   },
+   "C": {
+    "hhi_lo": 2075,
+    "silent_delta": 102,
+    "merger_delta": 1177,
+    "hhi_silent": 2177,
+    "hhi_merger": 3252
+   },
+   "D": {
+    "hhi_lo": 1742,
+    "silent_delta": 13,
+    "merger_delta": 190,
+    "hhi_silent": 1755,
+    "hhi_merger": 1932
+   },
+   "E": {
+    "hhi_lo": 4067,
+    "silent_delta": 68,
+    "merger_delta": 990,
+    "hhi_silent": 4135,
+    "hhi_merger": 5057
+   },
+   "D'": {
+    "hhi_lo": 1739,
+    "silent_delta": 41,
+    "merger_delta": 596,
+    "hhi_silent": 1780,
+    "hhi_merger": 2335
+   },
+   "E'": {
+    "hhi_lo": 4564,
+    "silent_delta": 11,
+    "merger_delta": 168,
+    "hhi_silent": 4575,
+    "hhi_merger": 4732
+   },
+   "F": {
+    "hhi_lo": 3026,
+    "silent_delta": 39,
+    "merger_delta": 571,
+    "hhi_silent": 3065,
+    "hhi_merger": 3597
+   },
+   "G": {
+    "hhi_lo": 3663,
+    "silent_delta": 0,
+    "merger_delta": 0,
+    "hhi_silent": 3663,
+    "hhi_merger": 3663
+   }
+  },
+  "d_by_seller": {
+   "shares": {
+    "OpenAI": 19.0,
+    "Google": 15.1,
+    "Anthropic": 6.3,
+    "DeepSeek": 4.5,
+    "Alibaba": 3.2,
+    "Mistral": 2.6,
+    "Tencent": 2.3,
+    "NVIDIA": 1.6,
+    "Zai": 0.6
+   },
+   "leader": "OpenAI",
+   "leaders": {
+    "A web visits": "OpenAI",
+    "B MAU": "Meta",
+    "C revenue": "Anthropic",
+    "D gateway req.": "OpenAI",
+    "E enterprise": "Anthropic"
+   },
+   "distinct_leaders": 3,
+   "W": 0.525,
+   "p_perm": 0.0103,
+   "openai_kappa50": 2.63
+  },
+  "common_denominator": {
+   "matrix": {
+    "A web visits": {
+     "OpenAI": 58.2,
+     "Google": 25.5,
+     "Anthropic": 12.1,
+     "DeepSeek": 3.4,
+     "Meta": 0.5,
+     "Alibaba": 0.3
+    },
+    "B MAU": {
+     "OpenAI": 26.3,
+     "Google": 26.3,
+     "Anthropic": 3.5,
+     "DeepSeek": 3.8,
+     "Meta": 31.6,
+     "Alibaba": 8.4
+    },
+    "C revenue": {
+     "OpenAI": 37.7,
+     "Google": 15.7,
+     "Anthropic": 40.8,
+     "DeepSeek": 0.3,
+     "Meta": 1.8,
+     "Alibaba": 3.8
+    },
+    "D gateway req.": {
+     "OpenAI": 24.0,
+     "Google": 19.1,
+     "Anthropic": 8.0,
+     "DeepSeek": 40.2,
+     "Meta": 1.0,
+     "Alibaba": 7.8
+    },
+    "E enterprise": {
+     "OpenAI": 31.3,
+     "Google": 9.1,
+     "Anthropic": 55.6,
+     "DeepSeek": 1.3,
+     "Meta": 1.3,
+     "Alibaba": 1.3
+    }
+   },
+   "rows": {
+    "OpenAI": {
+     "min": 24.0,
+     "kappa50": 2.08,
+     "ge50": 1
+    },
+    "Google": {
+     "min": 9.1,
+     "kappa50": 5.5,
+     "ge50": 0
+    },
+    "Anthropic": {
+     "min": 3.5,
+     "kappa50": 14.18,
+     "ge50": 1
+    },
+    "DeepSeek": {
+     "min": 0.3,
+     "kappa50": 192.5,
+     "ge50": 0
+    },
+    "Meta": {
+     "min": 0.5,
+     "kappa50": 96.65,
+     "ge50": 0
+    },
+    "Alibaba": {
+     "min": 0.3,
+     "kappa50": 155.89,
+     "ge50": 0
+    }
+   },
+   "leaders": {
+    "A web visits": "OpenAI",
+    "B MAU": "Meta",
+    "C revenue": "Anthropic",
+    "D gateway req.": "DeepSeek",
+    "E enterprise": "Anthropic"
+   },
+   "best": "OpenAI"
+  },
+  "error_rates": {
+   "sigmas": [
+    0.2,
+    0.35,
+    0.5,
+    0.7
+   ],
+   "size_rule_kstar2": [
+    0.0013,
+    0.1136,
+    0.351,
+    0.5844
+   ],
+   "kstar_for_5pct": [
+    1.59,
+    2.25,
+    3.19,
+    5.07
+   ],
+   "p_primary": {
+    "50": [
+     0.0,
+     0.0142,
+     0.1256,
+     0.3532
+    ],
+    "40": [
+     0.0005,
+     0.0808,
+     0.2978,
+     0.5398
+    ],
+    "30": [
+     0.0547,
+     0.3961,
+     0.6304,
+     0.7736
+    ]
+   },
+   "p_favourable": {
+    "50": [
+     0.0002,
+     0.0543,
+     0.2453,
+     0.4914
+    ],
+    "40": [
+     0.0097,
+     0.2245,
+     0.4847,
+     0.6821
+    ],
+    "30": [
+     0.3188,
+     0.6806,
+     0.8083,
+     0.8744
+    ]
+   }
+  },
+  "upstream": {
+   "cloud": {
+    "Amazon": 26,
+    "Microsoft": 19,
+    "Google": 16
+   },
+   "cloud_hhi_lo": 1293,
+   "cloud_hhi_hi": 1854,
+   "cloud_cr3": 61,
+   "nvidia_lo": 75,
+   "nvidia_hi": 86
+  },
+  "pooled": {
+   "Primary matrix, OpenAI": {
+    "50": {
+     "T": 2.864,
+     "p_indep": 0.0002,
+     "p_corr": 0.0175,
+     "p_sigma05": 0.009
+    },
+    "40": {
+     "T": 1.971,
+     "p_indep": 0.0104,
+     "p_corr": 0.0759,
+     "p_sigma05": 0.0842
+    },
+    "30": {
+     "T": 0.853,
+     "p_indep": 0.3325,
+     "p_corr": 0.3207,
+     "p_sigma05": 0.5377
+    }
+   },
+   "Most favourable matrix, OpenAI": {
+    "50": {
+     "T": 1.42,
+     "p_indep": 0.0744,
+     "p_corr": 0.1611,
+     "p_sigma05": 0.242
+    },
+    "40": {
+     "T": 0.899,
+     "p_indep": 0.3009,
+     "p_corr": 0.3041,
+     "p_sigma05": 0.5098
+    },
+    "30": {
+     "T": 0.323,
+     "p_indep": 0.7738,
+     "p_corr": 0.5835,
+     "p_sigma05": 0.848
+    }
+   },
+   "Common denominator, OpenAI": {
+    "50": {
+     "T": 2.127,
+     "p_indep": 0.0055,
+     "p_corr": 0.06,
+     "p_sigma05": 0.0597
+    },
+    "40": {
+     "T": 1.235,
+     "p_indep": 0.1286,
+     "p_corr": 0.2034,
+     "p_sigma05": 0.3244
+    },
+    "30": {
+     "T": 0.354,
+     "p_indep": 0.7486,
+     "p_corr": 0.5636,
+     "p_sigma05": 0.8324
+    }
+   },
+   "Bloc OpenAI+Microsoft, primary": {
+    "50": {
+     "T": 2.207,
+     "p_indep": 0.0039,
+     "p_corr": 0.0531,
+     "p_sigma05": 0.0498
+    },
+    "40": {
+     "T": 1.314,
+     "p_indep": 0.1024,
+     "p_corr": 0.1844,
+     "p_sigma05": 0.2873
+    },
+    "30": {
+     "T": 0.384,
+     "p_indep": 0.7234,
+     "p_corr": 0.5448,
+     "p_sigma05": 0.8168
+    }
+   },
+   "Bloc OpenAI+Microsoft, most favourable": {
+    "50": {
+     "T": 1.129,
+     "p_indep": 0.1722,
+     "p_corr": 0.2314,
+     "p_sigma05": 0.3776
+    },
+    "40": {
+     "T": 0.608,
+     "p_indep": 0.5281,
+     "p_corr": 0.4237,
+     "p_sigma05": 0.6882
+    },
+    "30": {
+     "T": 0.221,
+     "p_indep": 0.8519,
+     "p_corr": 0.6547,
+     "p_sigma05": 0.8947
+    }
+   },
+   "Bloc Google+Anthropic, primary": {
+    "50": {
+     "T": 2.056,
+     "p_indep": 0.0074,
+     "p_corr": 0.0671,
+     "p_sigma05": 0.0702
+    },
+    "40": {
+     "T": 1.247,
+     "p_indep": 0.1244,
+     "p_corr": 0.2004,
+     "p_sigma05": 0.3186
+    },
+    "30": {
+     "T": 0.574,
+     "p_indep": 0.5576,
+     "p_corr": 0.4399,
+     "p_sigma05": 0.7083
+    }
+   },
+   "Bloc Google+Anthropic, most favourable": {
+    "50": {
+     "T": 0.95,
+     "p_indep": 0.2684,
+     "p_corr": 0.2866,
+     "p_sigma05": 0.4792
+    },
+    "40": {
+     "T": 0.146,
+     "p_indep": 0.8999,
+     "p_corr": 0.7125,
+     "p_sigma05": 0.9243
+    },
+    "30": {
+     "T": 0.0,
+     "p_indep": 1.0,
+     "p_corr": 1.0,
+     "p_sigma05": 1.0
+    }
+   }
+  }
+ },
+ "rev7": {
+  "sigma_star": {
+   "T": 2.864,
+   "indep": 0.65,
+   "corr": 0.45,
+   "factor95_indep": 3.6,
+   "factor95_corr": 2.4
+  },
+  "local_critical_share": {
+   "50": 28.1,
+   "40": 22.5,
+   "30": 16.9
+  },
+  "local_metrics": [
+   {
+    "metric": "A",
+    "leader": "OpenAI",
+    "s1": 56.6,
+    "p50": 1.0
+   },
+   {
+    "metric": "B",
+    "leader": "Meta",
+    "s1": 25.1,
+    "p50": 0.024
+   },
+   {
+    "metric": "C",
+    "leader": "Anthropic",
+    "s1": 31.4,
+    "p50": 0.092
+   },
+   {
+    "metric": "D",
+    "leader": "DeepSeek",
+    "s1": 31.8,
+    "p50": 0.098
+   },
+   {
+    "metric": "E",
+    "leader": "Anthropic",
+    "s1": 55.0,
+    "p50": 1.0
+   },
+   {
+    "metric": "D'",
+    "leader": "Google",
+    "s1": 30.4,
+    "p50": 0.078
+   },
+   {
+    "metric": "E'",
+    "leader": "Anthropic",
+    "s1": 49.3,
+    "p50": 0.484
+   },
+   {
+    "metric": "F",
+    "leader": "OpenAI",
+    "s1": 46.4,
+    "p50": 0.415
+   },
+   {
+    "metric": "G",
+    "leader": "ByteDance",
+    "s1": 54.3,
+    "p50": 1.0
+   }
+  ],
+  "local_metrics_rejected": [
+   "B"
+  ],
+  "local_markets": {
+   "Consumer assistants outside China": [
+    [
+     "OpenAI",
+     56.6,
+     1.0
+    ],
+    [
+     "OpenAI",
+     51.58,
+     1.0
+    ],
+    [
+     "OpenAI",
+     79.4,
+     1.0
+    ],
+    [
+     "OpenAI",
+     46.4,
+     0.415
+    ]
+   ],
+   "Enterprise model spend": [
+    [
+     "Anthropic",
+     55.0,
+     1.0
+    ],
+    [
+     "Anthropic",
+     49.3,
+     0.484
+    ],
+    [
+     "Anthropic",
+     58.7,
+     1.0
+    ],
+    [
+     "Anthropic",
+     52.8,
+     1.0
+    ],
+    [
+     "OpenAI",
+     56.0,
+     1.0
+    ]
+   ],
+   "Developer inference through gateways": [
+    [
+     "DeepSeek",
+     31.8,
+     0.098
+    ],
+    [
+     "Google",
+     30.39,
+     0.077
+    ],
+    [
+     "OpenAI",
+     19.0,
+     0.003
+    ]
+   ],
+   "Consumer AI apps in China": [
+    [
+     "ByteDance",
+     54.3,
+     1.0
+    ],
+    [
+     "Alibaba",
+     42.0,
+     0.309
+    ],
+    [
+     "ByteDance",
+     39.6,
+     0.253
+    ]
+   ]
+  },
+  "local_regions": {
+   "Worldwide (Oct)": [
+    "ChatGPT",
+    51.58,
+    1.0
+   ],
+   "Africa (Oct)": [
+    "ChatGPT",
+    45.93,
+    0.404
+   ],
+   "Asia (Oct)": [
+    "ChatGPT",
+    55.8,
+    1.0
+   ],
+   "Europe (Oct)": [
+    "ChatGPT",
+    43.38,
+    0.342
+   ],
+   "North America (Sep)": [
+    "ChatGPT",
+    74.24,
+    1.0
+   ],
+   "South America (Oct)": [
+    "Gemini",
+    49.26,
+    0.483
+   ],
+   "Oceania (Jul)": [
+    "ChatGPT",
+    70.2,
+    1.0
+   ]
+  },
+  "paradigm": {
+   "eight": [
+    {
+     "side": "open",
+     "k": 8,
+     "min": 3.5,
+     "kappa50": 14.29,
+     "below50": 6,
+     "T": 9.848,
+     "p_indep": 0.0,
+     "p_corr": 0.0
+    },
+    {
+     "side": "closed",
+     "k": 8,
+     "min": 28.0,
+     "kappa50": 1.79,
+     "below50": 2,
+     "T": 1.142,
+     "p_indep": 0.4446,
+     "p_corr": 0.3759
+    }
+   ],
+   "five": [
+    {
+     "side": "open",
+     "k": 5,
+     "min": 3.5,
+     "kappa50": 14.29,
+     "below50": 4,
+     "T": 6.728,
+     "p_indep": 0.0,
+     "p_corr": 0.0
+    },
+    {
+     "side": "closed",
+     "k": 5,
+     "min": 28.2,
+     "kappa50": 1.77,
+     "below50": 1,
+     "T": 0.571,
+     "p_indep": 0.5595,
+     "p_corr": 0.4413
+    }
+   ]
+  },
+  "origin": [
+   {
+    "side": "US",
+    "k": 7,
+    "min": 31.0,
+    "kappa50": 1.61,
+    "below50": 2,
+    "T": 0.793,
+    "p_indep": 0.5934,
+    "p_corr": 0.4469
+   },
+   {
+    "side": "China",
+    "k": 7,
+    "min": 4.2,
+    "kappa50": 11.88,
+    "below50": 6,
+    "T": 7.82,
+    "p_indep": 0.0,
+    "p_corr": 0.0
+   }
+  ]
+ }
+}

@@ -1,0 +1,858 @@
+\begin{thebibliography}{126}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Liu et~al.(2025)Liu, Huang, and Wang]{liu2025who}
+Yan Liu, Jingyun Huang, and He~Wang.
+\newblock Who on earth is using generative {AI}? global trends and shifts in
+  2025.
+\newblock Policy Research Working Paper 11231, World Bank, 2025.
+
+\bibitem[Wang and Siler-Evans(2026)]{wang2026uschina}
+Austin Horng-En Wang and Kyle Siler-Evans.
+\newblock {U.S.}-{China} competition for artificial intelligence markets:
+  Analyzing global use patterns of large language models.
+\newblock Research Report RR-A4355-1, RAND Corporation, 2026.
+
+\bibitem[{OpenRouter}(2026{\natexlab{a}})]{openrouter2026tokens}
+{OpenRouter}.
+\newblock The token state of play.
+\newblock \url{https://openrouter.ai/data/newsletter/the-token-state-of-play},
+  2026{\natexlab{a}}.
+
+\bibitem[{Vercel}(2026{\natexlab{a}})]{vercel2026index}
+{Vercel}.
+\newblock {AI} gateway production index, {October} 2026.
+\newblock
+  \url{https://vercel.com/blog/ai-gateway-production-index-october-2026},
+  2026{\natexlab{a}}.
+
+\bibitem[{Menlo Ventures}(2026)]{menlo2026state}
+{Menlo Ventures}.
+\newblock 2026: The state of enterprise {AI}.
+\newblock
+  \url{https://menlovc.com/wp-content/uploads/2026/11/menlo_ventures_enterprise_ai_report-2026-110326.pdf},
+  2026.
+
+\bibitem[{Ramp}(2026)]{ramp2026index}
+{Ramp}.
+\newblock Ramp {AI} index ({October} 2026 data).
+\newblock \url{https://ramp.com/data/ai-index}, 2026.
+
+\bibitem[Vipra and Korinek(2023)]{vipra2023market}
+Jai Vipra and Anton Korinek.
+\newblock Market concentration implications of foundation models: The invisible
+  hand of {ChatGPT}.
+\newblock \emph{arXiv preprint arXiv:2311.01550}, 2023.
+
+\bibitem[Korinek and Vipra(2025)]{korinek2025concentrating}
+Anton Korinek and Jai Vipra.
+\newblock Concentrating intelligence: Scaling and market structure in
+  artificial intelligence.
+\newblock \emph{Economic Policy}, 40\penalty0 (121):\penalty0 225--256, 2025.
+\newblock \doi{10.1093/epolic/eiae057}.
+
+\bibitem[Aubakirova et~al.(2026)Aubakirova, Atallah, Clark, Summerville, and
+  Midha]{aubakirova2026state}
+Malika Aubakirova, Alex Atallah, Chris Clark, Justin Summerville, and Anjney
+  Midha.
+\newblock State of {AI}: An empirical 100 trillion token study with
+  {OpenRouter}.
+\newblock \emph{arXiv preprint arXiv:2601.10088}, 2026.
+
+\bibitem[Nagle and Yue(2025)]{nagle2025latent}
+Frank Nagle and Daniel Yue.
+\newblock The latent role of open models in the {AI} economy.
+\newblock Working Paper 5767103, SSRN, 2025.
+
+\bibitem[Handa et~al.(2025)Handa, Tamkin, McCain, Huang, Durmus, Heck, Mueller,
+  Hong, Ritchie, Belonax, Troy, Amodei, Kaplan, Clark, and
+  Ganguli]{handa2025which}
+Kunal Handa, Alex Tamkin, Miles McCain, Saffron Huang, Esin Durmus, Sarah Heck,
+  Jared Mueller, Jerry Hong, Stuart Ritchie, Tim Belonax, Kevin~K. Troy, Dario
+  Amodei, Jared Kaplan, Jack Clark, and Deep Ganguli.
+\newblock Which economic tasks are performed with {AI}? evidence from millions
+  of {Claude} conversations.
+\newblock \emph{arXiv preprint arXiv:2503.04761}, 2025.
+
+\bibitem[Tamkin et~al.(2024)Tamkin, McCain, Handa, Durmus,
+  et~al.]{tamkin2024clio}
+Alex Tamkin, Miles McCain, Kunal Handa, Esin Durmus, et~al.
+\newblock Clio: Privacy-preserving insights into real-world {AI} use.
+\newblock \emph{arXiv preprint arXiv:2412.13678}, 2024.
+
+\bibitem[Chatterji et~al.(2025)Chatterji, Cunningham, Deming, Hitzig, Ong,
+  Shan, and Wadman]{chatterji2025how}
+Aaron Chatterji, Thomas Cunningham, David~J. Deming, Zoe Hitzig, Christopher
+  Ong, Carl~Yan Shan, and Kevin Wadman.
+\newblock How people use {ChatGPT}.
+\newblock NBER Working Paper 34255, National Bureau of Economic Research, 2025.
+
+\bibitem[Longpre et~al.(2025)Longpre, Akiki, Lund, Kulkarni, Chen, Solaiman,
+  Ghosh, Jernite, and Kaffee]{longpre2025economies}
+Shayne Longpre, Christopher Akiki, Campbell Lund, Atharva Kulkarni, Emily Chen,
+  Irene Solaiman, Avijit Ghosh, Yacine Jernite, and Lucie-Aim{\'e}e Kaffee.
+\newblock Economies of open intelligence: Tracing power \& participation in the
+  model ecosystem.
+\newblock \emph{arXiv preprint arXiv:2512.03073}, 2025.
+
+\bibitem[Lambert and Brand(2026)]{lambert2026atom}
+Nathan Lambert and Florian Brand.
+\newblock The {ATOM} report: Measuring the open language model ecosystem.
+\newblock \emph{arXiv preprint arXiv:2604.07190}, 2026.
+
+\bibitem[Cottier et~al.(2024)Cottier, You, Martemianova, and
+  Owen]{cottier2024far}
+Ben Cottier, Josh You, Natalia Martemianova, and David Owen.
+\newblock How far behind are open models?
+\newblock Technical report, Epoch AI, 2024.
+\newblock \url{https://epoch.ai/publications/open-models-report}.
+
+\bibitem[Edwards and Emberson(2026)]{epoch2026gap}
+Jack Edwards and Luke Emberson.
+\newblock Open models lag state-of-the-art closed models by 4 months.
+\newblock Epoch AI Data Insight, 29 May 2026,
+  \url{https://epoch.ai/data-insights/open-closed-eci-gap}, 2026.
+
+\bibitem[Kapoor et~al.(2024)Kapoor, Bommasani, Klyman, Longpre,
+  et~al.]{kapoor2024societal}
+Sayash Kapoor, Rishi Bommasani, Kevin Klyman, Shayne Longpre, et~al.
+\newblock Position: On the societal impact of open foundation models.
+\newblock In \emph{Proceedings of the 41st International Conference on Machine
+  Learning}, volume 235 of \emph{Proceedings of Machine Learning Research},
+  pages 23082--23104, 2024.
+
+\bibitem[Liesenfeld and Dingemanse(2024)]{liesenfeld2024rethinking}
+Andreas Liesenfeld and Mark Dingemanse.
+\newblock Rethinking open source generative {AI}: Open-washing and the {EU}
+  {AI} {Act}.
+\newblock In \emph{Proceedings of the 2024 ACM Conference on Fairness,
+  Accountability, and Transparency (FAccT '24)}. ACM, 2024.
+\newblock \doi{10.1145/3630106.3659005}.
+
+\bibitem[Liu and Wang(2024)]{liu2024who}
+Yan Liu and He~Wang.
+\newblock Who on earth is using generative {AI}?
+\newblock Policy Research Working Paper 10870, World Bank, 2024.
+
+\bibitem[Misra et~al.(2025)Misra, Wang, McCullers, White, and {Lavista
+  Ferres}]{misra2025measuring}
+Amit Misra, Jane Wang, Scott McCullers, Kevin White, and Juan {Lavista Ferres}.
+\newblock Measuring {AI} diffusion: A population-normalized metric for tracking
+  global {AI} usage.
+\newblock \emph{arXiv preprint arXiv:2511.02781}, 2025.
+
+\bibitem[Bick et~al.(2024)Bick, Blandin, and Deming]{bick2024rapid}
+Alexander Bick, Adam Blandin, and David~J. Deming.
+\newblock The rapid adoption of generative {AI}.
+\newblock NBER Working Paper 32966, National Bureau of Economic Research, 2024.
+
+\bibitem[Bick et~al.(2026)Bick, Blandin, Deming, Fuchs-Sch{\"u}ndeln, and
+  Jessen]{bick2026mind}
+Alexander Bick, Adam Blandin, David~J. Deming, Nicola Fuchs-Sch{\"u}ndeln, and
+  Jonas Jessen.
+\newblock Mind the gap: {AI} adoption in {Europe} and the {U.S.}
+\newblock NBER Working Paper 34995, National Bureau of Economic Research, 2026.
+
+\bibitem[Demsetz(1973)]{demsetz1973industry}
+Harold Demsetz.
+\newblock Industry structure, market rivalry, and public policy.
+\newblock \emph{Journal of Law and Economics}, 16\penalty0 (1):\penalty0 1--9,
+  1973.
+
+\bibitem[Baumol(1982)]{baumol1982contestable}
+William~J. Baumol.
+\newblock Contestable markets: An uprising in the theory of industry structure.
+\newblock \emph{American Economic Review}, 72\penalty0 (1):\penalty0 1--15,
+  1982.
+
+\bibitem[Schumpeter(1942)]{schumpeter1942capitalism}
+Joseph~A. Schumpeter.
+\newblock \emph{Capitalism, Socialism and Democracy}.
+\newblock Harper \& Brothers, New York, 1942.
+
+\bibitem[Kaplow(2010)]{kaplow2010why}
+Louis Kaplow.
+\newblock Why (ever) define markets?
+\newblock \emph{Harvard Law Review}, 124\penalty0 (2):\penalty0 437--517, 2010.
+
+\bibitem[Katz and Shapiro(1985)]{katz1985network}
+Michael~L. Katz and Carl Shapiro.
+\newblock Network externalities, competition, and compatibility.
+\newblock \emph{American Economic Review}, 75\penalty0 (3):\penalty0 424--440,
+  1985.
+
+\bibitem[Arthur(1989)]{arthur1989competing}
+W.~Brian Arthur.
+\newblock Competing technologies, increasing returns, and lock-in by historical
+  events.
+\newblock \emph{Economic Journal}, 99\penalty0 (394):\penalty0 116--131, 1989.
+
+\bibitem[Azoulay et~al.(2025)Azoulay, Krieger, and Nagaraj]{azoulay2025old}
+Pierre Azoulay, Joshua~L. Krieger, and Abhishek Nagaraj.
+\newblock Old moats for new models: Openness, control, and competition in
+  generative artificial intelligence.
+\newblock \emph{Entrepreneurship and Innovation Policy and the Economy},
+  4\penalty0 (1):\penalty0 7--46, 2025.
+\newblock \doi{10.1086/732852}.
+
+\bibitem[Hagiu and Wright(2023)]{hagiu2023data}
+Andrei Hagiu and Julian Wright.
+\newblock Data-enabled learning, network effects, and competitive advantage.
+\newblock \emph{RAND Journal of Economics}, 54\penalty0 (4):\penalty0 638--667,
+  2023.
+\newblock \doi{10.1111/1756-2171.12453}.
+
+\bibitem[Hagiu and Wright(2025)]{hagiu2025ai}
+Andrei Hagiu and Julian Wright.
+\newblock Artificial intelligence and competition policy.
+\newblock \emph{International Journal of Industrial Organization}, 2025.
+
+\bibitem[Tucker(2024)]{tucker2024competition}
+Catherine Tucker.
+\newblock How does competition policy need to change in a world of artificial
+  intelligence?
+\newblock \emph{Oxford Review of Economic Policy}, 40:\penalty0 834--842, 2024.
+\newblock \doi{10.1093/oxrep/grae043}.
+
+\bibitem[{OECD}(2026)]{oecd2026markets}
+{OECD}.
+\newblock Artificial intelligence markets (policy brief).
+\newblock
+  \url{https://www.oecd.org/en/publications/artificial-intelligence-markets_d531d73f-en/full-report.html},
+  2026.
+
+\bibitem[Demirer et~al.(2026)Demirer, Fradkin, and
+  Tadelis]{demirer2026emerging}
+Mert Demirer, Andrey Fradkin, and Nadav Tadelis.
+\newblock The emerging market for intelligence: How firms buy and sell {AI}.
+\newblock \emph{Journal of Economic Perspectives}, 40\penalty0 (3):\penalty0
+  23--46, 2026.
+\newblock \doi{10.1257/jep.20261506}.
+
+\bibitem[Demirer et~al.(2025)Demirer, Fradkin, Tadelis, and
+  Peng]{demirer2025emerging}
+Mert Demirer, Andrey Fradkin, Nadav Tadelis, and Sida Peng.
+\newblock The emerging market for intelligence: Pricing, supply, and demand for
+  {LLMs}.
+\newblock NBER Working Paper 34608, National Bureau of Economic Research, 2025.
+
+\bibitem[Fradkin(2025)]{fradkin2025demand}
+Andrey Fradkin.
+\newblock Demand for {LLMs}: Descriptive evidence on substitution, market
+  expansion, and multihoming.
+\newblock \emph{arXiv preprint arXiv:2504.15440}, 2025.
+
+\bibitem[Rochet and Tirole(2003)]{rochet2003platform}
+Jean-Charles Rochet and Jean Tirole.
+\newblock Platform competition in two-sided markets.
+\newblock \emph{Journal of the European Economic Association}, 1\penalty0
+  (4):\penalty0 990--1029, 2003.
+
+\bibitem[Armstrong(2006)]{armstrong2006competition}
+Mark Armstrong.
+\newblock Competition in two-sided markets.
+\newblock \emph{RAND Journal of Economics}, 37\penalty0 (3):\penalty0 668--691,
+  2006.
+
+\bibitem[Lerner and Tirole(2002)]{lerner2002simple}
+Josh Lerner and Jean Tirole.
+\newblock Some simple economics of open source.
+\newblock \emph{Journal of Industrial Economics}, 50\penalty0 (2):\penalty0
+  197--234, 2002.
+
+\bibitem[Widder et~al.(2024)Widder, Whittaker, and West]{widder2024open}
+David~Gray Widder, Meredith Whittaker, and Sarah~Myers West.
+\newblock Why `open' {AI} systems are actually closed, and why this matters.
+\newblock \emph{Nature}, 635\penalty0 (8040):\penalty0 827--833, 2024.
+\newblock \doi{10.1038/s41586-024-08141-1}.
+
+\bibitem[Osborne et~al.(2024)Osborne, Ding, and Kirk]{osborne2024ai}
+Cailean Osborne, Jennifer Ding, and Hannah~Rose Kirk.
+\newblock The {AI} community building the future? {A} quantitative analysis of
+  development activity on {Hugging Face Hub}.
+\newblock \emph{Journal of Computational Social Science}, 7\penalty0
+  (2):\penalty0 2067--2105, 2024.
+\newblock \doi{10.1007/s42001-024-00300-8}.
+
+\bibitem[Schrepel and Potts(2025)]{schrepel2025measuring}
+Thibault Schrepel and Jason Potts.
+\newblock Measuring the openness of {AI} foundation models: Competition and
+  policy implications.
+\newblock \emph{Information \& Communications Technology Law}, 34\penalty0
+  (3):\penalty0 279--304, 2025.
+\newblock \doi{10.1080/13600834.2025.2461953}.
+
+\bibitem[Duan et~al.(2025)Duan, Du, Zhao, Wang, Wu, Shadbolt, and
+  He]{duan2025position}
+Moming Duan, Mingzhe Du, Rui Zhao, Mengying Wang, Yinghui Wu, Nigel Shadbolt,
+  and Bingsheng He.
+\newblock Position: Current model licensing practices are dragging us into a
+  quagmire of legal noncompliance.
+\newblock In \emph{Proceedings of the 42nd International Conference on Machine
+  Learning}, volume 267 of \emph{PMLR}, pages 81276--81291, 2025.
+
+\bibitem[Griliches(1957)]{griliches1957hybrid}
+Zvi Griliches.
+\newblock Hybrid corn: An exploration in the economics of technological change.
+\newblock \emph{Econometrica}, 25\penalty0 (4):\penalty0 501--522, 1957.
+
+\bibitem[Rogers(2003)]{rogers2003diffusion}
+Everett~M. Rogers.
+\newblock \emph{Diffusion of Innovations}.
+\newblock Free Press, New York, 5th edition, 2003.
+
+\bibitem[Bresnahan and Trajtenberg(1995)]{bresnahan1995general}
+Timothy~F. Bresnahan and Manuel Trajtenberg.
+\newblock General purpose technologies: `engines of growth'?
+\newblock \emph{Journal of Econometrics}, 65\penalty0 (1):\penalty0 83--108,
+  1995.
+
+\bibitem[Eloundou et~al.(2024)Eloundou, Manning, Mishkin, and
+  Rock]{eloundou2024gpts}
+Tyna Eloundou, Sam Manning, Pamela Mishkin, and Daniel Rock.
+\newblock {GPTs} are {GPTs}: Labor market impact potential of {LLMs}.
+\newblock \emph{Science}, 384\penalty0 (6702):\penalty0 1306--1308, 2024.
+
+\bibitem[Comin and Hobijn(2010)]{comin2010exploration}
+Diego Comin and Bart Hobijn.
+\newblock An exploration of technology diffusion.
+\newblock \emph{American Economic Review}, 100\penalty0 (5):\penalty0
+  2031--2059, 2010.
+
+\bibitem[Comin and Mestieri(2018)]{comin2018technology}
+Diego Comin and Mart{\'i} Mestieri.
+\newblock If technology has arrived everywhere, why has income diverged?
+\newblock \emph{American Economic Journal: Macroeconomics}, 10\penalty0
+  (3):\penalty0 137--178, 2018.
+\newblock \doi{10.1257/mac.20150175}.
+
+\bibitem[Humlum and Vestergaard(2025)]{humlum2025unequal}
+Anders Humlum and Emilie Vestergaard.
+\newblock The unequal adoption of {ChatGPT} exacerbates existing inequalities
+  among workers.
+\newblock \emph{Proceedings of the National Academy of Sciences}, 122\penalty0
+  (1):\penalty0 e2414972121, 2025.
+\newblock \doi{10.1073/pnas.2414972121}.
+
+\bibitem[Otis et~al.(2024)Otis, Delecourt, Cranney, and Koning]{otis2024global}
+Nicholas~G. Otis, Sol{\`e}ne Delecourt, Katelyn Cranney, and Rembrand Koning.
+\newblock Global evidence on gender gaps and generative {AI}.
+\newblock Working Paper 25-023, Harvard Business School, 2024.
+
+\bibitem[McElheran et~al.(2024)McElheran, Li, Brynjolfsson, Kroff, Dinlersoz,
+  Foster, and Zolas]{mcelheran2024ai}
+Kristina McElheran, J.~Frank Li, Erik Brynjolfsson, Zachary Kroff, Emin
+  Dinlersoz, Lucia Foster, and Nikolas Zolas.
+\newblock {AI} adoption in {America}: Who, what, and where.
+\newblock \emph{Journal of Economics \& Management Strategy}, 33\penalty0
+  (2):\penalty0 375--415, 2024.
+
+\bibitem[Su{\'a}rez and Garc{\'i}a-Mari{\~n}oso(2025)]{suarez2025verge}
+David Su{\'a}rez and Bego{\~n}a Garc{\'i}a-Mari{\~n}oso.
+\newblock On the verge of a digital divide in the use of generative {AI}?
+\newblock \emph{Telecommunications Policy}, 49\penalty0 (7):\penalty0 102997,
+  2025.
+\newblock \doi{10.1016/j.telpol.2025.102997}.
+
+\bibitem[Kobak et~al.(2025)Kobak, Gonz{\'a}lez-M{\'a}rquez, Horv{\'a}t, and
+  Lause]{kobak2025delving}
+Dmitry Kobak, Rita Gonz{\'a}lez-M{\'a}rquez, Em{\H{o}}ke-{\'A}gnes Horv{\'a}t,
+  and Jan Lause.
+\newblock Delving into {LLM}-assisted writing in biomedical publications
+  through excess vocabulary.
+\newblock \emph{Science Advances}, 11\penalty0 (27):\penalty0 eadt3813, 2025.
+\newblock \doi{10.1126/sciadv.adt3813}.
+
+\bibitem[Liang et~al.(2025)Liang, Zhang, Wu, Lepp,
+  et~al.]{liang2025quantifying}
+Weixin Liang, Yaohui Zhang, Zhengxuan Wu, Haley Lepp, et~al.
+\newblock Quantifying large language model usage in scientific papers.
+\newblock \emph{Nature Human Behaviour}, 2025.
+\newblock \doi{10.1038/s41562-025-02273-8}.
+
+\bibitem[{European Commission}(2009)]{ec2009guidance}
+{European Commission}.
+\newblock Guidance on the commission's enforcement priorities in applying
+  {Article 82} of the {EC} treaty to abusive exclusionary conduct by dominant
+  undertakings.
+\newblock Official Journal of the European Union, 2009/C 45/02, 2009.
+
+\bibitem[Lakens(2017)]{lakens2017equivalence}
+Dani{\"e}l Lakens.
+\newblock Equivalence tests: A practical primer for $t$ tests, correlations,
+  and meta-analyses.
+\newblock \emph{Social Psychological and Personality Science}, 8\penalty0
+  (4):\penalty0 355--362, 2017.
+
+\bibitem[Roy(1953)]{roy1953heuristic}
+S.~N. Roy.
+\newblock On a heuristic method of test construction and its use in
+  multivariate analysis.
+\newblock \emph{Annals of Mathematical Statistics}, 24\penalty0 (2):\penalty0
+  220--238, 1953.
+
+\bibitem[{Court of Justice of the European Communities}(1991)]{akzo1991}
+{Court of Justice of the European Communities}.
+\newblock {Case C-62/86}, {AKZO Chemie BV} v {Commission}.
+\newblock [1991] ECR I-3359, 1991.
+
+\bibitem[{U.S. Department of Justice and Federal Trade
+  Commission}(2023)]{doj2023merger}
+{U.S. Department of Justice and Federal Trade Commission}.
+\newblock Merger guidelines.
+\newblock Washington, DC, 2023.
+
+\bibitem[Hirschman(1964)]{hirschman1964paternity}
+Albert~O. Hirschman.
+\newblock The paternity of an index.
+\newblock \emph{American Economic Review}, 54\penalty0 (5):\penalty0 761--762,
+  1964.
+
+\bibitem[Rhoades(1993)]{rhoades1993hhi}
+Stephen~A. Rhoades.
+\newblock The {Herfindahl-Hirschman} index.
+\newblock \emph{Federal Reserve Bulletin}, 79\penalty0 (3):\penalty0 188--189,
+  1993.
+
+\bibitem[Kendall and {Babington Smith}(1939)]{kendall1939problem}
+Maurice~G. Kendall and Bernard {Babington Smith}.
+\newblock The problem of $m$ rankings.
+\newblock \emph{Annals of Mathematical Statistics}, 10\penalty0 (3):\penalty0
+  275--287, 1939.
+
+\bibitem[Saltelli et~al.(2008)Saltelli, Ratto, Andres, Campolongo, Cariboni,
+  Gatelli, Saisana, and Tarantola]{saltelli2008global}
+Andrea Saltelli, Marco Ratto, Terry Andres, Francesca Campolongo, Jessica
+  Cariboni, Debora Gatelli, Michaela Saisana, and Stefano Tarantola.
+\newblock \emph{Global Sensitivity Analysis: The Primer}.
+\newblock Wiley, Chichester, 2008.
+
+\bibitem[Berger(1982)]{berger1982multiparameter}
+Roger~L. Berger.
+\newblock Multiparameter hypothesis testing and acceptance sampling.
+\newblock \emph{Technometrics}, 24\penalty0 (4):\penalty0 295--300, 1982.
+
+\bibitem[O'Brien and Salop(2000)]{obrien2000competitive}
+Daniel~P. O'Brien and Steven~C. Salop.
+\newblock Competitive effects of partial ownership: Financial interest and
+  corporate control.
+\newblock \emph{Antitrust Law Journal}, 67\penalty0 (3):\penalty0 559--614,
+  2000.
+
+\bibitem[Hymer and Pashigian(1962)]{hymer1962turnover}
+Stephen Hymer and Peter Pashigian.
+\newblock Turnover of firms as a measure of market behavior.
+\newblock \emph{Review of Economics and Statistics}, 44\penalty0 (1):\penalty0
+  82--87, 1962.
+
+\bibitem[{Momentic}(2026)]{momentic2026chatbots}
+{Momentic}.
+\newblock Top {AI} chatbots by market share, {November} 2026 ({Similarweb}
+  estimates).
+\newblock \url{https://momenticmarketing.com/blog/top-ai-chatbots}, 2026.
+
+\bibitem[{Counterpoint Research}(2026{\natexlab{a}})]{counterpoint2026mau}
+{Counterpoint Research}.
+\newblock Global {LLM} adoption snapshot, {April} 2026.
+\newblock
+  \url{https://counterpointresearch.com/en/insights/global-llm-adoption-snapshot-april-2026},
+  2026{\natexlab{a}}.
+
+\bibitem[{Counterpoint Research}(2026{\natexlab{b}})]{counterpoint2026revenue}
+{Counterpoint Research}.
+\newblock Global {LLM} adoption and revenue snapshot, {Q1} 2026.
+\newblock
+  \url{https://counterpointresearch.com/en/insights/Global-LLM-Adoption-and-Revenue-Snapshot},
+  2026{\natexlab{b}}.
+
+\bibitem[{OpenRouter}(2026{\natexlab{b}})]{openrouter2026rankings}
+{OpenRouter}.
+\newblock {LLM} rankings (usage data through 20 nov 2026).
+\newblock \url{https://openrouter.ai/rankings}, 2026{\natexlab{b}}.
+
+\bibitem[{AIMultiple}(2026)]{aimultiple2026share}
+{AIMultiple}.
+\newblock {LLM} market share (web visits and developer usage, oct 2025--oct
+  2026).
+\newblock \url{https://aimultiple.com/llm-market-share}, 2026.
+
+\bibitem[{Sensor Tower}(2026)]{sensortower2026state}
+{Sensor Tower}.
+\newblock State of {AI} 2026.
+\newblock \url{https://sensortower.com/blog/state-of-ai-2026}; figures as
+  reported in
+  \url{https://techcrunch.com/2026/06/16/chatgpts-market-share-slips-below-50-for-first-time/},
+  2026.
+
+\bibitem[{QuestMobile}(2026)]{questmobile2026q3}
+{QuestMobile}.
+\newblock {AI} application market report, {Q3} 2026.
+\newblock As reported in \url{https://eu.36kr.com/en/p/4035697724266375} and
+  \url{https://fourweekmba.com/ai-bytedances-doubao-hits-419m-users-daily-base-6x-qwens/},
+  2026.
+
+\bibitem[Patience(2026)]{futurum2026open}
+Nick Patience.
+\newblock Enterprises embrace open weights but infrastructure sellers profit
+  most.
+\newblock Futurum Group,
+  \url{https://futurumgroup.com/wp-content/uploads/2026/10/Enterprises-Embrace-Open-Weights-but-Infrastructure-Sellers-Profit-Most_AIONP202610.pdf},
+  2026.
+
+\bibitem[{Hugging Face}(2026{\natexlab{a}})]{hf2026spring}
+{Hugging Face}.
+\newblock State of open source on {Hugging Face}: Spring 2026.
+\newblock
+  \url{https://huggingface.co/blog/huggingface/state-of-os-hf-spring-2026},
+  2026{\natexlab{a}}.
+
+\bibitem[{VIDraft}(2026)]{vidraft2026top300}
+{VIDraft}.
+\newblock Qwen still takes half of open-{LLM} downloads: What changed in the
+  {Hugging Face} top 300 since {September}.
+\newblock 5 November 2026,
+  \url{https://dev.to/ai_openfree_b23025ef075cf/qwen-still-takes-half-of-open-llm-downloads-what-changed-in-the-hugging-face-top-300-since-1gbn},
+  2026.
+
+\bibitem[{Hugging Face}(2026{\natexlab{b}})]{hf2026summer}
+{Hugging Face}.
+\newblock State of open models: Summer 2026 observations.
+\newblock 14 August 2026,
+  \url{https://huggingface.co/blog/state-of-open-models-summer-2026},
+  2026{\natexlab{b}}.
+
+\bibitem[{American Compute}(2026)]{amcompute2026providers}
+{American Compute}.
+\newblock Inference providers: Open-weight token market share (2--8 {November}
+  2026).
+\newblock \url{https://www.amcompute.com/inference-providers}, 2026.
+
+\bibitem[{Artificial Analysis}(2026)]{aa2026open}
+{Artificial Analysis}.
+\newblock Recent open weights model launches.
+\newblock 30 April 2026,
+  \url{https://artificialanalysis.ai/articles/recent-open-weights-model-launches},
+  2026.
+
+\bibitem[{StatCounter Global Stats}(2026)]{statcounter2026}
+{StatCounter Global Stats}.
+\newblock {AI} chatbot market share, worldwide and by region ({August} and
+  {October} 2026).
+\newblock
+  \url{https://gs.statcounter.com/ai-chatbot-market-share/all/worldwide/},
+  2026.
+
+\bibitem[Wang et~al.(2026)Wang, Kahl, and Xu]{a16z2026cio}
+Sarah Wang, Justin Kahl, and Shangda Xu.
+\newblock Leaders, gainers and unexpected winners in the enterprise {AI} arms
+  race.
+\newblock Andreessen Horowitz, 30 January 2026,
+  \url{https://www.a16z.news/p/leaders-gainers-and-unexpected-winners}, 2026.
+
+\bibitem[{Moss}(2026)]{moss2026spend}
+{Moss}.
+\newblock European {SaaS} and {AI} spending report 2026.
+\newblock \url{https://www.getmoss.com/vendor-market-spend}, 2026.
+
+\bibitem[{AICPB}(2026)]{aicpb2026june}
+{AICPB}.
+\newblock Global {AI} rankings, {June} 2026.
+\newblock As reported in
+  \url{https://statisticsanddata.org/data/most-popular-ai-apps-in-the-world-2024-2026/},
+  2026.
+
+\bibitem[{Microsoft Corporation}(2026)]{microsoft2026q1}
+{Microsoft Corporation}.
+\newblock Form 10-{Q} for the quarter ended 30 {September} 2026.
+\newblock
+  \url{https://www.sec.gov/Archives/edgar/data/0000789019/000119312526436133/msft-20260930.htm},
+  2026.
+
+\bibitem[{CNBC}(2026)]{cnbc2026openai}
+{CNBC}.
+\newblock {OpenAI} shakes up partnership with {Microsoft}, capping revenue
+  share payments.
+\newblock 27 April 2026,
+  \url{https://www.cnbc.com/2026/04/27/openai-microsoft-partnership-revenue-cap.html},
+  2026.
+
+\bibitem[{Fortune}(2026)]{fortune2026anthropic}
+{Fortune}.
+\newblock {Amazon} and {Google} will own nearly 30\% of {Anthropic} after
+  today's {IPO}.
+\newblock 19 November 2026,
+  \url{https://fortune.com/2026/11/19/anthropic-ipo-amazon-google-stake-windfall-nonvoting/},
+  2026.
+
+\bibitem[{Cloud Security Alliance}(2026)]{csa2026frontier}
+{Cloud Security Alliance}.
+\newblock Frontier labs go public: When your {AI} vendor's investors are your
+  cloud.
+\newblock Research note, 20 November 2026,
+  \url{https://labs.cloudsecurityalliance.org/research/csa-research-note-frontier-lab-ipo-vendor-risk-20261120-csa/},
+  2026.
+
+\bibitem[{Synergy Research Group}(2026)]{synergy2026q3}
+{Synergy Research Group}.
+\newblock Cloud infrastructure services market, {Q3} 2026.
+\newblock As reported in
+  \url{https://www.datacenterdynamics.com/en/news/synergy-enterprise-cloud-infrastructure-spending-jumped-55-yoy-in-q3/},
+  2026.
+
+\bibitem[{Silicon Analysts}(2026)]{siliconanalysts2026chain}
+{Silicon Analysts}.
+\newblock {AI} data center value chain analysis 2026.
+\newblock
+  \url{https://siliconanalysts.com/research/ai-data-center-value-chain}, 2026.
+
+\bibitem[{Mordor Intelligence}(2026)]{mordor2026gpu}
+{Mordor Intelligence}.
+\newblock {AI} {GPU} chip market size and share analysis, 2026--2031.
+\newblock
+  \url{https://www.mordorintelligence.com/industry-reports/ai-gpu-chip-market},
+  2026.
+
+\bibitem[Oliveira(2026)]{oliveira2026repo}
+Rodrigo F. A.~P. Oliveira.
+\newblock {No Universal AI Dominance}: replication package (transcribed inputs,
+  analysis code, statistical validation and figures).
+\newblock \url{https://github.com/rfapo/no-universal-ai-dominance}, 2026.
+\newblock Version 1.0.
+
+\bibitem[{Microsoft AI Economy Institute}(2026{\natexlab{a}})]{microsoft2026q2}
+{Microsoft AI Economy Institute}.
+\newblock Global {AI} diffusion: {Q2} 2026 trends and insights.
+\newblock
+  \url{https://www.microsoft.com/en-us/research/wp-content/uploads/2026/09/Microsoft-AI-Diffusion-Report-2026-Q2.pdf},
+  2026{\natexlab{a}}.
+
+\bibitem[{China Internet Network Information Center}(2026)]{cnnic2026genai}
+{China Internet Network Information Center}.
+\newblock Generative {AI} application development report (2026).
+\newblock As reported in
+  \url{https://www.ecns.cn/cns-wire/2026-09-29/detail-ihfkteqw7936690.shtml},
+  2026.
+
+\bibitem[{Cetic.br / NIC.br}(2025)]{cetic2025tic}
+{Cetic.br / NIC.br}.
+\newblock {TIC} {Domic{\'i}lios} 2025: Pesquisa sobre o uso das tecnologias de
+  informa{\c{c}}{\~a}o e comunica{\c{c}}{\~a}o nos domic{\'i}lios brasileiros.
+\newblock
+  \url{https://cetic.br/en/noticia/50-milhoes-de-brasileiros-ja-usam-ia-mas-potenciais-beneficios-continuam-limitados-as-camadas-de-maior-renda-e-escolaridade/},
+  2025.
+
+\bibitem[{Reuters Institute for the Study of
+  Journalism}(2026)]{reuters2026genai}
+{Reuters Institute for the Study of Journalism}.
+\newblock Generative {AI} and news report 2026: From standalone tools to
+  information infrastructure.
+\newblock
+  \url{https://reutersinstitute.politics.ox.ac.uk/generative-ai-and-news-report-2026-standalone-tools-information-infrastructure},
+  2026.
+
+\bibitem[{BenchLM}(2026)]{benchlm2026}
+{BenchLM}.
+\newblock {BenchLM} {LLM} leaderboard ({BenchAlign} v6.0).
+\newblock \url{https://benchlm.ai/}, 2026.
+
+\bibitem[{LLM Leaderboard}(2026)]{llmleaderboard2026}
+{LLM Leaderboard}.
+\newblock {LLM} leaderboard: Benchmarks, pricing and speed.
+\newblock \url{https://llmleaderboard.com/}, 2026.
+
+\bibitem[{Open LLM Leaderboard}(2026)]{hf2026collection}
+{Open LLM Leaderboard}.
+\newblock Open {LLM} leaderboard best models (collection).
+\newblock
+  \url{https://huggingface.co/collections/open-llm-leaderboard/open-llm-leaderboard-best-models},
+  2026.
+
+\bibitem[{Microsoft AI Economy Institute}(2026{\natexlab{b}})]{microsoft2026h2}
+{Microsoft AI Economy Institute}.
+\newblock Global {AI} adoption in 2025: A widening digital divide ({AI}
+  diffusion report, {H2} 2025).
+\newblock
+  \url{https://www.microsoft.com/en-us/research/wp-content/uploads/2026/01/Microsoft-AI-Diffusion-Report-January-2026.pdf},
+  2026{\natexlab{b}}.
+
+\bibitem[{TMTPost}(2026)]{tmtpost2026doubao}
+{TMTPost}.
+\newblock Doubao model daily token usage hits 180 trillion.
+\newblock \url{https://en.tmtpost.com/news/8037307}, 2026.
+
+\bibitem[{The Register}(2026)]{register2026io}
+{The Register}.
+\newblock Google touts tokenmaxxing, huge capex and {AI} agents at {I/O}.
+\newblock
+  \url{https://www.theregister.com/ai-ml/2026/05/19/google-touts-tokenmaxxing-huge-capex-and-ai-agents-at-i/o/5242983},
+  2026.
+
+\bibitem[{Alphabet}(2026)]{alphabet2026q3}
+{Alphabet}.
+\newblock {Q3} 2026 earnings call: Remarks from our {CEO}.
+\newblock
+  \url{https://blog.google/company-news/inside-google/message-ceo/alphabet-earnings-q3-2026/},
+  2026.
+
+\bibitem[{Vercel}(2026{\natexlab{b}})]{vercel2026open}
+{Vercel}.
+\newblock Open-weight models on {AI} gateway.
+\newblock \url{https://vercel.com/i/open-weight-models}, 2026{\natexlab{b}}.
+
+\bibitem[{McKinsey \& Company and Mozilla Foundation and Patrick J. McGovern
+  Foundation}(2025)]{mckinsey2025open}
+{McKinsey \& Company and Mozilla Foundation and Patrick J. McGovern
+  Foundation}.
+\newblock Open source technology in the age of {AI}.
+\newblock
+  \url{https://www.mckinsey.com/capabilities/quantumblack/our-insights/open-source-technology-in-the-age-of-ai},
+  2025.
+
+\bibitem[{Epoch AI}(2026{\natexlab{a}})]{epoch2026thread}
+{Epoch AI}.
+\newblock Summary of the open--closed capability gap analysis (public and
+  private benchmarks).
+\newblock 29 May 2026,
+  \url{https://x.com/EpochAIResearch/status/2060451576779886942},
+  2026{\natexlab{a}}.
+
+\bibitem[{Epoch AI}(2026{\natexlab{b}})]{epoch2026topics}
+{Epoch AI}.
+\newblock Open-weight models: Research index (cyber capabilities and
+  furniture-assembly evaluations).
+\newblock \url{https://epoch.ai/topics/open-models}, 2026{\natexlab{b}}.
+
+\bibitem[{Implicator.ai}(2026)]{implicator2026index}
+{Implicator.ai}.
+\newblock {Artificial Analysis} raises the bar for {AI} models.
+\newblock 28 October 2026,
+  \url{https://www.implicator.ai/artificial-analysis-index-v5-open-model-gap/},
+  2026.
+
+\bibitem[Bean et~al.(2025)Bean, Kearns, Romanou, Hafner, Mayne,
+  et~al.]{bean2025measuring}
+Andrew~M. Bean, Ryan~Othniel Kearns, Angelika Romanou, Franziska~Sofia Hafner,
+  Harry Mayne, et~al.
+\newblock Measuring what matters: Construct validity in large language model
+  benchmarks.
+\newblock In \emph{Advances in Neural Information Processing Systems 38
+  (Datasets and Benchmarks Track)}, 2025.
+
+\bibitem[{Anthropic}(2026)]{anthropic2026index}
+{Anthropic}.
+\newblock Anthropic economic index report: Economic primitives.
+\newblock
+  \url{https://www.anthropic.com/research/anthropic-economic-index-january-2026-report},
+  2026.
+
+\bibitem[{Analytics Insight}(2026)]{analytics2026india}
+{Analytics Insight}.
+\newblock {ChatGPT}'s {Indian} user base doubles since {January}: Report.
+\newblock
+  \url{https://www.analyticsinsight.net/news/chatgpts-indian-user-base-doubles-since-january-report},
+  2026.
+
+\bibitem[{TechCrunch}(2026)]{techcrunch2026india}
+{TechCrunch}.
+\newblock India has 100{M} weekly active {ChatGPT} users, {Sam Altman} says.
+\newblock
+  \url{https://www.techcrunch.com/2026/02/15/india-has-100m-weekly-active-chatgpt-users-sam-altman-says/},
+  2026.
+
+\bibitem[{Elfsight}(2026)]{elfsight2026chatgpt}
+{Elfsight}.
+\newblock {ChatGPT} usage statistics (compilation of {Similarweb} country
+  traffic).
+\newblock \url{https://elfsight.com/blog/chatgpt-usage-statistics/}, 2026.
+
+\bibitem[{OpenAI}(2026{\natexlab{a}})]{openai2026expanded}
+{OpenAI}.
+\newblock How {ChatGPT} adoption has expanded.
+\newblock \url{https://openai.com/index/how-chatgpt-adoption-has-expanded},
+  2026{\natexlab{a}}.
+
+\bibitem[{AI Index Steering Committee}(2026)]{aiindex2026}
+{AI Index Steering Committee}.
+\newblock The {AI} index 2026 annual report.
+\newblock Institute for Human-Centered AI, Stanford University,
+  \url{https://hai.stanford.edu/ai-index/2026-ai-index-report}, 2026.
+
+\bibitem[{Board of Governors of the Federal Reserve
+  System}(2026)]{fed2026monitoring}
+{Board of Governors of the Federal Reserve System}.
+\newblock Monitoring {AI} adoption in the {U.S.} economy ({FEDS} notes, 3 april
+  2026).
+\newblock
+  \url{https://www.federalreserve.gov/econres/notes/feds-notes/monitoring-ai-adoption-in-the-u-s-economy-20260403.html},
+  2026.
+
+\bibitem[{European Data Portal / Eurostat}(2026)]{eurostat2025genai}
+{European Data Portal / Eurostat}.
+\newblock Artificial intelligence in {Europe}: How {AI} is entering everyday
+  life (eurostat series isoc\_ai\_iaiu, 2025 data).
+\newblock
+  \url{https://data.europa.eu/en/publications/datastories/artificial-intelligence-europe-how-ai-entering-everyday-life},
+  2026.
+
+\bibitem[{U.S. Census Bureau}(2023)]{census2023btos}
+{U.S. Census Bureau}.
+\newblock Business trends and outlook survey: Use of {AI} by businesses
+  (november 2023 release).
+\newblock
+  \url{https://census.gov/library/stories/2023/11/businesses-use-ai.html},
+  2023.
+
+\bibitem[Bonney et~al.(2024)Bonney, Breaux, Buffington, Dinlersoz, Foster,
+  Goldschlag, Haltiwanger, Kroff, and Savage]{bonney2024tracking}
+Kathryn Bonney, Cory Breaux, Cathy Buffington, Emin Dinlersoz, Lucia~S. Foster,
+  Nathan Goldschlag, John~C. Haltiwanger, Zachary Kroff, and Keith Savage.
+\newblock Tracking firm use of {AI} in real time: A snapshot from the {Business
+  Trends and Outlook Survey}.
+\newblock NBER Working Paper 32319, National Bureau of Economic Research, 2024.
+
+\bibitem[{Big Technology}(2026)]{bigtech2026wau}
+{Big Technology}.
+\newblock Interview with {ChatGPT} consumer product lead {Adam Fry} (1.2
+  billion weekly active users).
+\newblock As analysed in
+  \url{https://explainx.ai/blog/chatgpt-1-2-billion-weekly-users-search-20-percent-of-google-adam-fry-voice-250-million-claimed-vs-verified-2026},
+  2026.
+
+\bibitem[{OpenAI}(2026{\natexlab{b}})]{openai2026work}
+{OpenAI}.
+\newblock From asking to doing: How the world is putting {ChatGPT} to work.
+\newblock
+  \url{https://openai.com/index/how-the-world-is-putting-chatgpt-to-work/},
+  2026{\natexlab{b}}.
+
+\bibitem[{The New Stack}(2026)]{newstack2026runpod}
+{The New Stack}.
+\newblock Runpod report: {Qwen} has overtaken {Meta}'s {Llama} as the
+  most-deployed self-hosted {LLM}.
+\newblock \url{https://thenewstack.io/runpod-ai-infrastructure-reality/}, 2026.
+
+\bibitem[{Menlo Ventures}(2025)]{menlo2025mid}
+{Menlo Ventures}.
+\newblock 2025 mid-year {LLM} market update.
+\newblock
+  \url{https://menlovc.com/perspective/2025-mid-year-llm-market-update/}, 2025.
+
+\bibitem[{United Nations, Department of Economic and Social Affairs, Population
+  Division}(2024)]{un2024wpp}
+{United Nations, Department of Economic and Social Affairs, Population
+  Division}.
+\newblock World population prospects 2024.
+\newblock New York: United Nations, 2024.
+
+\bibitem[{DataReportal}(2026)]{datareportal2026}
+{DataReportal}.
+\newblock Digital 2026: More than 1 billion people use {AI}.
+\newblock
+  \url{https://datareportal.com/reports/digital-2026-one-billion-people-using-ai},
+  2026.
+
+\end{thebibliography}

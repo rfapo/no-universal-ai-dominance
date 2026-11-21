@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+
+# build artefacts
+build/
+.verify/
+
+# LaTeX intermediates (main.bbl IS committed, so the PDF builds without bibtex)
+paper/*.aux
+paper/*.log
+paper/*.out
+paper/*.blg
+paper/*.fls
+paper/*.fdb_latexmk
+paper/*.synctex.gz
+paper/main.pdf
+
+# produced by code/archive_urls.sh
+results/archive_log.txt
+
+# OS
+.DS_Store

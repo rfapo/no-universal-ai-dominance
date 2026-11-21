@@ -1,0 +1,11 @@
+# Pinned to the versions used to produce the committed results/ and paper/figs/.
+# All simulations are seeded and NumPy's PCG64 bit-generator stream is stable
+# across releases, so the statistics in results.json reproduce under newer
+# NumPy/SciPy as well; the figures are the part most sensitive to a Matplotlib
+# upgrade (font metrics and tick placement), so that one is worth keeping.
+numpy==2.5.5
+scipy==1.18.1
+matplotlib==3.11.2
+
+# test suite only
+pytest==9.2.0

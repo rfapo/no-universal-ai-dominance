@@ -1,0 +1,44 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite both the article and this replication package."
+title: "No Universal AI Dominance: replication package"
+abstract: >-
+  Replication package for "No Universal AI Dominance: A Multi-Dimensional
+  Falsification Test of Vendor, Paradigm and Origin Dominance in Global LLM
+  Adoption". States dominance as the null hypothesis and tests it on 61 data
+  sources covering consumer attention, users, revenue, developer volume and
+  enterprise spend, at the vendor, paradigm and origin levels. Contains every
+  transcribed input, the analysis and figure scripts, an independent
+  re-implementation of each statistical procedure, and a test suite that checks
+  every number quoted in the manuscript.
+type: software
+authors:
+  - family-names: "Oliveira"
+    given-names: "Rodrigo F. A. P."
+    email: "rfapo@cesar.school"
+    affiliation: "CESAR School, Recife, Brazil"
+version: "1.0.0"
+date-released: "2026-11-21"
+license: MIT
+repository-code: "https://github.com/rfapo/no-universal-ai-dominance"
+keywords:
+  - large language models
+  - market concentration
+  - technology diffusion
+  - open-weight models
+  - Herfindahl-Hirschman index
+  - AI adoption
+  - Global South
+  - falsification test
+  - equivalence testing
+preferred-citation:
+  type: article
+  title: >-
+    No Universal AI Dominance: A Multi-Dimensional Falsification Test of
+    Vendor, Paradigm and Origin Dominance in Global LLM Adoption
+  authors:
+    - family-names: "Oliveira"
+      given-names: "Rodrigo F. A. P."
+      email: "rfapo@cesar.school"
+      affiliation: "CESAR School, Recife, Brazil"
+  year: 2026
+  month: 11

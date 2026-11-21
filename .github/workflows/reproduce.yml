@@ -1,0 +1,60 @@
+name: reproduce
+
+# Re-runs the whole analysis from scratch and asserts that it reproduces the
+# committed results, figures and every number quoted in the manuscript.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  reproduce:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+          cache: pip
+
+      - name: Install pinned dependencies
+        run: pip install -r requirements.txt
+
+      - name: Check the committed results against the manuscript
+        run: python -m pytest tests/ -q
+
+      - name: Re-run the analysis and diff against the committed outputs
+        run: make verify
+
+      - name: Re-run the test suite on the freshly computed results
+        run: python -m pytest tests/ -q
+
+      - name: Upload results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: results
+          path: |
+            results/results.json
+            results/validation.json
+
+  paper:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build the manuscript
+        uses: xu-cheng/latex-action@v3
+        with:
+          working_directory: paper
+          root_file: main.tex
+          latexmk_use_xelatex: false
+
+      - name: Upload the PDF
+        uses: actions/upload-artifact@v4
+        with:
+          name: no-universal-ai-dominance-pdf
+          path: paper/main.pdf

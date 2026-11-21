@@ -1,0 +1,90 @@
+# No Universal AI Dominance -- replication package
+#
+#   make all       analysis + validation + figures + tests
+#   make verify    re-run everything into a scratch directory and diff against
+#                  the committed outputs (the bit-for-bit reproducibility check)
+#   make paper     build paper/no-universal-ai-dominance.pdf
+#
+# Everything is seeded, so a fresh run must reproduce results/ and paper/figs/
+# byte for byte with the pinned dependency versions.
+
+PYTHON  ?= python3
+ROOT    := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
+SCRATCH := $(ROOT).verify
+
+RESULTS := results/results.json
+VALID   := results/validation.json
+PDF     := paper/no-universal-ai-dominance.pdf
+
+.PHONY: all analysis validate figures test paper verify arxiv archive clean help
+.DEFAULT_GOAL := help
+
+all: analysis validate figures test ## run the whole pipeline and the test suite
+
+analysis: ## code/analysis.py -> results/results.json   (~70 s)
+	$(PYTHON) code/analysis.py > /dev/null
+	@echo "wrote $(RESULTS)"
+
+validate: ## code/validate_stats.py -> results/validation.json   (~4 s)
+	$(PYTHON) code/validate_stats.py > /dev/null
+	@echo "wrote $(VALID)"
+
+figures: ## code/figures.py -> paper/figs/*.{pdf,png}   (~5 s)
+	$(PYTHON) code/figures.py
+
+test: ## pytest tests/ -- every number in the paper against results.json
+	$(PYTHON) -m pytest tests/ -q
+
+paper: ## build the PDF (latexmk, pdflatex or tectonic, whichever is available)
+	@cd paper && \
+	if command -v latexmk >/dev/null 2>&1; then \
+	    latexmk -pdf -quiet main.tex && cp main.pdf ../$(PDF); \
+	elif command -v pdflatex >/dev/null 2>&1; then \
+	    pdflatex -interaction=nonstopmode main.tex >/dev/null && \
+	    bibtex main >/dev/null && \
+	    pdflatex -interaction=nonstopmode main.tex >/dev/null && \
+	    pdflatex -interaction=nonstopmode main.tex >/dev/null && \
+	    cp main.pdf ../$(PDF); \
+	elif command -v tectonic >/dev/null 2>&1; then \
+	    tectonic -X compile main.tex --keep-intermediates && cp main.pdf ../$(PDF); \
+	else \
+	    echo "no LaTeX engine found (install tectonic, latexmk or texlive)" >&2; exit 1; \
+	fi
+	@echo "wrote $(PDF)"
+
+verify: ## assert a fresh run reproduces results/ and paper/figs/ byte for byte
+	@rm -rf $(SCRATCH) && mkdir -p $(SCRATCH)/results $(SCRATCH)/figs
+	@echo "re-running the pipeline into $(SCRATCH) ..."
+	@NUAD_RESULTS=$(SCRATCH)/results NUAD_FIGS=$(SCRATCH)/figs $(PYTHON) code/analysis.py > /dev/null
+	@NUAD_RESULTS=$(SCRATCH)/results NUAD_FIGS=$(SCRATCH)/figs $(PYTHON) code/validate_stats.py > /dev/null
+	@NUAD_RESULTS=$(SCRATCH)/results NUAD_FIGS=$(SCRATCH)/figs $(PYTHON) code/figures.py > /dev/null
+	@diff $(RESULTS) $(SCRATCH)/results/results.json     && echo "  OK results.json"
+	@diff $(VALID)   $(SCRATCH)/results/validation.json  && echo "  OK validation.json"
+	@for f in paper/figs/*.png; do \
+	    cmp -s "$$f" "$(SCRATCH)/figs/$$(basename $$f)" || { echo "  DIFFERS: $$f" >&2; exit 1; }; \
+	done
+	@echo "  OK all 14 figures"
+	@rm -rf $(SCRATCH)
+	@echo "reproduction verified"
+
+arxiv: ## bundle the arXiv submission (manuscript + figures + ancillary files)
+	@rm -rf build/arxiv && mkdir -p build/arxiv/figs build/arxiv/anc
+	@cp paper/main.tex paper/main.bbl paper/references.bib build/arxiv/
+	@cp paper/figs/*.pdf build/arxiv/figs/
+	@cp code/analysis.py code/figures.py code/validate_stats.py code/paths.py \
+	    code/archive_urls.sh build/arxiv/anc/
+	@cp data/sources.csv results/results.json results/validation.json build/arxiv/anc/
+	@cd build/arxiv && zip -qr ../no-universal-ai-dominance-arxiv.zip .
+	@echo "wrote build/no-universal-ai-dominance-arxiv.zip"
+
+archive: ## request an Internet Archive snapshot of every source URL (needs network)
+	bash code/archive_urls.sh
+
+clean: ## remove build artefacts (never the committed results or figures)
+	rm -rf build $(SCRATCH) .pytest_cache paper/main.aux paper/main.log \
+	    paper/main.out paper/main.fls paper/main.fdb_latexmk paper/main.blg
+	find . -name __pycache__ -type d -prune -exec rm -rf {} +
+
+help:
+	@grep -hE '^[a-z]+:.*?## ' $(MAKEFILE_LIST) \
+	    | awk 'BEGIN{FS=":.*?## "}{printf "  \033[36m%-10s\033[0m %s\n", $$1, $$2}'

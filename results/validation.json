@@ -1,0 +1,107 @@
+{
+ "kendall_W": {
+  "script": 0.379,
+  "via_friedman": 0.379,
+  "p_perm": 0.0794,
+  "p_asymptotic": 0.0917
+ },
+ "pooled_all_vendors": {
+  "primary": {
+   "50": {
+    "max_vendor": "OpenAI",
+    "p_indep": 0.00016,
+    "p_corr": 0.01741,
+    "second": 0.0
+   },
+   "40": {
+    "max_vendor": "OpenAI",
+    "p_indep": 0.01028,
+    "p_corr": 0.07569,
+    "second": 0.0
+   },
+   "30": {
+    "max_vendor": "OpenAI",
+    "p_indep": 0.33161,
+    "p_corr": 0.31999,
+    "second": 1e-05
+   }
+  },
+  "favourable": {
+   "50": {
+    "max_vendor": "OpenAI",
+    "p_indep": 0.07425,
+    "p_corr": 0.16114,
+    "second": 0.0
+   },
+   "40": {
+    "max_vendor": "OpenAI",
+    "p_indep": 0.30076,
+    "p_corr": 0.30375,
+    "second": 0.0
+   },
+   "30": {
+    "max_vendor": "OpenAI",
+    "p_indep": 0.77533,
+    "p_corr": 0.58397,
+    "second": 0.00172
+   }
+  }
+ },
+ "pooled_size": {
+  "at_boundary_indep": 0.0497,
+  "at_boundary_corr": 0.0498,
+  "interior_60_indep": 0.0033,
+  "mixed_boundary": 0.0019
+ },
+ "pooled_power_if_primary_true": 0.984,
+ "rule2_size": {
+  "formula": 0.1136,
+  "simulated": 0.1136
+ },
+ "hhi_bound": {
+  "upper": 1854,
+  "brute_force_max": 1851
+ },
+ "instability": {
+  "web": {
+   "named_mean": 2.72,
+   "full_mean": 2.94,
+   "full_max": 6.96,
+   "residual_range": [
+    0.6,
+    3.0
+   ]
+  },
+  "dev": {
+   "named_mean": 18.27,
+   "full_mean": 19.37,
+   "full_max": 39.84,
+   "residual_range": [
+    1.9,
+    12.3
+   ]
+  }
+ },
+ "spearman_exact": {
+  "dl_gw": [
+   0.2,
+   0.714
+  ],
+  "dl_ent": [
+   -0.46,
+   0.394
+  ],
+  "gw_ent": [
+   -0.61,
+   0.222
+  ]
+ },
+ "mhhi": {
+  "general_delta": 39.34,
+  "closed_form": 39.34
+ },
+ "mc_error_p_primary": {
+  "p": 0.00016,
+  "se": 7e-06
+ }
+}
