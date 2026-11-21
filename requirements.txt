@@ -1,11 +1,22 @@
 # Pinned to the versions used to produce the committed results/ and paper/figs/.
-# All simulations are seeded and NumPy's PCG64 bit-generator stream is stable
-# across releases, so the statistics in results.json reproduce under newer
-# NumPy/SciPy as well; the figures are the part most sensitive to a Matplotlib
-# upgrade (font metrics and tick placement), so that one is worth keeping.
+#
+# Every simulation is seeded and NumPy's PCG64 bit-generator stream is stable
+# across releases, so results/results.json and results/validation.json
+# reproduce byte for byte under newer NumPy and SciPy too -- this is confirmed
+# on Linux by the `reproduce` CI job, which re-runs the analysis and diffs.
+#
+# The rendered figures are the part that does depend on its environment: PNG
+# bytes are a function of the Matplotlib, Pillow and FreeType versions and of
+# the host's installed fonts. `make verify` therefore checks that the figures
+# were produced at the reference dimensions and reports pixel differences,
+# while `make verify-strict` demands identical bytes and is meant for a run
+# that shares a font stack with the committed figures.
 numpy==2.5.5
 scipy==1.18.1
 matplotlib==3.11.2
+
+# pulled in by matplotlib; used directly by code/compare_figures.py
+pillow==13.0.0
 
 # test suite only
 pytest==9.2.0

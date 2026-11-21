@@ -1,12 +1,15 @@
 # No Universal AI Dominance -- replication package
 #
 #   make all       analysis + validation + figures + tests
-#   make verify    re-run everything into a scratch directory and diff against
-#                  the committed outputs (the bit-for-bit reproducibility check)
+#   make verify    re-run everything into a scratch directory and compare with
+#                  the committed outputs (the reproducibility check)
 #   make paper     build paper/no-universal-ai-dominance.pdf
 #
-# Everything is seeded, so a fresh run must reproduce results/ and paper/figs/
-# byte for byte with the pinned dependency versions.
+# Every simulation is seeded, so a fresh run must reproduce results/*.json byte
+# for byte on any platform. Rendered PNGs depend on the Matplotlib, Pillow and
+# FreeType versions and on the host's fonts, so `verify` compares the figures as
+# images; `verify-strict` demands identical bytes, which holds between two runs
+# that share a font stack.
 
 PYTHON  ?= python3
 ROOT    := $(dir $(abspath $(lastword $(MAKEFILE_LIST))))
@@ -16,7 +19,10 @@ RESULTS := results/results.json
 VALID   := results/validation.json
 PDF     := paper/no-universal-ai-dominance.pdf
 
-.PHONY: all analysis validate figures test paper verify arxiv archive clean help
+# passed to code/compare_figures.py; verify-strict overrides it with --strict
+FIGCMP  ?=
+
+.PHONY: all analysis validate figures test paper verify verify-strict arxiv archive clean help
 .DEFAULT_GOAL := help
 
 all: analysis validate figures test ## run the whole pipeline and the test suite
@@ -52,7 +58,7 @@ paper: ## build the PDF (latexmk, pdflatex or tectonic, whichever is available)
 	fi
 	@echo "wrote $(PDF)"
 
-verify: ## assert a fresh run reproduces results/ and paper/figs/ byte for byte
+verify: ## assert a fresh run reproduces results/ and paper/figs/
 	@rm -rf $(SCRATCH) && mkdir -p $(SCRATCH)/results $(SCRATCH)/figs
 	@echo "re-running the pipeline into $(SCRATCH) ..."
 	@NUAD_RESULTS=$(SCRATCH)/results NUAD_FIGS=$(SCRATCH)/figs $(PYTHON) code/analysis.py > /dev/null
@@ -60,19 +66,20 @@ verify: ## assert a fresh run reproduces results/ and paper/figs/ byte for byte
 	@NUAD_RESULTS=$(SCRATCH)/results NUAD_FIGS=$(SCRATCH)/figs $(PYTHON) code/figures.py > /dev/null
 	@diff $(RESULTS) $(SCRATCH)/results/results.json     && echo "  OK results.json"
 	@diff $(VALID)   $(SCRATCH)/results/validation.json  && echo "  OK validation.json"
-	@for f in paper/figs/*.png; do \
-	    cmp -s "$$f" "$(SCRATCH)/figs/$$(basename $$f)" || { echo "  DIFFERS: $$f" >&2; exit 1; }; \
-	done
-	@echo "  OK all 14 figures"
+	@$(PYTHON) code/compare_figures.py paper/figs $(SCRATCH)/figs $(FIGCMP)
 	@rm -rf $(SCRATCH)
 	@echo "reproduction verified"
+
+verify-strict: FIGCMP = --strict
+verify-strict: verify ## same as verify, but the figures must match byte for byte
+	@:
 
 arxiv: ## bundle the arXiv submission (manuscript + figures + ancillary files)
 	@rm -rf build/arxiv && mkdir -p build/arxiv/figs build/arxiv/anc
 	@cp paper/main.tex paper/main.bbl paper/references.bib build/arxiv/
 	@cp paper/figs/*.pdf build/arxiv/figs/
 	@cp code/analysis.py code/figures.py code/validate_stats.py code/paths.py \
-	    code/archive_urls.sh build/arxiv/anc/
+	    code/archive_urls.sh code/compare_figures.py build/arxiv/anc/
 	@cp data/sources.csv results/results.json results/validation.json build/arxiv/anc/
 	@cd build/arxiv && zip -qr ../no-universal-ai-dominance-arxiv.zip .
 	@echo "wrote build/no-universal-ai-dominance-arxiv.zip"
@@ -86,5 +93,5 @@ clean: ## remove build artefacts (never the committed results or figures)
 	find . -name __pycache__ -type d -prune -exec rm -rf {} +
 
 help:
-	@grep -hE '^[a-z]+:.*?## ' $(MAKEFILE_LIST) \
-	    | awk 'BEGIN{FS=":.*?## "}{printf "  \033[36m%-10s\033[0m %s\n", $$1, $$2}'
+	@grep -hE '^[a-z][a-z-]*:.*?## ' $(MAKEFILE_LIST) \
+	    | awk 'BEGIN{FS=":.*?## "}{printf "  \033[36m%-13s\033[0m %s\n", $$1, $$2}'

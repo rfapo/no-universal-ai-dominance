@@ -606,3 +606,87 @@ def test_source_list_covers_every_url_bearing_source():
     rows = (ROOT / "data" / "sources.csv").read_text().strip().splitlines()
     assert rows[0].startswith("bib_key,title,url,accessed")
     assert len(rows) - 1 >= 60
+
+
+# --------------------------------------------------------------------------
+# README / results consistency
+# --------------------------------------------------------------------------
+
+README = (ROOT / "README.md").read_text()
+
+
+def _markdown_table_after(heading, n_cols):
+    """Return the rows of the first markdown table following `heading`."""
+    body = README.split(heading, 1)[1]
+    rows = []
+    for line in body.splitlines():
+        line = line.strip()
+        if line.startswith("|"):
+            cells = [c.strip() for c in line.strip("|").split("|")]
+            if len(cells) == n_cols and not set("".join(cells)) <= set("-: "):
+                rows.append(cells)
+        elif rows:
+            break
+    return rows
+
+
+def test_readme_concentration_table_matches_results():
+    """The README reprints Table 2; it must not drift from results.json."""
+    rows = _markdown_table_after("### 1. The identity of the leader changes", 7)
+    data = {r["metric"].split()[0]: r for r in RESULTS["concentration"]}
+    seen = 0
+    for cells in rows:
+        key = cells[0].replace("′", "'")
+        if key not in data:
+            continue
+        seen += 1
+        row = data[key]
+        assert cells[1] == row["leader"], key
+        assert float(cells[2]) == approx(row["s1"]), key
+        assert float(cells[3]) == approx(row["lead_ratio"], tol=0.005), key
+        assert float(cells[4]) == approx(row["cr4"]), key
+    assert seen == 9, f"only matched {seen} of 9 metrics in the README table"
+
+
+def test_readme_vendor_matrix_matches_results():
+    """The README reprints Table 4."""
+    rows = _markdown_table_after("### 2. No vendor reaches 50%", 9)
+    seen = 0
+    for cells in rows:
+        vendor = cells[0]
+        if vendor not in TABLE4:
+            continue
+        seen += 1
+        shares = [float(c.replace("**", "")) for c in cells[1:6]]
+        assert shares == pytest.approx(
+            [RESULTS["matrix"][d][vendor] for d in DIMS], abs=0.05
+        ), vendor
+    assert seen == len(TABLE4), f"only matched {seen} of {len(TABLE4)} vendors"
+
+
+def test_readme_quotes_the_pooled_p_values_correctly():
+    pooled = RESULTS["rev6"]["pooled"]
+    prim = pooled["Primary matrix, OpenAI"]["50"]
+    fav = pooled["Most favourable matrix, OpenAI"]["50"]
+    assert f"{prim['p_indep']:.4f}" in README          # 0.0002
+    assert f"{fav['p_indep']:.3f}" in README           # 0.074
+    assert f"{fav['p_corr']:.3f}" in README            # 0.161
+
+
+def test_readme_figure_links_resolve():
+    import re
+
+    for rel in re.findall(r"!\[[^\]]*\]\(([^)]+)\)", README):
+        assert (ROOT / rel).exists(), rel
+
+
+def test_readme_internal_file_references_exist():
+    import re
+
+    # backticked paths that look like repository files
+    refs = set(re.findall(r"`((?:code|data|results|paper|tests)/[A-Za-z0-9_./*-]+)`", README))
+    for ref in refs:
+        if "*" in ref:
+            assert list(ROOT.glob(ref)), ref
+        else:
+            assert (ROOT / ref).exists(), ref

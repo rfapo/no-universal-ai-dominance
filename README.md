@@ -185,11 +185,22 @@ make figures      # code/figures.py        → paper/figs/*.{pdf,png}     (~5 s)
 make test         # pytest tests/                                       (<1 s)
 make paper        # LaTeX → paper/no-universal-ai-dominance.pdf
 make verify       # assert results/ and figures are unchanged by a fresh run
+make verify-strict # same, but the figures must match byte for byte
 ```
 
-### Everything is seeded
+### What reproduces, and how exactly
 
-All simulations take an explicit seed, so `results/results.json`, `results/validation.json` and all 14 figures reproduce **bit for bit** with the pinned dependency versions. `make verify` is exactly that check: it reruns the pipeline into a temporary directory and diffs against the committed outputs. The costs are dominated by the permutation test (200,000 within-dimension permutations) and the simulations (100,000 draws per $\sigma$ for the error curves; 400,000 to 2,000,000 for the pooled null distributions).
+Every simulation takes an explicit seed, and the two artefacts have different guarantees — worth stating precisely rather than claiming more than holds:
+
+| Artefact | Guarantee | Checked by |
+|---|---|---|
+| `results/results.json`, `results/validation.json` | **Byte-identical on any platform.** NumPy's PCG64 stream is versioned and stable across releases, so the statistics do not depend on the host. Confirmed on Linux by CI against results produced on macOS. | `make verify` (hard fail) |
+| `paper/figs/*.png`, `*.pdf` | **Produced at the reference dimensions.** PNG bytes are a function of the Matplotlib, Pillow and FreeType versions and of the host's fonts, so byte equality is not a cross-platform invariant for a rendering. | `make verify` (hard fail on missing, truncated or resized; pixel differences measured and reported) |
+| `paper/figs/*.png` | **Byte-identical** between runs sharing a font stack. | `make verify-strict` (hard fail) |
+
+`make verify` reruns the whole pipeline into a scratch directory and compares. It deliberately does not fail the build when a figure merely re-rasterises, because any pixel threshold loose enough to absorb re-rendered text is also loose enough to absorb a genuinely changed bar — so the check is structural, and `verify-strict` is there for the exact-bytes question.
+
+Runtime is dominated by the permutation test (200,000 within-dimension permutations) and the simulations (100,000 draws per $\sigma$ for the error curves; 400,000 to 2,000,000 for the pooled null distributions).
 
 ### Building the PDF
 
@@ -245,7 +256,7 @@ Not a re-run — a re-derivation by a different route, with a different seed and
 
 ## Data provenance and its limits
 
-All 61 data sources were read in **November 2026**. Several are live dashboards that are overwritten weekly or monthly, so **the figures cannot be recovered from the URL alone**. `data/sources.csv` lists every URL and `code/archive_urls.sh` requests an Internet Archive snapshot of each; the snapshots could not be created from the environment in which the analysis was run, and the script should be executed before the URLs change again.
+Every source was read in **November 2026**. Several are live dashboards that are overwritten weekly or monthly, so **the figures cannot be recovered from the URL alone**. `data/sources.csv` lists 63 source URLs — the 61 data sources counted in the paper plus the ownership disclosures used in the bloc scenarios — and `code/archive_urls.sh` requests an Internet Archive snapshot of each; the snapshots could not be created from the environment in which the analysis was run, and the script should be executed before the URLs change again.
 
 Known limits, stated in the paper and repeated here:
 

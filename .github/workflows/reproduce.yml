@@ -26,7 +26,10 @@ jobs:
       - name: Check the committed results against the manuscript
         run: python -m pytest tests/ -q
 
-      - name: Re-run the analysis and diff against the committed outputs
+      # results/*.json must match byte for byte on Linux as well; the figures
+      # are only required to redraw at the reference dimensions, since PNG
+      # bytes depend on the host's FreeType and fonts.
+      - name: Re-run the analysis and compare with the committed outputs
         run: make verify
 
       - name: Re-run the test suite on the freshly computed results
