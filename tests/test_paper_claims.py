@@ -808,3 +808,35 @@ def test_manuscript_states_the_adjustment_and_its_lower_bound_caveat():
     assert "Concentration net of multi-homing" in TEX
     assert "3{,}968 to 1{,}787" in TEX and "3{,}026 to 1{,}363" in TEX
     assert "lower bound on concentration" in TEX
+
+
+# --------------------------------------------------------------------------
+# METR citations (Sections 4.11 and 7)
+# --------------------------------------------------------------------------
+
+
+def test_metr_citations_are_defined_and_used():
+    bib = (ROOT / "paper" / "references.bib").read_text()
+    for key in ("metr2026swebench", "metr2026survey"):
+        assert f"@misc{{{key}" in bib, key
+        assert f"\\cite{{{key}}}" in TEX or f"{key}}}" in TEX, key
+
+
+def test_metr_grader_finding_sits_in_the_capability_section():
+    """The SWE-bench grader gap belongs with 'Capability is not adoption',
+    where it supports the claim that the ruler decides the verdict."""
+    cap = TEX.split("\\subsection{Capability is not adoption}")[1].split("\\subsection{")[0]
+    assert "metr2026swebench" in cap
+    assert "24.2 percentage points" in cap
+
+
+def test_metr_self_report_finding_sits_in_threats_to_validity():
+    threats = TEX.split("\\section{Threats to validity}")[1].split("\\section{")[0]
+    assert "metr2026survey" in threats
+    assert "40" in threats and "self-report" in threats
+
+
+def test_metr_urls_are_in_the_source_list_for_archiving():
+    rows = (ROOT / "data" / "sources.csv").read_text()
+    assert "metr.org/notes/2026-03-10" in rows
+    assert "metr.org/blog/2026-05-11" in rows

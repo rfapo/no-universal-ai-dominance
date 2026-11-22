@@ -1,4 +1,4 @@
-\begin{thebibliography}{126}
+\begin{thebibliography}{128}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -852,6 +852,14 @@ Kathryn Bonney, Cory Breaux, Cathy Buffington, Emin Dinlersoz, Lucia~S. Foster,
   most-deployed self-hosted {LLM}.
 \newblock \url{https://thenewstack.io/runpod-ai-infrastructure-reality/}, 2026.
 
+\bibitem[Whitfill et~al.(2026)Whitfill, Wu, Becker, and Rush]{metr2026swebench}
+Parker Whitfill, Cheryl Wu, Joel Becker, and Nate Rush.
+\newblock Many {SWE-bench}-passing {PRs} would not be merged into main.
+\newblock {METR} research note,
+  \url{https://metr.org/notes/2026-03-10-many-swe-bench-passing-prs-would-not-be-merged-into-main/},
+  2026.
+\newblock Accessed November 2026.
+
 \bibitem[{Menlo Ventures}(2025)]{menlo2025mid}
 {Menlo Ventures}.
 \newblock 2025 mid-year {LLM} market update.
@@ -871,5 +879,13 @@ Kathryn Bonney, Cory Breaux, Cathy Buffington, Emin Dinlersoz, Lucia~S. Foster,
 \newblock
   \url{https://datareportal.com/reports/digital-2026-one-billion-people-using-ai},
   2026.
+
+\bibitem[{METR}(2026)]{metr2026survey}
+{METR}.
+\newblock Measuring the self-reported impact of early-2026 {AI} on technical
+  worker productivity.
+\newblock \url{https://metr.org/blog/2026-05-11-ai-usage-survey/}, 2026.
+\newblock Survey of 349 technical workers, February--April 2026; accessed
+  November 2026.
 
 \end{thebibliography}
