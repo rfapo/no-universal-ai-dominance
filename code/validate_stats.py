@@ -98,3 +98,25 @@ report["mhhi"] = dict(general_delta=round(mhhi_general(s3, beta, gamma) - sum(x*
 report["mc_error_p_primary"] = dict(p=pv["primary"][50]["p_indep"], se=round(math.sqrt(2e-4*(1 - 2e-4)/4e6), 6))
 json.dump(report, open(VALIDATION_JSON, "w"), indent=1)
 print(json.dumps(report, indent=1))
+
+# 10. Exclusivity bounds: re-derive the analytic interval by linear programming over
+#     user types (which subset of brands each user holds). Confirms both bounds are sharp.
+import itertools as _it
+from scipy.optimize import linprog as _lp
+_B={'ChatGPT':34.0,'Gemini':24.0,'Copilot':11.0,'Claude':7.0}; _ANY=51.0; _LEAD='ChatGPT'
+_brands=list(_B); _types=[t for r in range(1,len(_brands)+1) for t in _it.combinations(_brands,r)]
+def _feas(e):
+    A=[[1.0]*len(_types)]+[[1.0 if k in t else 0.0 for t in _types] for k in _brands] \
+      +[[1.0 if t==(_LEAD,) else 0.0 for t in _types]]
+    rhs=[_ANY]+[_B[k] for k in _brands]+[e]
+    return _lp([0]*len(_types),A_eq=np.array(A),b_eq=np.array(rhs),
+               bounds=[(0,None)]*len(_types),method="highs").success
+_ex=R["multihoming"]["exclusivity"]
+_lo,_hi=_ex["excl_lo_pop"],_ex["excl_hi_pop"]
+report["exclusivity_bounds"]=dict(
+    analytic=[_lo,_hi],
+    lo_sharp=(not _feas(_lo-0.1)) and _feas(_lo),      # just below infeasible, at bound feasible
+    hi_sharp=_feas(_hi) and (not _feas(_hi+0.1)),
+    interior_feasible=_feas((_lo+_hi)/2))
+json.dump(report, open(VALIDATION_JSON, "w"), indent=1)
+print("exclusivity bounds:", json.dumps(report["exclusivity_bounds"]))

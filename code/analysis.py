@@ -237,18 +237,22 @@ brands = dict(ChatGPT=34, Gemini=24, Copilot=11, Claude=7)
 mh = sum(brands.values())/51
 out["multihoming"] = dict(sum_brands=sum(brands.values()), any_use=51, tools_per_user_lb=round(mh, 2))
 
-# Exclusivity-adjusted concentration. A share counts a multi-homing user once per
-# brand, so to first order the exclusive-user share is s/mh and the index scales by
-# 1/mh^2. Applied only to the consumer metrics, where multi-homing is measured;
-# enterprise buyers mostly single-home, so no adjustment is warranted there. The
-# correction divides every vendor by the same factor, while a leader plausibly holds
-# more exclusive users than a challenger, so the adjusted figure is a LOWER BOUND on
-# concentration.
-out["multihoming"]["adjusted_hhi"] = {
-    row["metric"].split()[0]: dict(hhi=row["hhi_lo"], adjusted=round(row["hhi_lo"]/mh**2),
-                                   band_before="highly" if row["hhi_lo"] > 1800 else "moderately",
-                                   band_after="highly" if row["hhi_lo"]/mh**2 > 1800 else "moderately")
-    for row in out["concentration"] if row["metric"].split()[0] in ("A", "F")}
+# Exclusivity of the leader's user base, by partial identification.
+# A share counts a multi-homing user once per brand, so it is an upper bound on the
+# users actually dependent on one vendor. The mean tools-per-user does NOT identify
+# who is exclusive, so no point estimate is available; what the brand masses do pin
+# down is an interval. With "any use" mass A, leader mass b and rival masses r_k:
+#   lower  e >= A - sum(r_k)   every non-exclusive user needs at least one rival slot
+#   upper  e <= A - max(r_k)   the largest rival's users must fit outside the exclusive mass
+# Both bounds are sharp; validate_stats.py re-derives them by linear programming.
+_A, _b = 51.0, 34.0                      # Reuters: any weekly use, and ChatGPT
+_riv = [24.0, 11.0, 7.0]                 # Gemini, Copilot, Claude
+_lo, _hi = max(0.0, _A - sum(_riv)), min(_b, _A - max(_riv))
+out["multihoming"]["exclusivity"] = dict(
+    any_use_mass=_A, leader_mass=_b, rival_masses=_riv,
+    excl_lo_pop=round(_lo, 1), excl_hi_pop=round(_hi, 1),
+    excl_lo_share=round(100*_lo/_A, 1), excl_hi_share=round(100*_hi/_A, 1),
+    raw_share=round(100*_b/_A, 1))
 
 # ---- adoption depends on the measure ----
 out["adoption_measures"] = [

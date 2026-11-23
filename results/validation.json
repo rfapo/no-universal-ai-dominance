@@ -103,5 +103,14 @@
  "mc_error_p_primary": {
   "p": 0.00016,
   "se": 7e-06
+ },
+ "exclusivity_bounds": {
+  "analytic": [
+   9.0,
+   27.0
+  ],
+  "lo_sharp": true,
+  "hi_sharp": true,
+  "interior_feasible": true
  }
 }

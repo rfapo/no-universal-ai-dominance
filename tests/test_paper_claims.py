@@ -775,39 +775,68 @@ def test_provenance_reports_the_measured_archive_outcome():
 
 
 # --------------------------------------------------------------------------
-# Exclusivity-adjusted concentration (Section 4.9)
+# Exclusivity of the leader's base, by partial identification (Section 4.9)
 # --------------------------------------------------------------------------
 
 
-def test_adjusted_hhi_divides_by_the_squared_multihoming_index():
-    mh = RESULTS["multihoming"]["tools_per_user_lb"]
-    adj = RESULTS["multihoming"]["adjusted_hhi"]
-    conc = {r["metric"].split()[0]: r for r in RESULTS["concentration"]}
-    for key, row in adj.items():
-        assert row["hhi"] == conc[key]["hhi_lo"], key
-        assert row["adjusted"] == approx(conc[key]["hhi_lo"] / mh**2, tol=1.0), key
-        assert row["adjusted"] < row["hhi"], key
+def test_no_multihoming_adjusted_hhi_is_reported():
+    """Dividing shares by a mean multi-homing factor gives a vector that no longer
+    sums to 100 and is not comparable with the HHI bands. It was reported in an
+    earlier version and withdrawn; nothing may reintroduce it."""
+    assert "adjusted_hhi" not in RESULTS["multihoming"]
+    assert "HHI}{1.49" not in TEX and "1.49^{2}" not in TEX
+    assert "no longer sums to 100" in TEX
 
 
-def test_adjusted_hhi_applies_only_to_the_consumer_metrics():
-    """Enterprise buyers single-home, so no correction is warranted for E or E'."""
-    adj = RESULTS["multihoming"]["adjusted_hhi"]
-    assert set(adj) == {"A", "F"}
+def test_exclusivity_bounds_follow_the_two_binding_constraints():
+    e = RESULTS["multihoming"]["exclusivity"]
+    A, b, riv = e["any_use_mass"], e["leader_mass"], e["rival_masses"]
+    assert e["excl_lo_pop"] == approx(max(0.0, A - sum(riv)), tol=0.05)
+    assert e["excl_hi_pop"] == approx(min(b, A - max(riv)), tol=0.05)
+    assert e["excl_lo_pop"] < e["excl_hi_pop"]
 
 
-def test_both_consumer_metrics_cross_the_concentration_band():
-    """Section 4.9: A falls 3,968 -> 1,787 and F 3,026 -> 1,363, both crossing 1,800."""
-    adj = RESULTS["multihoming"]["adjusted_hhi"]
-    assert adj["A"]["adjusted"] == 1787 and adj["F"]["adjusted"] == 1363
-    for key, row in adj.items():
-        assert row["band_before"] == "highly" and row["band_after"] == "moderately", key
-        assert row["hhi"] > 1800 > row["adjusted"], key
+def test_exclusivity_interval_is_9_to_27_points_of_population():
+    e = RESULTS["multihoming"]["exclusivity"]
+    assert (e["excl_lo_pop"], e["excl_hi_pop"]) == (9.0, 27.0)
+    assert e["excl_lo_share"] == approx(17.6, tol=0.1)
+    assert e["excl_hi_share"] == approx(52.9, tol=0.1)
 
 
-def test_manuscript_states_the_adjustment_and_its_lower_bound_caveat():
-    assert "Concentration net of multi-homing" in TEX
-    assert "3{,}968 to 1{,}787" in TEX and "3{,}026 to 1{,}363" in TEX
-    assert "lower bound on concentration" in TEX
+def test_upper_bound_lies_strictly_below_the_raw_share():
+    """The only thing the marginals establish: the share overstates dependence."""
+    e = RESULTS["multihoming"]["exclusivity"]
+    assert e["excl_hi_share"] < e["raw_share"]
+    assert e["raw_share"] == approx(66.7, tol=0.1)
+
+
+def test_both_bounds_are_sharp_under_the_linear_program():
+    """validate_stats.py searches over user types; a bound is sharp when the value
+    just outside it admits no feasible population."""
+    lp = VALIDATION["exclusivity_bounds"]
+    assert lp["analytic"] == [9.0, 27.0]
+    assert lp["lo_sharp"] is True and lp["hi_sharp"] is True
+    assert lp["interior_feasible"] is True
+
+
+def test_trackers_table_compares_a_single_month():
+    """Gap raised in review: the published table paired Similarweb October with
+    StatCounter August, over a window in which StatCounter's own leader share fell
+    27.8 points."""
+    assert "both for October 2026" in TEX
+    assert "confounded method with period" in TEX
+    sc = RESULTS["rev6"]["statcounter_regions"]["Worldwide (Oct)"]["shares"]
+    assert "51.58" in TEX and f"{sc['Perplexity']:.2f}" in TEX
+
+
+def test_thresholds_separate_merger_screening_from_dominance():
+    assert "applies to mergers" in TEX and "not a test of unilateral dominance" in TEX
+
+
+def test_geopolitical_claim_is_stated_as_association():
+    assert "The access counterfactual" not in TEX
+    assert "no more strongly than an association" in TEX
+    assert "identified counterfactuals" in TEX
 
 
 # --------------------------------------------------------------------------
