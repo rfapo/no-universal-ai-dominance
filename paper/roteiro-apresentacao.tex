@@ -1,0 +1,159 @@
+% Roteiro de apresentação para o deck de "No Universal AI Dominance".
+% Build:  tectonic -X compile roteiro-apresentacao.tex
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[portuguese]{babel}
+\usepackage{lmodern}
+\usepackage[a4paper,margin=2.2cm]{geometry}
+\usepackage{xcolor}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xurl}
+\usepackage[colorlinks=true,linkcolor=black,urlcolor=blue!50!black]{hyperref}
+
+\definecolor{ink}{HTML}{14213D}
+\definecolor{accent}{HTML}{BC4749}
+\definecolor{mid}{HTML}{5A6B8C}
+
+\titleformat{\section}{\large\bfseries\color{ink}}{\thesection.}{0.5em}{}
+\titlespacing{\section}{0pt}{1.4em}{0.5em}
+
+\newcommand{\slide}[3]{%
+  \vspace{1.0em}\noindent
+  {\color{ink}\bfseries Slide #1 \,|\, #2}\hfill{\color{accent}\bfseries #3}\\[-0.6em]
+  {\color{ink!20}\rule{\textwidth}{0.8pt}}\\[0.3em]}
+\newcommand{\fala}[1]{\noindent #1\par\vspace{0.4em}}
+\newcommand{\nota}[2]{\noindent{\color{mid}\small\textbf{#1}\ #2}\par\vspace{0.3em}}
+
+\setlist[itemize]{leftmargin=1.2em,itemsep=0.15em,topsep=0.2em}
+
+\begin{document}
+
+\begin{center}
+{\LARGE\bfseries\color{ink} Roteiro de apresentação}\\[0.4em]
+{\large\color{mid} \emph{No Universal AI Dominance} --- 14 slides}\\[0.6em]
+{\small Rodrigo F. A. P. Oliveira \,|\, CESAR School}
+\end{center}
+\vspace{0.8em}
+
+\noindent
+\begin{tabular}{@{}ll@{}}
+\toprule
+Duração alvo & 18--20 minutos (+ perguntas) \\
+Ritmo & cerca de 1min20 por slide; os slides 8 e 9 merecem o dobro \\
+Tom & expositivo e direto; o artigo já é cético, a fala não precisa ser defensiva \\
+\bottomrule
+\end{tabular}
+
+\section{Antes de subir ao palco}
+\begin{itemize}
+  \item Abra o PDF dos slides em tela cheia e teste o projetor \emph{antes} --- há duas figuras densas (slides 5 e 10) que precisam de contraste.
+  \item Tenha a aba do repositório aberta: alguém vai pedir o código.\\ \url{https://github.com/rfapo/no-universal-ai-dominance}
+  \item Decore apenas três números: \textbf{6 líderes em 9 métricas}, \textbf{3.225 $\to$ 559}, \textbf{p entre 0,0002 e 0,018}. O resto está nos slides.
+  \item Se o tempo apertar, corte os slides 4 e 13 (ver ``Plano B'' no fim).
+\end{itemize}
+
+% ------------------------------------------------------------------
+\section{Roteiro slide a slide}
+
+\slide{1}{Título}{0:30}
+\fala{Bom dia. Meu nome é Rodrigo Oliveira, sou do CESAR School, no Recife. O trabalho que eu vou apresentar faz uma pergunta simples e dá uma resposta incômoda: \emph{existe alguém que domine o mercado de modelos de linguagem?} A resposta curta é que depende inteiramente do que você resolve contar --- e eu vou mostrar o quanto depende.}
+\nota{Não leia o subtítulo.}{Deixe-o na tela enquanto fala. Mencione que dados, código e testes estão no repositório --- isso compra credibilidade logo no início.}
+
+\slide{2}{Três afirmações, três respostas}{1:30}
+\fala{Circulam três afirmações sobre esse mercado. Quem olha tráfego web diz que o ChatGPT levou 77\% das visitas. Quem olha telemetria de \emph{gateway} diz que os modelos de peso aberto de laboratórios chineses processam a maior parte dos \emph{tokens}. Quem olha gasto corporativo encontra um terceiro ranking, liderado pela Anthropic.}
+\fala{Essas três afirmações são sobre o mesmo mercado, no mesmo período. Elas só são compatíveis entre si se ``dominância'' for uma função daquilo que se escolheu medir. É exatamente essa suspeita que organiza o artigo.}
+\nota{Pausa aqui.}{É o momento em que a plateia percebe que o problema é real. Não corra.}
+
+\slide{3}{Dominância como hipótese nula}{2:00}
+\fala{A prática usual coloca ``nenhum efeito'' como hipótese nula. Isso é péssimo para a nossa pergunta: se eu não encontro dominância, não concluí nada --- talvez só me faltem dados. Então eu inverto o ônus da prova, como se faz em testes de equivalência.}
+\fala{A hipótese nula aqui é a \emph{dominância}: existe algum fornecedor cuja participação é maior ou igual ao limiar em \emph{todas} as cinco dimensões. Para rejeitá-la, os dados precisam ser incompatíveis com ela. O limiar principal é 50\%, que é a presunção da jurisprudência europeia; 40\% e 30\% entram como sensibilidade.}
+\nota{Se perguntarem no meio:}{``por que 50?'' --- responda ``porque é o número que o direito da concorrência usa, não porque é estatisticamente especial''. Os limiares são pontos de referência descritivos, não achados jurídicos.}
+
+\slide{4}{Cinco dimensões, cinco unidades}{1:00}
+\fala{As cinco dimensões não medem a mesma coisa nem a mesma população. Visitas contam visitantes; usuários ativos contam contas e aparelhos; receita conta quem paga; volume de desenvolvedor conta aplicações; gasto corporativo conta empresas. Não há taxa de câmbio entre essas unidades, e é justamente por isso que o teste é interessante.}
+\nota{Slide de transição.}{Pode ser rápido. Se estiver atrasado, é o primeiro a cortar.}
+
+\slide{5}{Resultado 1 --- o líder muda com a unidade}{1:30}
+\fala{Este é o resultado mais simples e talvez o mais importante. Nove métricas, \textbf{seis líderes diferentes}. OpenAI lidera atenção do consumidor. Meta lidera alcance. Anthropic lidera receita e gasto corporativo. DeepSeek lidera requisições de \emph{gateway}. Google lidera \emph{tokens} pagos. ByteDance lidera na China.}
+\fala{Nenhum desses números está errado. Eles medem coisas diferentes.}
+\nota{Aponte para a figura.}{As barras escuras são as que passam de 50\%: só três das nove.}
+
+\slide{6}{Resultado 2 --- nenhuma linha escura}{1:30}
+\fala{Aqui está a matriz principal: seis fornecedores, cinco dimensões. Se existisse dominância universal, haveria \emph{uma linha} escura da esquerda à direita. Não há. \textbf{Nenhum fornecedor alcança 50\% em mais de uma das cinco dimensões}, e quatro fornecedores diferentes lideram as cinco colunas.}
+\nota{Frase para fixar:}{``dominância universal seria uma linha uniformemente escura --- e a matriz não tem nenhuma''.}
+
+\slide{7}{Resultado 3 --- o teste calibrado}{1:45}
+\fala{Os números publicados são estimativas pontuais, sem distribuição amostral utilizável. Então eu declaro um modelo de erro multiplicativo e calculo a estatística no ponto menos favorável à hipótese nula --- o ponto em que todas as participações verdadeiras valem exatamente o limiar.}
+\fala{Com dados de fonte única, a dominância universal a 50\% é rejeitada: p de 0,0002 com erros independentes e 0,018 com erros correlacionados. A rejeição sobrevive a escalas de erro de até sigma igual a 0,65.}
+\fala{E aqui eu preciso ser explícito: \textbf{esse modelo de erro é assumido, não estimado}. Por isso o artigo reporta a curva inteira de sigma, e não um número só.}
+\nota{Diga essa última frase de propósito.}{Ela desarma a crítica mais previsível da plateia e mostra que você sabe onde o trabalho é frágil.}
+
+\slide{8}{Onde a nula \emph{não} é rejeitada}{2:30}
+\fala{Um título como o meu é fácil de ler demais, então eu reporto com o mesmo peso os casos em que a hipótese sobrevive.}
+\fala{Primeiro: se eu pegar, em cada célula, a maior participação que \emph{qualquer} fonte reporta, o p sobe para a faixa de 0,07 a 0,16 e a rejeição falha. Segundo: se, nessa leitura, eu contar Google e Anthropic como um bloco por causa da participação de 13,7\%, um limiar de 30\% é atingido em todas as cinco dimensões. Terceiro: o teste é assimétrico --- ele rejeita dominância de \emph{pesos abertos} e de \emph{laboratórios chineses}, mas \emph{não} rejeita a de pesos fechados nem a de laboratórios americanos.}
+\fala{E, principalmente: isto aqui não é um achado de que o mercado é competitivo. O HHI passa de 1.800 em seis das nove métricas. E, uma camada acima, uma única empresa tem de 75 a 86\% dos aceleradores de IA.}
+\nota{Este é o slide mais importante da apresentação.}{Se você só tiver tempo para um slide além dos resultados, é este. Ele é o que separa o trabalho de um \emph{press release}.}
+
+\slide{9}{Autor $\neq$ vendedor}{2:00}
+\fala{Este é o resultado de que eu mais gosto. Como qualquer um pode servir pesos liberados, quem \emph{fez} o modelo e quem \emph{vende} a inferência dele são empresas diferentes.}
+\fala{Os mesmos \emph{tokens}, atribuídos à família do modelo, dão um HHI de 3.225 --- altamente concentrado, cerca de três concorrentes efetivos. Atribuídos ao vendedor, dão 559 --- desconcentrado, quase dezoito concorrentes efetivos. Dados idênticos, conclusões opostas.}
+\fala{E o detalhe geopolítico: famílias chinesas fornecem 89,6\% dos \emph{tokens} de peso aberto, enquanto 57,6\% desses \emph{tokens} são vendidos por empresas sediadas nos Estados Unidos.}
+\nota{Deixe o silêncio depois de ``conclusões opostas''.}{É a demonstração mais limpa da tese do artigo.}
+
+\slide{10}{Durabilidade aponta para dois lados}{1:30}
+\fala{Dominância, no direito da concorrência, pressupõe durabilidade --- então um corte transversal não resolve. Em treze meses de painel, o líder do consumo ficou acima de 50\% nos treze meses, com um único líder e 2,9\% do mercado mudando de mãos por mês. Já a inferência de desenvolvedor teve \textbf{três líderes diferentes} e 19,4\% do mercado mudando de mãos por mês.}
+\fala{Uma observação de método: treze meses não bastam para identificar dinâmica de \emph{tipping}. Eu testei, e a estimativa não sobrevive à correção de viés de amostra pequena. Por isso essa análise permanece descritiva.}
+\nota{Essa confissão vale pontos.}{Mostra que você testou e descartou, em vez de não ter tentado.}
+
+\slide{11}{O que uma participação não diz}{1:30}
+\fala{Uma participação conta o mesmo usuário uma vez para cada marca que ele usa. Quanto da base do líder é \emph{exclusiva}? A média de 1,49 ferramentas por usuário não responde isso --- ela não identifica \emph{quem} é exclusivo.}
+\fala{O que as marginais da pesquisa permitem é limitar o intervalo. A participação bruta do líder é de 66,7\% dos usuários; a parcela genuinamente exclusiva está entre 17,6\% e 52,9\%. Os dois limites são exatos, verificados por programação linear sobre tipos de usuário.}
+\fala{O intervalo é largo, e essa largura \emph{é} o resultado: esse tipo de dado não diz se um quarto ou quatro quintos da base é cativa. Diz apenas que a participação superestima a dependência.}
+\nota{Se alguém perguntar por um índice ajustado:}{veja a pergunta 3 da seção de perguntas. Uma versão anterior deste trabalho trazia um ajuste do HHI que foi retirado por ser matematicamente inválido.}
+
+\slide{12}{O que levar}{1:30}
+\fala{A frase que eu queria que ficasse é esta: \textbf{uma afirmação de dominância precisa nomear sua unidade, seu mercado e sua fonte}. Sem isso, ela não é verificável.}
+\fala{Três implicações. Para medição: participação de \emph{tokens} não é participação de mercado --- ela se moveu dezenas de pontos em um trimestre sob promoção de preço. Para política de concorrência: a pergunta é específica por segmento, mais forte no chat de consumo e nas APIs corporativas, mais fraca na inferência de desenvolvedor. Para difusão: a divisão mais nítida não é entre fornecedores, é entre populações --- 12,6 pontos entre Norte e Sul global, e 53 pontos entre a classe A e as classes D/E no Brasil.}
+\nota{O dado do Brasil costuma ser o que a plateia lembra.}{Vale dizer devagar.}
+
+\slide{13}{Reprodutibilidade}{1:00}
+\fala{Todos os insumos transcritos estão dentro do \texttt{analysis.py}, ao lado da citação de onde vieram --- não existe base de dados escondida. O \texttt{results.json} reproduz byte a byte em Linux e macOS, a integração contínua roda a análise inteira a cada \emph{push}, e 103 testes verificam cada número do artigo contra esse arquivo.}
+\fala{E uma limitação declarada: os dados são secundários e várias fontes são painéis que se sobrescrevem. Quarenta e seis das 63 URLs têm uma captura de arquivo contemporânea à leitura. Eu digo quais não têm.}
+
+\slide{14}{Encerramento}{0:30}
+\fala{Encerrando: não existe um mercado único aqui, nem um líder único. Existem segmentos --- cada um concentrado, cada um liderado por alguém diferente. Obrigado. Fico à disposição para perguntas.}
+
+% ------------------------------------------------------------------
+\section{Perguntas prováveis (e o que responder)}
+
+\nota{1.}{\textbf{``Isso não é um teste trivial? É óbvio que ninguém domina tudo.''} --- É uma crítica justa e o artigo concorda com ela: a seção de discussão diz que a rejeição universal é o resultado \emph{menos} informativo. Os achados com conteúdo econômico são os de mercado: chat de consumo fora da China, gasto corporativo, inferência de desenvolvedor e aplicações na China. O teste universal serve como disciplina de robustez, não como manchete.}
+
+\nota{2.}{\textbf{``Seus p-valores dependem de um modelo de erro que você inventou.''} --- Correto, e está dito no artigo. Sigma é uma escolha, não uma estimativa; nenhum publicador reporta incerteza nessas participações. Por isso eu reporto a curva inteira de sigma e o maior sigma em que a rejeição sobrevive, em vez de um número único. É um teste condicional ao modelo declarado.}
+
+\nota{3.}{\textbf{``Como você corrige a concentração para multi-homing?''} --- Eu \emph{não} corrijo, e isso é deliberado. Uma versão anterior dividia o HHI pelo quadrado da média de ferramentas por usuário. Está errado: as participações ajustadas somam 67 e não 100, logo o resultado não é um HHI e não pode ser comparado às faixas antitruste. Além disso a fórmula não acompanha o conceito --- com dois fornecedores a 50/50 cujos usuários todos usam ambos, ninguém é cativo e a fórmula ainda devolve 1.250. Em vez disso eu reporto limites de identificação parcial, que é o que as marginais sustentam.}
+
+\nota{4.}{\textbf{``Por que HHI e não outra métrica?''} --- Porque é o índice que as autoridades de concorrência usam e os limiares vêm do mesmo guia, então medida e corte são comensuráveis. O artigo declara os dois limites: o resultado de Cournot que dá conteúdo econômico ao índice não vale para produtos diferenciados vendidos por \emph{token}, e o índice é estático. Por isso ele aparece sempre ao lado do índice de instabilidade, e o apêndice repete as nove métricas na família de Hill, variando o peso do líder.}
+
+\nota{5.}{\textbf{``A afirmação sobre acesso e não renda é causal?''} --- Não, e o artigo agora diz isso explicitamente. É uma associação. A comparação é entre países que diferem em muito mais do que disponibilidade: sanções, regulação, idioma, preço, conectividade, política industrial e confiança em plataformas estrangeiras. Identificar o efeito exigiria variação dentro do país ao longo do tempo ou um estudo de evento em torno de uma mudança de acesso.}
+
+\nota{6.}{\textbf{``Como você escolheu as fontes?''} --- Comecei por cinco \emph{leaderboards} e páginas de participação escolhidas por mim, o que é uma amostra de conveniência, e o artigo diz isso. Depois acrescentei fontes até que cada uma de dez perguntas de lacuna tivesse fonte independente, e exigi que cada afirmação usada em um teste aparecesse em pelo menos duas fontes de tipos diferentes. Não é uma revisão sistemática e não a chamo assim.}
+
+\nota{7.}{\textbf{``Treze meses é pouco para falar de durabilidade.''} --- Concordo, e é por isso que a análise temporal é descritiva. Eu testei formalmente a dinâmica de \emph{tipping} e a estimativa não sobrevive à correção de viés: com doze transições, um passeio aleatório reproduz o resultado observado em 60\% das vezes. O painel mostra rotatividade, não mecanismo.}
+
+\nota{8.}{\textbf{``Por que você não cita [trabalho X]?''} --- Pergunte qual é, anote, e responda com honestidade. Se for comentário jurídico sobre concorrência em IA generativa, existe uma literatura que o artigo não engaja porque a contribuição aqui é de medição, não de doutrina. Se for trabalho empírico de medição, vale mesmo olhar.}
+
+\nota{9.}{\textbf{``Os dados são de 2026. Isso envelhece em meses.''} --- Sim, e esse é parte do argumento. A participação de \emph{tokens} se moveu dezenas de pontos em um trimestre. É exatamente por isso que o artigo insiste em nomear unidade, mercado e fonte, e por que o código e os insumos transcritos estão públicos: quem repetir daqui a seis meses deve obter números diferentes e poderá dizer o quanto mudou.}
+
+% ------------------------------------------------------------------
+\section{Plano B --- se o tempo apertar}
+\begin{itemize}
+  \item \textbf{Corte primeiro} o slide 4 (cinco dimensões) e o 13 (reprodutibilidade). O conteúdo deles cabe em uma frase cada.
+  \item \textbf{Nunca corte} o slide 8 (onde a nula não é rejeitada). Sem ele a apresentação vira propaganda.
+  \item \textbf{Se sobrar tempo}, volte ao slide 9 e explore o contraste 3.225 contra 559 --- é o que gera as melhores perguntas.
+  \item \textbf{Versão de 10 minutos:} slides 1, 2, 3, 6, 8, 9, 12, 14.
+\end{itemize}
+
+\end{document}

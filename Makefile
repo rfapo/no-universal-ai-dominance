@@ -41,14 +41,17 @@ figures: ## code/figures.py -> paper/figs/*.{pdf,png}   (~5 s)
 test: ## pytest tests/ -- every number in the paper against results.json
 	$(PYTHON) -m pytest tests/ -q
 
-slides: ## build the conference deck -> paper/no-universal-ai-dominance-slides.pdf
+slides: ## build the conference deck and the Portuguese speaker script
 	@cd paper && \
 	if command -v tectonic >/dev/null 2>&1; then tectonic -X compile slides.tex; \
 	elif command -v latexmk >/dev/null 2>&1; then latexmk -pdf -quiet slides.tex; \
 	else echo "no LaTeX engine found" >&2; exit 1; fi && \
 	cp paper/slides.pdf paper/no-universal-ai-dominance-slides.pdf 2>/dev/null || \
 	cp slides.pdf no-universal-ai-dominance-slides.pdf
-	@echo "wrote paper/no-universal-ai-dominance-slides.pdf"
+	@cd paper && \
+	if command -v tectonic >/dev/null 2>&1; then tectonic -X compile roteiro-apresentacao.tex; \
+	elif command -v latexmk >/dev/null 2>&1; then latexmk -pdf -quiet roteiro-apresentacao.tex; fi
+	@echo "wrote paper/no-universal-ai-dominance-slides.pdf and paper/roteiro-apresentacao.pdf"
 
 paper: ## build the PDF (latexmk, pdflatex or tectonic, whichever is available)
 	@cd paper && \
