@@ -18,6 +18,7 @@ paper/*.fls
 paper/*.fdb_latexmk
 paper/*.synctex.gz
 paper/main.pdf
+paper/slides.pdf
 
 # results/archive_log.txt IS committed: it is the provenance record of which
 # source URLs were snapshotted, when, and which the Wayback crawler refused.

@@ -22,7 +22,7 @@ PDF     := paper/no-universal-ai-dominance.pdf
 # passed to code/compare_figures.py; verify-strict overrides it with --strict
 FIGCMP  ?=
 
-.PHONY: all analysis validate figures test paper verify verify-strict arxiv archive archive-status clean help
+.PHONY: all analysis validate figures test paper slides verify verify-strict arxiv archive archive-status clean help
 .DEFAULT_GOAL := help
 
 all: analysis validate figures test ## run the whole pipeline and the test suite
@@ -40,6 +40,15 @@ figures: ## code/figures.py -> paper/figs/*.{pdf,png}   (~5 s)
 
 test: ## pytest tests/ -- every number in the paper against results.json
 	$(PYTHON) -m pytest tests/ -q
+
+slides: ## build the conference deck -> paper/no-universal-ai-dominance-slides.pdf
+	@cd paper && \
+	if command -v tectonic >/dev/null 2>&1; then tectonic -X compile slides.tex; \
+	elif command -v latexmk >/dev/null 2>&1; then latexmk -pdf -quiet slides.tex; \
+	else echo "no LaTeX engine found" >&2; exit 1; fi && \
+	cp paper/slides.pdf paper/no-universal-ai-dominance-slides.pdf 2>/dev/null || \
+	cp slides.pdf no-universal-ai-dominance-slides.pdf
+	@echo "wrote paper/no-universal-ai-dominance-slides.pdf"
 
 paper: ## build the PDF (latexmk, pdflatex or tectonic, whichever is available)
 	@cd paper && \
