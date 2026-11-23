@@ -869,3 +869,30 @@ def test_metr_urls_are_in_the_source_list_for_archiving():
     rows = (ROOT / "data" / "sources.csv").read_text()
     assert "metr.org/notes/2026-03-10" in rows
     assert "metr.org/blog/2026-05-11" in rows
+
+
+# --------------------------------------------------------------------------
+# Regressions from reviewer findings
+# --------------------------------------------------------------------------
+
+
+def test_tracker_comparison_reports_the_october_hhi():
+    """A reviewer found the prose beside the trackers table still carried the
+    August figures after the table was rebuilt on October: a DeepSeek factor of
+    175 against the table's 70, and an HHI 'rising' to 6,460. On October data
+    the HHI FALLS, and these numbers must not reappear."""
+    sc = RESULTS["rev6"]["statcounter_regions"]["Worldwide (Oct)"]["hhi"]
+    sw = next(r["hhi_lo"] for r in RESULTS["concentration"] if r["metric"].startswith("A"))
+    assert sc == 3730 and sw == 3968
+    assert sc < sw, "the October tracker comparison lowers concentration"
+    assert "3{,}730" in TEX
+    for stale in ("6{,}460", "factor of 175", "80.5"):
+        assert stale not in TEX, stale
+
+
+def test_seller_layer_claim_does_not_assert_durability():
+    """Seller shares come from one week (2-8 November 2026); there is no panel,
+    so no durability claim may rest on them."""
+    assert "no durable leader" not in TEX
+    assert "no majority seller in the week observed" in TEX
+    assert RESULTS["open_segment"]["seller"]["largest_seller"] == approx(12.9, tol=0.05)
