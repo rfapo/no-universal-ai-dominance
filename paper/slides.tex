@@ -96,7 +96,7 @@
   \begin{itemize}\setlength\itemsep{0.35em}
     \item $\tau = 50\%$ primary (EU case law); 40\% and 30\% as sensitivity
     \item Union--intersection over dimensions, intersection--union over vendors
-    \item \lead{The data must be shown incompatible with dominance} --- not merely silent on it
+    \item \lead{The data must be shown incompatible with dominance}, not merely silent on it
   \end{itemize}
 \end{frame}
 
@@ -117,19 +117,19 @@
   \end{center}
   \vspace{0.9em}
   \punch{Plus independent second sources (D$'$, E$'$, F) and one regional metric (G).
-  Nine share metrics over 61 data sources and 53 scholarly works, at three levels ---
+  Nine share metrics over 61 data sources and 53 scholarly works, at three levels:
   vendor, paradigm (closed vs open weights) and origin (US vs China).}
 \end{frame}
 
 % ---------------------------------------------------------------- results
-\begin{frame}{Result 1 --- the leader changes with the unit}
+\begin{frame}{Result 1: the leader changes with the unit}
   \vspace{-0.6em}
   \begin{center}\includegraphics[width=0.80\textwidth]{figs/fig_leader.pdf}\end{center}
   \vspace{-0.6em}
   \punch{Nine metrics, \lead{six different leaders}.}
 \end{frame}
 
-\begin{frame}{Result 2 --- no uniformly dark row}
+\begin{frame}{Result 2: no uniformly dark row}
   \vspace{-0.2em}
   \begin{center}\includegraphics[width=0.90\textwidth]{figs/fig_heatmap.pdf}\end{center}
   \vspace{-0.4em}
@@ -137,7 +137,7 @@
   \lead{No vendor reaches 50\% in more than one of five dimensions.} Four vendors lead the five.}
 \end{frame}
 
-\begin{frame}{Result 3 --- the calibrated test}
+\begin{frame}{Result 3: the calibrated test}
   \vspace{0.3em}
   $T_v(\tau)=\sum_d \max\{0,\ln(\tau/s_{v,d})\}$, evaluated at the least favourable point of $H_0$.
   \vspace{0.8em}
@@ -157,7 +157,7 @@
   \vspace{0.8em}
   \punch{On single-source data $H_0(50)$ is rejected, and survives error scales up to
   $\sigma=0.65$ (95\% of errors within a factor of 3.6). \lead{The error model is assumed,
-  not estimated} --- so the whole $\sigma$ curve is reported, not one number.}
+  not estimated}, so the whole $\sigma$ curve is reported, not one number.}
 \end{frame}
 
 % ---------------------------------------------------------------- honesty
@@ -215,14 +215,14 @@
   \end{tabular}
   \end{center}
   \vspace{-0.2em}
-  \punch{Thirteen months cannot identify tipping dynamics --- this stays descriptive.}
+  \punch{Thirteen months cannot identify tipping dynamics, so this stays descriptive.}
 \end{frame}
 
 % ---------------------------------------------------------------- multi-homing
 \begin{frame}{What a share cannot tell you}
   \vspace{0.5em}
   A share counts a multi-homing user once per brand. How much of the leader's base is
-  \emph{exclusive}? The mean of 1.49 tools per user cannot say --- but the marginals bound it.
+  \emph{exclusive}? The mean of 1.49 tools per user cannot say, but the marginals bound it.
   \vspace{0.7em}
   \begin{center}
   $e \ge A - \textstyle\sum_k r_k \qquad\text{and}\qquad e \le A - \max_k r_k$
@@ -253,7 +253,7 @@
   \begin{itemize}\setlength\itemsep{0.4em}
     \item \textbf{Measurement.} Token share is not market share. It moved tens of points in a
       quarter under price promotions, and differs from spend share by exactly the price gap ($\approx 7\times$).
-    \item \textbf{Policy.} The antitrust question is segment-specific --- strongest for consumer
+    \item \textbf{Policy.} The antitrust question is segment-specific: strongest for consumer
       chat and enterprise APIs, weakest for developer inference.
     \item \textbf{Diffusion.} The sharper divide is between populations, not vendors: 12.6 points
       between Global North and South; 53 points between Brazil's top and bottom income classes.
@@ -263,11 +263,11 @@
 \begin{frame}{Everything here is reproducible}
   \vspace{0.7em}
   \begin{itemize}\setlength\itemsep{0.45em}
-    \item Every transcribed input lives inline in \texttt{code/analysis.py} beside its citation ---
+    \item Every transcribed input lives inline in \texttt{code/analysis.py} beside its citation;
       there is no hidden dataset.
     \item \texttt{results.json} reproduces \lead{byte for byte} on Linux and macOS; CI re-runs the
       whole analysis on every push.
-    \item \texttt{validate\_stats.py} re-derives each procedure by a different route ---
+    \item \texttt{validate\_stats.py} re-derives each procedure by a different route:
       Kendall's $W$ via Friedman, the HHI bound against brute force, the exclusivity interval by linear programming.
     \item \lead{103 tests} hold every number in the paper against \texttt{results.json}.
     \item Data are secondary and several sources are live dashboards: 46 of 63 URLs carry a
@@ -282,7 +282,7 @@
   \begin{center}
     {\Large\textbf{No Universal AI Dominance}}\\[0.9em]
     {\color{mid} There is no single market here, and no single leader.}\\[0.4em]
-    {\color{mid} There are segments --- each concentrated, each led by someone else.}\\[2.0em]
+    {\color{mid} There are segments, each concentrated, each led by someone else.}\\[2.0em]
     {\small Rodrigo F. A. P. Oliveira \quad\textbar\quad \texttt{rfapo@cesar.school}}\\[0.5em]
     {\footnotesize\color{mid}\texttt{github.com/rfapo/no-universal-ai-dominance}}
   \end{center}
