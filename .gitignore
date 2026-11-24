@@ -23,5 +23,8 @@ paper/slides.pdf
 # results/archive_log.txt IS committed: it is the provenance record of which
 # source URLs were snapshotted, when, and which the Wayback crawler refused.
 
+# speaker script: kept locally, not published
+paper/roteiro-apresentacao.*
+
 # OS
 .DS_Store
