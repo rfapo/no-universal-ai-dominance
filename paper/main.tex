@@ -101,6 +101,51 @@ E & Enterprise spend & US dollars of API spend by firms \\
 
 \noindent Each dimension has one primary metric and, where available, an independent secondary metric (D$'$, E$'$, F); metric G is regional (China). Capability benchmarks are analysed separately (Section~\ref{sec:capability}) because they rank models and do not measure adoption.
 
+\paragraph{A taxonomy of the measurements.} The nine metrics are not nine attempts at one
+quantity. Each is a point in a space with five axes, and two metrics agree or disagree according to how
+far apart they sit in that space. Table~\ref{tab:taxonomy} locates them. The axes are the unit in which a
+share is counted; the side of the market the buyers sit on; the layer of the value chain to which the
+share is attributed; the level at which entities are aggregated; and the horizon over which the share is
+observed. Metrics that share a cell agree on the leader, and the disagreements fall where the axes
+separate: A and F read the same market in two units and name the same firm, while D and D$'$ read the
+same market in two units and do not. Setting the measurements out this way also shows what the design
+cannot do. B and C are aggregates that cut across the market axis, which is why they are not assigned to
+a candidate market and why no market-level null is stated for them.
+
+\begin{table}[h]
+\centering\footnotesize
+\caption{The nine share metrics located on five axes. ``Layer'' is the point in the chain to which a
+share is attributed: the firm that trained the model, the firm that serves the tokens, or the firm that
+sells the hardware. The last column marks the metrics for which a monthly series exists; the rest are
+single readings.}
+\label{tab:taxonomy}
+\begin{tabularx}{\textwidth}{@{}l L{2.4cm} L{2.5cm} L{2.2cm} X c@{}}
+\toprule
+& Unit counted & Market side & Layer & Aggregation tested & Panel \\
+\midrule
+A  & web visits        & consumer (M1)    & model author & vendor, origin            & yes \\
+F  & app and web users & consumer (M1)    & model author & vendor                    & no  \\
+\addlinespace
+E  & dollars of spend  & enterprise (M2)  & model author & vendor, paradigm          & no  \\
+E$'$ & dollars of spend & enterprise (M2) & model author & vendor                    & yes \\
+\addlinespace
+D  & requests          & developer (M3)   & model author & vendor, paradigm, origin  & no  \\
+D$'$ & tokens          & developer (M3)   & model author & vendor, paradigm, origin  & yes \\
+\addlinespace
+G  & monthly users     & consumer, China (M4) & model author & vendor                & no  \\
+\addlinespace
+B  & monthly users     & \emph{cuts across}  & model author & vendor, origin         & no  \\
+C  & dollars of revenue & \emph{cuts across} & model author & vendor, origin         & no  \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+\noindent The layer axis carries only one value in the table because every published source attributes
+shares to the firm that trained the model. That is a property of the sources and not of the market:
+Section~\ref{sec:openseg} recomputes one of these metrics at the serving layer instead, and the
+concentration it reports changes by a factor of six on identical tokens. The upstream layer, where
+accelerators are sold, is outside the test and is reported separately.
+
 \subsubsection{Relevant markets} Competition law assesses dominance in a relevant market, defined by what buyers treat as substitutes \cite{ec2009guidance,kaplow2010why}. We lack the price and switching data that a hypothetical-monopolist test requires, so we use four candidate markets that the evidence separates on observable grounds. (M1) Consumer assistants outside China are bought by individuals at zero or flat monthly prices, and their users multi-home. (M2) Model access bought by enterprises is priced per token at frontier rates, and firms mostly rely on one model. (M3) Developer inference bought through gateways is priced at about one seventh of frontier rates, and its model mix changes within weeks. (M4) Consumer AI applications in China form a separate geographic market, because the leading US services are not available there. Metrics A and F measure M1, E and E$'$ measure M2, D and D$'$ measure M3 and G measures M4; B and C are aggregates that cut across markets. The universal null asks whether one entity dominates all of them at once. The market-level nulls ask the question competition law actually asks, and each is tested below against every source we could find. The remaining elements of a dominance assessment are addressed as far as public data allow: durability through a thirteen-month panel, common interests between vendors through ownership scenarios, and entry conditions through the comparison between the firms that release open weights and the firms that sell them.
 
 \subsubsection{Scope} The test concerns adoption shares of LLM products and services. It does not cover the supply of chips, cloud capacity or training compute. Section~\ref{sec:upstream} reports the concentration of those layers so that the title is not read as a claim about them.
