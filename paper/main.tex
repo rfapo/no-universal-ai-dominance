@@ -52,6 +52,8 @@ We then press the test harder than the headline requires. It is applied inside t
 
 \section{Related work}
 
+Three literatures bear on the question and almost never cite one another. Industrial economics asks whether the cost structure of frontier models forces concentration. Measurement work counts what people actually use, platform by platform. Diffusion research asks who has access at all. Each is read below for what it establishes and for the boundary it does not cross, because the boundaries are where this paper's question sits.
+
 \subsection{Market structure} Vipra and Korinek \cite{vipra2023market} and Korinek and Vipra \cite{korinek2025concentrating} analyse the cost structure of foundation models and identify economies of scale and scope that may push the industry towards concentration and market tipping. Their argument is about the supply side. This paper tests whether the predicted outcome is visible on the demand side in 2026.
 
 \subsection{Usage telemetry} Aubakirova et al.\ \cite{aubakirova2026state} study 100 trillion tokens routed by OpenRouter up to November 2025 and report that open-weight models reached about one third of tokens, that programming grew from 11\% to over 50\% of tokens, and that North America accounted for 47.2\% of usage by billing region. Nagle and Yue \cite{nagle2025latent}, using the same platform, find that closed models held about 80\% of tokens and 96\% of revenue in 2025 at roughly six times the price of open models. Handa et al.\ \cite{handa2025which} and Tamkin et al.\ \cite{tamkin2024clio} measure task composition on Claude.ai; Chatterji et al.\ \cite{chatterji2025how} do the same for ChatGPT, which by July 2025 had been adopted by around 10\% of the world's adult population, with non-work messages above 70\% of usage.
@@ -79,6 +81,8 @@ This is not an oversight by any individual author. A study of gateway tokens is 
 The same evidence raises a second difficulty. These shares move. Two of the studies cited above are separated, on their own platform and inside a single year, by movements of more than 35 points. A cross-section can therefore be accurate and still describe a position its holder no longer occupies, which matters because dominance in competition law is a durable condition rather than an instantaneous one. Consistency across units and persistence over time are what the design in the next section is built to test.
 
 \section{Hypotheses and method}
+
+Testing a claim of dominance means first deciding what would count as one. Three choices do most of the work and each is contestable: which entities are compared, in what units their shares are counted, and how large a share has to be before the word applies. We make all three explicitly, taking the thresholds from competition law rather than inventing them, and we state the decision rules before reporting any result so that a reader can disagree with a choice and see exactly which conclusion it carries.
 
 \subsection{Entities, levels and dimensions}
 \label{sec:entities}
@@ -219,6 +223,8 @@ Table~\ref{tab:data} lists the nine share metrics. Paradigm shares come from two
 \subsection{Transcription and computation} Shares were transcribed from the sources as published. Where a source gives counts (B, G), shares are computed over the published total, including the ``others'' row. All statistics are produced by one script (\texttt{code/analysis.py}) distributed with this paper and in the replication package \cite{oliveira2026repo}.
 
 \section{Results}
+
+The results move outward from the narrowest reading to the broadest. We begin inside each metric, where concentration is high and the question is whether any leader clears the threshold on its own measure. We then ask whether a leader survives a second source, then whether any vendor leads everywhere at once, and finally whether the paradigm and origin groupings fare any better. The pattern that emerges early persists through all four: the answer changes with what is counted.
 
 \subsection{Within-metric concentration and local dominance}
 
@@ -608,7 +614,7 @@ The tests in this paper concern adoption. The layers that supply it are more con
 \section{What the literature changes in the reading of the results}
 \label{sec:lit}
 
-The peer-reviewed literature does not reverse any test above. It does change how much weight each result can carry.
+Rejecting a null is not the same as learning something important, and the two can come apart. None of the tests above is overturned by the peer-reviewed literature. What that literature does is redistribute their weight. It shows that our headline result was close to a foregone conclusion and that a pattern we report as a puzzle has a familiar name; it tells us which of two local dominances is the more meaningful and why one metric must diverge from another arithmetically; it warns that the paradigm test treats as one entity something the literature treats as graded; and it identifies which of our findings is the most robust, which turns out not to be about vendors at all.
 
 \subsection{Market definition and contestability} Law and economics assess dominance within a relevant market \cite{ec2009guidance,kaplow2010why}. If consumer assistants, enterprise APIs and developer inference are distinct relevant markets, as their different prices, buyers and leaders suggest, then no entity should be expected to dominate all of them, and rejecting $\Hzero$ is close to a foregone conclusion. The findings with legal and economic content are the local ones in Table~\ref{tab:conc}. We therefore do not present the universal rejection as evidence of a competitive market. Section~\ref{sec:markets} tests each candidate market separately with second sources: of the three local dominances, one is confirmed at world level, one is confirmed without a stable identity of the leader, and one is not confirmed by a second panel. High concentration without durable dominance is what contestability \cite{baumol1982contestable}, efficiency-based concentration \cite{demsetz1973industry} and competition for the market \cite{schumpeter1942capitalism} describe, and it is what Section~\ref{sec:persist} and the API-market evidence \cite{demirer2026emerging} show. The supply-side literature nevertheless predicts tipping through scale economies and control of complementary assets \cite{korinek2025concentrating,azoulay2025old}, and lock-in theory explains how an early lead can become permanent \cite{katz1985network,arthur1989competing}. A cross-section cannot tell a contestable equilibrium from the early phase of tipping; the OECD reaches the same mixed assessment \cite{oecd2026markets}.
 
@@ -656,6 +662,8 @@ Two propositions hold, two hold only in a narrower form and two fail. The accoun
 
 \section{Threats to validity}
 \label{sec:validity}
+
+Every number here was published by someone with an interest in it, measured by a method we cannot inspect, on a population we cannot verify. That is the ordinary condition of research on this industry rather than a defect of these particular sources, and it bounds what the test can establish. We set out the limitations under the usual headings, and say in each case whether it narrows the reach of a result or would overturn it.
 
 \subsection{Construct validity} A ``user'' is an account, a device or a survey respondent depending on the source. Counterpoint's vendor MAUs sum to about 4.8 billion \cite{counterpoint2026mau}. Microsoft's 18.8\% of a working-age population of about 5.3 billion \cite{un2024wpp} is about 1.0 billion people, fewer than ChatGPT's claimed weekly users alone. The two cannot both describe unique humans. Embedded assistants change the ranking: Counterpoint counts Meta AI and places Meta first, whereas DataReportal excludes use inside WhatsApp, Office or Snapchat \cite{datareportal2026}. ``Open'' and ``closed'' are properties of models, and several labs ship both; classification by lab is an approximation, and we did not verify the licence of the model currently behind Meta AI, which alone would move more than a billion estimated users between columns.
 
