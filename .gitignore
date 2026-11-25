@@ -26,5 +26,8 @@ paper/slides.pdf
 # speaker script: kept locally, not published
 paper/roteiro-apresentacao.*
 
+# seminar deck: kept locally, not published
+paper/superinteligencia-*.pdf
+
 # OS
 .DS_Store
