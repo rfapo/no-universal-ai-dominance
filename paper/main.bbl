@@ -227,6 +227,20 @@ Catherine Tucker.
   \url{https://www.oecd.org/en/publications/artificial-intelligence-markets_d531d73f-en/full-report.html},
   2026.
 
+\bibitem[Rochet and Tirole(2003)]{rochet2003platform}
+Jean-Charles Rochet and Jean Tirole.
+\newblock Platform competition in two-sided markets.
+\newblock \emph{Journal of the European Economic Association}, 1\penalty0
+  (4):\penalty0 990--1029, 2003.
+\newblock \doi{10.1162/154247603322493212}.
+
+\bibitem[Armstrong(2006)]{armstrong2006competition}
+Mark Armstrong.
+\newblock Competition in two-sided markets.
+\newblock \emph{RAND Journal of Economics}, 37\penalty0 (3):\penalty0 668--691,
+  2006.
+\newblock \doi{10.1111/j.1756-2171.2006.tb00037.x}.
+
 \bibitem[Demirer et~al.(2026)Demirer, Fradkin, and
   Tadelis]{demirer2026emerging}
 Mert Demirer, Andrey Fradkin, and Nadav Tadelis.
@@ -247,20 +261,6 @@ Andrey Fradkin.
 \newblock Demand for {LLMs}: Descriptive evidence on substitution, market
   expansion, and multihoming.
 \newblock \emph{arXiv preprint arXiv:2504.15440}, 2025.
-
-\bibitem[Rochet and Tirole(2003)]{rochet2003platform}
-Jean-Charles Rochet and Jean Tirole.
-\newblock Platform competition in two-sided markets.
-\newblock \emph{Journal of the European Economic Association}, 1\penalty0
-  (4):\penalty0 990--1029, 2003.
-\newblock \doi{10.1162/154247603322493212}.
-
-\bibitem[Armstrong(2006)]{armstrong2006competition}
-Mark Armstrong.
-\newblock Competition in two-sided markets.
-\newblock \emph{RAND Journal of Economics}, 37\penalty0 (3):\penalty0 668--691,
-  2006.
-\newblock \doi{10.1111/j.1756-2171.2006.tb00037.x}.
 
 \bibitem[Lerner and Tirole(2002)]{lerner2002simple}
 Josh Lerner and Jean Tirole.
